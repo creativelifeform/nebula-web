@@ -117,13 +117,14 @@ export default class Visualization {
 
   makeParticleSystem() {
     return new Promise(resolve => {
-      this.particleSystem = ParticleSystem.fromJSONAsync(this.data).then(
-        particleSystem => {
+      this.particleSystem = ParticleSystem.fromJSONAsync(this.data)
+        .then(particleSystem => {
+          console.log(particleSystem);
           particleSystem.addRenderer(new SpriteRenderer(this.scene));
 
           resolve(this.render);
-        }
-      );
+        })
+        .catch(console.error);
     });
   }
 }

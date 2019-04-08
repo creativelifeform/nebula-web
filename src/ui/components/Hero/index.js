@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Visualisation from './Visualisation';
 import hero from '../../../assets/hero.png';
 
 export default class Hero extends Component {
@@ -9,7 +10,15 @@ export default class Hero extends Component {
     this.canvasRef = React.createRef();
   }
 
-  async componentDidMount() {}
+  async componentDidMount() {
+    this.visualisation = await new Visualisation(this.canvas).start();
+
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  handleResize = e => {
+    this.visualisation.resize();
+  };
 
   render() {
     return (
@@ -20,5 +29,9 @@ export default class Hero extends Component {
         </div>
       </section>
     );
+  }
+
+  get canvas() {
+    return this.canvasRef.current;
   }
 }
