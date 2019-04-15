@@ -1,7 +1,7 @@
 import ParticleSystem, { SpriteRenderer } from 'three-nebula';
 import { PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 
-import DEFAULT_DATA from './data.js';
+import { test as DEFAULT_DATA } from './data.js';
 
 /**
  * Sets up three js and particle system environment so that they can be rendered
@@ -73,7 +73,7 @@ export default class Visualization {
       position: {
         x: 0,
         y: 0,
-        z: 20,
+        z: 50,
       },
       rotation: {
         x: 0,

@@ -2,4 +2,30 @@
   width: 100%;
   padding: $padding-m;
   background-color: $header-bg;
+  font-family: $app-font-header;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .Logo {
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+
+  .Nav {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: $padding-s;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $app-color;
+  }
 }

@@ -2,7 +2,15 @@ html,
 body,
 main,
 .App {
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: $app-font-body;
   background-color: $app-bg;
   color: $app-color;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
