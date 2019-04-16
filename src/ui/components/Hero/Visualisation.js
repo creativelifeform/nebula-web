@@ -73,7 +73,7 @@ export default class Visualization {
       position: {
         x: 0,
         y: 0,
-        z: 50,
+        z: 30,
       },
       rotation: {
         x: 0,

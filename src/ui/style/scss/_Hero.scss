@@ -2,15 +2,21 @@
   .container {
     position: relative;
 
-    .image {
-      width: $hero-image-w / 4;
-      height: $hero-image-h / 4;
+    .content {
       position: absolute;
       z-index: 2;
-      top: 50%;
+      top: 10%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      margin: auto;
+      text-align: center;
+      transform: translateX(-50%) translateY(0%);
+      font-size: 2em;
+
+      .image {
+        width: $hero-image-w / 3;
+        height: $hero-image-h / 3;
+
+        margin: auto;
+      }
     }
 
     canvas {

@@ -25,7 +25,10 @@ export default class Hero extends Component {
       <section className="Hero">
         <div className="container">
           <canvas ref={this.canvasRef} className="canvas" />
-          <img src={hero} alt="hero" className="image" />
+          <section className="content">
+            <section>A WebGL Particle System Designer</section>
+            <img src={hero} alt="hero" className="image" />
+          </section>
         </div>
       </section>
     );

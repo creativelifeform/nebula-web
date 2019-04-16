@@ -38,15 +38,18 @@ html {
   text-align: center; }
   .Hero .container {
     position: relative; }
-    .Hero .container .image {
-      width: 739px;
-      height: 451px;
+    .Hero .container .content {
       position: absolute;
       z-index: 2;
-      top: 50%;
+      top: 10%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      margin: auto; }
+      text-align: center;
+      transform: translateX(-50%) translateY(0%);
+      font-size: 2em; }
+      .Hero .container .content .image {
+        width: 985.33333px;
+        height: 601.33333px;
+        margin: auto; }
     .Hero .container canvas {
       width: 100%;
       height: 500px;
