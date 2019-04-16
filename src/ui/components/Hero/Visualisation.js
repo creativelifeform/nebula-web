@@ -71,9 +71,9 @@ export default class Visualization {
         farPlane: 1000,
       },
       position: {
-        x: 0,
+        x: -10,
         y: 0,
-        z: 30,
+        z: 50,
       },
       rotation: {
         x: 0,

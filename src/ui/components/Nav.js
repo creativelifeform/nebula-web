@@ -4,13 +4,16 @@ export default () => (
   <nav className="Nav">
     <ul>
       <li>
-        <a href="/">about</a>
+        <a href="/">About</a>
       </li>
       <li>
-        <a href="/">guide</a>
+        <a href="/">Guide</a>
       </li>
       <li>
-        <a href="/">download</a>
+        <a href="/">Pricing</a>
+      </li>
+      <li>
+        <button className="small">Download</button>
       </li>
     </ul>
   </nav>

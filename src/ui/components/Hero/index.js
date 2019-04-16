@@ -23,13 +23,18 @@ export default class Hero extends Component {
   render() {
     return (
       <section className="Hero">
-        <div className="container">
-          <canvas ref={this.canvasRef} className="canvas" />
-          <section className="content">
-            <section>A WebGL Particle System Designer</section>
-            <img src={hero} alt="hero" className="image" />
-          </section>
-        </div>
+        <canvas ref={this.canvasRef} className="canvas" />
+        <section className="content">
+          <div className="blurb">
+            <h2>A particle system designer for the web.</h2>
+            <p>
+              Design rich, diverse particle systems for any JavaScript
+              application.
+            </p>
+            <button>Try Nebula For Free</button>
+          </div>
+          <img className="image" src={hero} alt="hero" />
+        </section>
       </section>
     );
   }

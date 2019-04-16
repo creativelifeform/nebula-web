@@ -1,4 +1,46 @@
 .Hero {
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 $padding-l;
+    height: calc(100vh - #{$header-h});
+    text-align: left;
+
+    .blurb {
+      h2 {
+        font-size: 3.5em;
+        margin-bottom: $padding-l;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin-bottom: $padding-l;
+      }
+
+      button {
+        font-family: $app-font-body;
+      }
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+
   .container {
     position: relative;
 
@@ -8,21 +50,25 @@
       top: 10%;
       left: 50%;
       text-align: center;
-      transform: translateX(-50%) translateY(0%);
+
       font-size: 2em;
 
-      .image {
-        width: $hero-image-w / 3;
-        height: $hero-image-h / 3;
+      .content-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        margin: auto;
+        .blurb {
+          width: 100%;
+        }
+
+        .image {
+          width: $hero-image-w / 3;
+          height: $hero-image-h / 3;
+          transform: translateX(-50%) translateY(0%);
+          margin: auto;
+        }
       }
-    }
-
-    canvas {
-      width: 100%;
-      height: $hero-canvas-h;
-      background: black;
     }
   }
 
