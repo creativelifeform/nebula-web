@@ -21,7 +21,8 @@ button {
   border-radius: 5px;
   color: white;
   font-size: 1em;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: "Dosis", sans-serif; }
 
 button:hover {
   background: #3400ce; }
@@ -64,7 +65,8 @@ button.small {
     background: black;
     position: fixed;
     left: 0;
-    top: 0; }
+    top: 0;
+    opacity: 0.5; }
   .Hero .content {
     position: relative;
     display: grid;
@@ -82,9 +84,10 @@ button.small {
     .Hero .content .blurb p {
       font-size: 1.2em;
       margin-bottom: 20px; }
-    .Hero .content .blurb button {
-      font-family: "Barlow", sans-serif; }
-    .Hero .content .image {
+    .Hero .content video {
+      width: 100%;
+      height: 75%; }
+    .Hero .content img {
       width: 100%; }
   .Hero .container {
     position: relative; }

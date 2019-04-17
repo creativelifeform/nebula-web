@@ -6,6 +6,7 @@
     position: fixed;
     left: 0;
     top: 0;
+    opacity: 0.5;
   }
 
   .content {
@@ -30,13 +31,14 @@
         font-size: 1.2em;
         margin-bottom: $padding-l;
       }
-
-      button {
-        font-family: $app-font-body;
-      }
     }
 
-    .image {
+    video {
+      width: 100%;
+      height: 75%;
+    }
+
+    img {
       width: 100%;
     }
   }
