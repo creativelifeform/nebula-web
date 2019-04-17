@@ -1,4 +1,4 @@
-import { Header, Home } from './ui/components';
+import { Footer, Header, Home } from './ui/components';
 import React, { Component } from 'react';
 
 import style from './ui/style';
@@ -11,6 +11,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Home />
+        <Footer />
       </div>
     );
   }

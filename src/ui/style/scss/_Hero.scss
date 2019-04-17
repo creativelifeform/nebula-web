@@ -23,12 +23,13 @@
 
     .blurb {
       h2 {
-        font-size: 3.5em;
-        margin-bottom: $padding-l;
+        font-size: 3.8em;
+        margin-bottom: $padding-xxl * 2;
       }
 
       p {
         font-size: 1.2em;
+        line-height: 1.4em;
         margin-bottom: $padding-l;
       }
     }

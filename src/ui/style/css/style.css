@@ -57,6 +57,13 @@ button.small {
     text-decoration: none;
     color: #eee; }
 
+.Footer {
+  position: relative;
+  text-align: center;
+  font-size: 0.8em; }
+  .Footer a {
+    color: #eee; }
+
 .Hero {
   text-align: center; }
   .Hero canvas {
@@ -79,10 +86,11 @@ button.small {
     height: calc(100vh - 60px);
     text-align: left; }
     .Hero .content .blurb h2 {
-      font-size: 3.5em;
-      margin-bottom: 20px; }
+      font-size: 3.8em;
+      margin-bottom: 60px; }
     .Hero .content .blurb p {
       font-size: 1.2em;
+      line-height: 1.4em;
       margin-bottom: 20px; }
     .Hero .content video {
       width: 100%;
