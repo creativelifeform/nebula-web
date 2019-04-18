@@ -36,6 +36,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Helmet title="You Are Doing Great" />
           <Header routes={routes} />
           <Switch>
             {routes.map(route => (
