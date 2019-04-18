@@ -1,18 +1,51 @@
-import { Footer, Header, Home } from './ui/components';
+import { About, Footer, Header, Home } from './ui/components';
 import React, { Component } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
+import Helmet from 'react-helmet';
 import style from './ui/style';
+
+const routes = [
+  {
+    title: 'Home',
+    path: '/',
+    component: Home,
+    exact: true,
+  },
+  {
+    title: 'About',
+    path: '/about',
+    component: About,
+  },
+  {
+    title: 'Pricing',
+    path: '/pricing',
+    component: About,
+  },
+  {
+    title: 'Guide',
+    path: '/guide',
+    component: About,
+  },
+];
 
 style();
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Home />
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <Header routes={routes} />
+          <Switch>
+            {routes.map(route => (
+              <Route key={route.title} {...route} />
+            ))}
+            <Route component={() => <div>404 File Not Found</div>} />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }

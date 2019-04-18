@@ -2,9 +2,9 @@ import Logo from './Logo';
 import Nav from './Nav';
 import React from 'react';
 
-export default () => (
+export default ({ routes }) => (
   <header className="Header">
     <Logo />
-    <Nav />
+    <Nav routes={routes} />
   </header>
 );

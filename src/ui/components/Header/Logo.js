@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 export default () => (
   <div className="Logo">
-    <a href="/">nebula</a>
+    <Link to="/">nebula</Link>
   </div>
 );
