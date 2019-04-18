@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
 import Visualisation from './Visualisation';
-import hero from '../../../assets/hero.png';
 
-export default class Hero extends Component {
+export default class Canvas extends Component {
   constructor(props) {
     super(props);
 
@@ -21,17 +20,7 @@ export default class Hero extends Component {
   };
 
   render() {
-    return (
-      <section className="Hero">
-        <div className="container">
-          <canvas ref={this.canvasRef} className="canvas" />
-          <section className="content">
-            <section>A WebGL Particle System Designer</section>
-            <img src={hero} alt="hero" className="image" />
-          </section>
-        </div>
-      </section>
-    );
+    return <canvas ref={this.canvasRef} className="canvas" />;
   }
 
   get canvas() {

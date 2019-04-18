@@ -1,11 +1,14 @@
 .Header {
   width: 100%;
-  padding: $padding-m;
+  padding: 0 $padding-l;
+  height: $header-h;
   background-color: $header-bg;
   font-family: $app-font-header;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
+  z-index: 2;
+  position: fixed;
 
   .Logo {
     font-weight: 700;
@@ -13,14 +16,20 @@
   }
 
   .Nav {
+    font-size: 0.9em;
+
     ul {
       li {
         display: inline-block;
-        margin-right: $padding-s;
+        margin-right: $padding-m;
       }
       li:last-child {
         margin-right: 0;
       }
+    }
+
+    button {
+      font-family: $app-font-header;
     }
   }
 

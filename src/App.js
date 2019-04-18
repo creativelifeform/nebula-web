@@ -1,4 +1,4 @@
-import { Blurb, Callout, Header, Hero } from './ui/components';
+import { Footer, Header, Home } from './ui/components';
 import React, { Component } from 'react';
 
 import style from './ui/style';
@@ -10,9 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Hero />
-        <Blurb />
-        <Callout />
+        <Home />
+        <Footer />
       </div>
     );
   }

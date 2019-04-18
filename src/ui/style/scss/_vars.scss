@@ -1,15 +1,22 @@
 $app-bg: #111;
 $app-color: #eee;
+$app-accent: #4202ff;
 $app-font: 'Dosis', sans-serif;
 $app-font-header: 'Dosis', sans-serif;
-$app-font-body: 'Lato', sans-serif;
+$app-font-body: 'Barlow', sans-serif;
+
+$header-h: 60px;
 $header-bg: #000;
 
 $hero-image-w: 2956px;
 $hero-image-h: 1804px;
 $hero-canvas-h: 500px;
 
+$button-bg: $app-accent;
+
 $padding-xs: 5px;
 $padding-s: 10px;
 $padding-m: 15px;
 $padding-l: 20px;
+$padding-xl: 25px;
+$padding-xxl: 30px;
