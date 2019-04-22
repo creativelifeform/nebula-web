@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default () => <section className="About">about</section>;
+export default () => <section className="Page About">about</section>;

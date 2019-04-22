@@ -1,33 +1,10 @@
-import { About, Footer, Header, Home } from './ui/components';
+import { Footer, Header } from './ui/components';
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Helmet from 'react-helmet';
+import routes from './routes';
 import style from './ui/style';
-
-const routes = [
-  {
-    title: 'Home',
-    path: '/',
-    component: Home,
-    exact: true,
-  },
-  {
-    title: 'About',
-    path: '/about',
-    component: About,
-  },
-  {
-    title: 'Pricing',
-    path: '/pricing',
-    component: About,
-  },
-  {
-    title: 'Guide',
-    path: '/guide',
-    component: About,
-  },
-];
 
 style();
 

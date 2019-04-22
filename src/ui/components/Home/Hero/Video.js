@@ -8,5 +8,6 @@ export default () => (
     autoPlay={true}
     loop={true}
     className="Video"
+    muted={true}
   />
 );

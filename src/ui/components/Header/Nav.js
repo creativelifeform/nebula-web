@@ -1,13 +1,14 @@
-import { NavLink, Route } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 export default ({ routes }) => (
   <nav className="Nav">
     <ul>
       {routes.map(({ path, title }, i) => (
-        <li>
-          <NavLink to={path}>{title}</NavLink>
+        <li key={i}>
+          <NavLink exact to={path}>
+            {title}
+          </NavLink>
         </li>
       ))}
       <li>
