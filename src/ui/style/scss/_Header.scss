@@ -22,7 +22,22 @@
       li {
         display: inline-block;
         margin-right: $padding-m;
+
+        a {
+          background: $header-bg;
+          padding: $padding-xs $padding-s;
+          border-radius: $padding-xs;
+        }
+
+        a:hover {
+          background: lighten($app-bg, 5);
+        }
+
+        a.active {
+          background: lighten($app-bg, 10);
+        }
       }
+
       li:last-child {
         margin-right: 0;
       }
@@ -36,5 +51,8 @@
   a {
     text-decoration: none;
     color: $app-color;
+  }
+
+  a.active {
   }
 }

@@ -15,6 +15,10 @@ export default class Canvas extends Component {
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentWillUnmount() {
+    this.visualisation.stop();
+  }
+
   handleResize = e => {
     this.visualisation.resize();
   };
