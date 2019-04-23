@@ -1,5 +1,8 @@
 .Page {
   padding: 0 $padding-l;
   padding-top: $header-h;
-  color: red;
+
+  .content {
+    padding: $padding-l 0;
+  }
 }

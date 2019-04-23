@@ -4,10 +4,10 @@ import React from 'react';
 export default ({ routes }) => (
   <nav className="Nav">
     <ul>
-      {routes.map(({ path, title }, i) => (
+      {routes.map(({ path, name }, i) => (
         <li key={i}>
           <NavLink exact to={path}>
-            {title}
+            {name}
           </NavLink>
         </li>
       ))}

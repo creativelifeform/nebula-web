@@ -32,8 +32,9 @@ button.small {
 
 .Page {
   padding: 0 20px;
-  padding-top: 60px;
-  color: red; }
+  padding-top: 60px; }
+  .Page .content {
+    padding: 20px 0; }
 
 .Header {
   width: 100%;
@@ -85,8 +86,7 @@ button.small {
     background: black;
     position: fixed;
     left: 0;
-    top: 0;
-    opacity: 0.5; }
+    top: 0; }
   .Hero .content {
     position: relative;
     display: grid;

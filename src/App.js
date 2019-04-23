@@ -2,7 +2,7 @@ import { Footer, Header } from './ui/components';
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import Helmet from 'react-helmet';
+import Title from './Title';
 import routes from './routes';
 import style from './ui/style';
 
@@ -12,8 +12,8 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Title routes={routes} />
         <div className="App">
-          <Helmet title="You Are Doing Great" />
           <Header routes={routes} />
           <Switch>
             {routes.map(route => (
