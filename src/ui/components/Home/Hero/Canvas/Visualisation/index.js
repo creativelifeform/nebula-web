@@ -12,6 +12,7 @@ export default class Visualization {
   constructor(canvas, data = DEFAULT_DATA) {
     this.canvas = canvas;
     this.data = data;
+    this.shouldAnimate = true;
   }
 
   /**
@@ -20,10 +21,22 @@ export default class Visualization {
    * @return {Promise<Visualization>}
    */
   start() {
+    this.shouldAnimate = true;
+
     return this.makeScene()
       .makeCamera()
       .makeWebGlRenderer()
       .makeParticleSystem();
+  }
+
+  /**
+   * Stops the visualisation.
+   *
+   * @return void
+   */
+  stop() {
+    this.shouldAnimate = false;
+    this.particleSystem.destroy();
   }
 
   /**
@@ -33,6 +46,10 @@ export default class Visualization {
    */
   render() {
     const animate = () => {
+      if (!this.shouldAnimate) {
+        return;
+      }
+
       requestAnimationFrame(animate);
 
       this.particleSystem.update();
@@ -109,7 +126,8 @@ export default class Visualization {
       canvas: { clientWidth, clientHeight },
     } = this;
 
-    this.webGlRenderer = new WebGLRenderer({ canvas, ...options });
+    this.webGlRenderer =
+      this.webGlRenderer || new WebGLRenderer({ canvas, ...options });
     this.webGlRenderer.setSize(clientWidth, clientHeight, false);
 
     return this;
