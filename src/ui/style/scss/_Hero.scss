@@ -20,28 +20,28 @@
     padding: 0 $padding-l;
     height: calc(100vh - #{$header-h});
     text-align: left;
+  }
 
-    .blurb {
-      h2 {
-        font-size: 3.8em;
-        margin-bottom: $padding-xxl * 2;
-      }
-
-      p {
-        font-size: 1.2em;
-        line-height: 1.4em;
-        margin-bottom: $padding-l;
-      }
+  .Blurb {
+    h2 {
+      font-size: 3.8em;
+      margin-bottom: $padding-xxl * 2;
     }
 
-    video {
-      width: 100%;
-      height: 75%;
+    p {
+      font-size: 1.2em;
+      line-height: 1.4em;
+      margin-bottom: $padding-l;
     }
+  }
 
-    img {
-      width: 100%;
-    }
+  video {
+    width: 100%;
+    height: 75%;
+  }
+
+  img {
+    width: 100%;
   }
 
   .container {

@@ -2,7 +2,7 @@ import Callout from './Callout';
 import React from 'react';
 
 export default () => (
-  <div className="blurb">
+  <div className="Blurb">
     <h2>Design particle systems for the web.</h2>
     <p>
       Craft rich, liquid smooth 3D particle systems for any JavaScript

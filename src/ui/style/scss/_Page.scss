@@ -2,7 +2,21 @@
   padding: 0 $padding-l;
   padding-top: $header-h;
 
-  .content {
-    padding: $padding-l 0;
+  .Content {
+    header {
+      text-align: center;
+    }
+
+    padding: $padding-letterbox;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &.Home {
+    padding: 0;
+
+    .Content {
+      padding: 0;
+    }
   }
 }

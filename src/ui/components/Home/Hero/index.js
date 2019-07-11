@@ -1,14 +1,16 @@
+import { Content, Grid } from '../../primitives';
+
 import Blurb from './Blurb';
 import Canvas from './Canvas';
 import React from 'react';
 import Video from './Video';
 
 export default () => (
-  <section className="Hero">
+  <Content className="Hero">
     <Canvas />
-    <section className="content">
+    <Grid>
       <Blurb />
       <Video />
-    </section>
-  </section>
+    </Grid>
+  </Content>
 );
