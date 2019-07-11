@@ -1,4 +1,4 @@
-import Callout from './Callout';
+import { Callout } from '../../primitives';
 import React from 'react';
 
 export default () => (

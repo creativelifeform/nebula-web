@@ -9,3 +9,14 @@ h3 {
   margin-bottom: $padding-xl;
   font-family: $app-font-header;
 }
+
+a {
+  color: $app-color;
+}
+
+.Code {
+  font-family: monospace;
+  background: lighten($app-bg, 10);
+  padding: 3px;
+  border-radius: 3px;
+}

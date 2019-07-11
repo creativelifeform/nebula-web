@@ -9,8 +9,8 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "reset-css": "^4.0.1",
-    "three": "^0.98.0",
-    "three-nebula": "^4.0.1"
+    "three": "^0.106.2",
+    "three-nebula": "^5.0.0-alpha"
   },
   "scripts": {
     "start": "react-scripts start | npm run scss:watch",

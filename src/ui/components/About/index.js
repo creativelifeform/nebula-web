@@ -1,4 +1,6 @@
 import {
+  Callout,
+  Code,
   Content,
   Grid,
   GridItem,
@@ -27,8 +29,11 @@ export default () => (
           <GridItemMedia />
           <GridItemDetails title="Develop">
             <p>
-              Include <a href="https://threejs.org">three</a> and three-nebula
-              in your JavaScript application
+              Include{' '}
+              <a href="https://threejs.org">
+                <Code>three</Code>
+              </a>{' '}
+              and three-nebula in your JavaScript application
             </p>
           </GridItemDetails>
         </GridItem>
@@ -42,6 +47,9 @@ export default () => (
           </GridItemDetails>
         </GridItem>
       </Grid>
+      <footer>
+        <Callout />
+      </footer>
     </Content>
   </Page>
 );
