@@ -10,6 +10,22 @@ h3 {
   font-family: $app-font-header;
 }
 
+h4 {
+  font-size: 1.1em;
+  margin-bottom: $padding-l;
+  font-family: $app-font-header;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: $padding-m;
+  font-family: $app-font-header;
+}
+
+b {
+  font-weight: 900;
+}
+
 a {
   color: $app-color;
 }
@@ -17,6 +33,10 @@ a {
 .Code {
   font-family: monospace;
   background: lighten($app-bg, 10);
-  padding: 3px;
+  padding: 4px;
   border-radius: 3px;
+
+  a {
+    // text-decoration: none;
+  }
 }

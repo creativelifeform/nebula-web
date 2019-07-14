@@ -11,6 +11,10 @@
       text-align: center;
     }
 
+    .main {
+      padding: $padding-xxl * 2 0;
+    }
+
     padding: $padding-letterbox;
     max-width: 1200px;
     margin: auto;
@@ -19,8 +23,47 @@
   &.Home {
     padding: 0;
 
-    .Content {
+    .Content,
+    .main {
       padding: 0;
+    }
+  }
+
+  &.Editions {
+    table {
+      td {
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      td,
+      th {
+        button {
+          margin-top: $padding-s;
+        }
+      }
+
+      th {
+        p {
+          height: 70px;
+        }
+      }
+
+      tr {
+        border-bottom: 1px solid #444;
+      }
+
+      button.disabled {
+        background: #333;
+        color: #777;
+      }
+
+      svg {
+        path {
+          fill: $app-accent;
+        }
+      }
     }
   }
 }

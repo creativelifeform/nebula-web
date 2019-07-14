@@ -13,6 +13,6 @@ export const Content = ({
         {description && <p>{description}</p>}
       </header>
     )}
-    {children}
+    <section className="main">{children}</section>
   </section>
 );

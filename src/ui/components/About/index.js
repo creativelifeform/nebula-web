@@ -7,6 +7,8 @@ import {
   GridItemDetails,
   GridItemMedia,
   Page,
+  ThreeLink,
+  ThreeNebulaLink,
 } from '../primitives/';
 import { DESC, TITLE } from './constants';
 
@@ -30,10 +32,14 @@ export default () => (
           <GridItemDetails title="Develop">
             <p>
               Include{' '}
-              <a href="https://threejs.org">
-                <Code>three</Code>
-              </a>{' '}
-              and three-nebula in your JavaScript application
+              <Code>
+                <ThreeLink />
+              </Code>
+              and{' '}
+              <Code>
+                <ThreeNebulaLink />
+              </Code>{' '}
+              in your JavaScript application
             </p>
           </GridItemDetails>
         </GridItem>
@@ -41,8 +47,11 @@ export default () => (
           <GridItemMedia />
           <GridItemDetails title="Deliver">
             <p>
-              Use three-nebula to render your particle system anywhere in your
-              app
+              Use{' '}
+              <Code>
+                <ThreeNebulaLink />
+              </Code>{' '}
+              to render your particle system anywhere in your app
             </p>
           </GridItemDetails>
         </GridItem>

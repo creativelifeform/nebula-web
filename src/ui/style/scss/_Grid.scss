@@ -11,11 +11,11 @@
       margin-bottom: $padding-xxl;
     }
     .Details {
+      line-height: 1.4em;
     }
   }
 
   &.About {
-    padding: $padding-xxl 0;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 72px 32px;
   }

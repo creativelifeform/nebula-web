@@ -1,4 +1,4 @@
-import { About, Guide, Home, Pricing } from '../ui/components';
+import { About, Editions, Guide, Home } from '../ui/components';
 
 export default [
   {
@@ -15,10 +15,10 @@ export default [
     component: About,
   },
   {
-    title: "Pricing For Nebula's Free and Pro Plans",
-    name: 'Pricing',
-    path: '/pricing',
-    component: Pricing,
+    title: 'The Different Flavours Of Nebula',
+    name: 'Editions',
+    path: '/editions',
+    component: Editions,
   },
   {
     title:

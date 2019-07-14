@@ -16,3 +16,8 @@ button:hover {
 button.small {
   padding: $padding-s $padding-xl;
 }
+
+button.xs {
+  padding: $padding-s $padding-l;
+  font-size: 0.9em;
+}
