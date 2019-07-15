@@ -1,3 +1,5 @@
+import { node, string } from 'prop-types';
+
 import React from 'react';
 
 export const Page = ({ children, className = '' }) => (
@@ -5,3 +7,8 @@ export const Page = ({ children, className = '' }) => (
 );
 
 export { Content } from './Content';
+
+Page.propTypes = {
+  children: node,
+  className: string,
+};

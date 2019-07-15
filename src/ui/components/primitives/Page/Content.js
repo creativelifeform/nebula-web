@@ -1,3 +1,5 @@
+import { node, string } from 'prop-types';
+
 import React from 'react';
 
 export const Content = ({
@@ -16,3 +18,10 @@ export const Content = ({
     <section className="main">{children}</section>
   </section>
 );
+
+Content.propTypes = {
+  children: node,
+  title: string,
+  description: string,
+  className: string,
+};

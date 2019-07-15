@@ -1,5 +1,6 @@
 button {
   background: $button-bg;
+  background: $button-gradient-purple;
   border: none;
   padding: $padding-m $padding-xl;
   border-radius: $padding-xs;
@@ -11,6 +12,7 @@ button {
 
 button:hover {
   background: darken($button-bg, 10);
+  background: $button-gradient-purple-hover;
 }
 
 button.small {

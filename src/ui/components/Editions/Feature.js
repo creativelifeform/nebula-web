@@ -1,3 +1,5 @@
+import { bool, oneOfType, string } from 'prop-types';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -22,8 +24,20 @@ export const Feature = ({ title, text, inAlpha, inCommunity, inPro }) => (
       <h5>{title}</h5>
       <p>{text}</p>
     </td>
-    {[inAlpha, inCommunity, inPro].map(hasFeature => (
-      <Edition hasFeature={hasFeature} />
+    {[inAlpha, inCommunity, inPro].map((hasFeature, i) => (
+      <Edition key={i} hasFeature={hasFeature} />
     ))}
   </tr>
 );
+
+Edition.propTypes = {
+  hasFeature: oneOfType([bool, string]),
+};
+
+Feature.propTypes = {
+  title: string,
+  text: string,
+  inAlpha: bool,
+  inCommunity: bool,
+  inPro: bool,
+};

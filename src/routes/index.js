@@ -28,3 +28,5 @@ export default [
     component: Guide,
   },
 ];
+
+export { default as ScrollToTop } from './ScrollToTop';

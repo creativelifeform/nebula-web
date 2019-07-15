@@ -9,14 +9,14 @@ export const FEATURES = [
   {
     title: 'Projects',
     text: 'The number of projects you can have',
-    inAlpha: 'Unlimited (local)',
+    inAlpha: 'Unlimited (local only)',
     inCommunity: '5 (cloud)',
     inPro: 'Unlimited (cloud)',
   },
   {
-    title: 'Orion Access',
+    title: 'Voyager Access',
     text:
-      'Access to the Orion community platform when you can download, and share your particle systems with others',
+      'Access to the Voyager community platform when you can download, and share your particle systems with others',
     inAlpha: false,
     inCommunity: true,
     inPro: true,

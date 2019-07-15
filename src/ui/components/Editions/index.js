@@ -47,6 +47,9 @@ export default () => (
           ))}
         </tbody>
       </table>
+      <p className="center disclaimer">
+        * Pricing and features subject to change without notice
+      </p>
     </Content>
   </Page>
 );

@@ -13,6 +13,18 @@ $hero-image-h: 1804px;
 $hero-canvas-h: 500px;
 
 $button-bg: $app-accent;
+$button-gradient-purple: radial-gradient(circle at top right, #4202ff, #a400c1);
+$button-gradient-purple-hover: radial-gradient(
+  circle at top right,
+  darken(#4202ff, 10),
+  darken(#a400c1, 10)
+);
+$button-gradient-blue: radial-gradient(circle at top right, #4202ff, #0280ff);
+$button-gradient-blue-hover: radial-gradient(
+  circle at top right,
+  darken(#4202ff, 10),
+  darken(#a400c1, 10)
+);
 
 $padding-xs: 5px;
 $padding-s: 10px;

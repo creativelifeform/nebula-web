@@ -1,3 +1,5 @@
+import { bool, node } from 'prop-types';
+
 import React from 'react';
 
 export const Code = ({ children, inline = true }) =>
@@ -6,3 +8,8 @@ export const Code = ({ children, inline = true }) =>
   ) : (
     <div className="Code">{children}</div>
   );
+
+Code.propTypes = {
+  children: node,
+  inline: bool,
+};

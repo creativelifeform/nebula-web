@@ -1,3 +1,5 @@
+import { node, string } from 'prop-types';
+
 import React from 'react';
 
 export const Grid = ({ children, className = '' }) => (
@@ -5,3 +7,8 @@ export const Grid = ({ children, className = '' }) => (
 );
 
 export { GridItem, GridItemMedia, GridItemDetails } from './Item';
+
+Grid.propTypes = {
+  children: node,
+  className: string,
+};
