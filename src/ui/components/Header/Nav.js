@@ -1,19 +1,27 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+
+import { DOWNLOAD_PATH } from '../../../routes/constants';
 import React from 'react';
 
-export default ({ routes }) => (
+const Nav = ({ routes, history }) => (
   <nav className="Nav">
     <ul>
-      {routes.map(({ path, name }, i) => (
-        <li key={i}>
-          <NavLink exact to={path}>
-            {name}
-          </NavLink>
-        </li>
-      ))}
+      {routes.map(({ path, name, shouldHideFromNav }, i) =>
+        shouldHideFromNav ? null : (
+          <li key={i}>
+            <NavLink exact to={path}>
+              {name}
+            </NavLink>
+          </li>
+        )
+      )}
       <li>
-        <button className="small">Download</button>
+        <button onClick={() => history.push(DOWNLOAD_PATH)} className="small">
+          Download
+        </button>
       </li>
     </ul>
   </nav>
 );
+
+export default withRouter(Nav);

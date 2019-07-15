@@ -1,0 +1,46 @@
+h2 {
+  font-size: 1.5em;
+  margin-bottom: $padding-xxl;
+  font-family: $app-font-header;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: $padding-xl;
+  font-family: $app-font-header;
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: $padding-l;
+  font-family: $app-font-header;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: $padding-m;
+  font-family: $app-font-header;
+}
+
+b {
+  font-weight: 900;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  color: $app-color;
+}
+
+.Code {
+  font-family: monospace;
+  background: lighten($app-bg, 10);
+  padding: 4px;
+  border-radius: 3px;
+
+  a {
+    // text-decoration: none;
+  }
+}

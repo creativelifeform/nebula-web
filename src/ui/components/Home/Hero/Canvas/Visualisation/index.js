@@ -1,7 +1,10 @@
+import * as THREE from 'three';
+
 import ParticleSystem, { SpriteRenderer } from 'three-nebula';
-import { PerspectiveCamera, Scene, WebGLRenderer } from 'three';
 
 import { test as DEFAULT_DATA } from './data.js';
+
+const { PerspectiveCamera, Scene, WebGLRenderer } = THREE;
 
 /**
  * Sets up three js and particle system environment so that they can be rendered
@@ -135,10 +138,10 @@ export default class Visualization {
 
   makeParticleSystem() {
     return new Promise(resolve => {
-      ParticleSystem.fromJSONAsync(this.data.particleSystemState)
+      ParticleSystem.fromJSONAsync(this.data.particleSystemState, THREE)
         .then(particleSystem => {
           this.particleSystem = particleSystem;
-          particleSystem.addRenderer(new SpriteRenderer(this.scene));
+          particleSystem.addRenderer(new SpriteRenderer(this.scene, THREE));
 
           return resolve(this.render());
         })

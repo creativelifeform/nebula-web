@@ -4,7 +4,9 @@ import App from './App';
 import React from 'react';
 import { render } from 'react-snapshot';
 
-render(<App />, document.getElementById('root'));
+const rootNode = document.getElementById('root');
+
+render(<App />, rootNode);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

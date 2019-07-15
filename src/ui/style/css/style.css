@@ -1,3 +1,38 @@
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  font-family: "Dosis", sans-serif; }
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  font-family: "Dosis", sans-serif; }
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-family: "Dosis", sans-serif; }
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 15px;
+  font-family: "Dosis", sans-serif; }
+
+b {
+  font-weight: 900; }
+
+.center {
+  text-align: center; }
+
+a {
+  color: #eee; }
+
+.Code {
+  font-family: monospace;
+  background: #2b2b2b;
+  padding: 4px;
+  border-radius: 3px; }
+
 html,
 body,
 main,
@@ -14,8 +49,22 @@ html {
 *:after {
   box-sizing: inherit; }
 
+.Table {
+  width: 100%;
+  text-align: left; }
+  .Table tr th p b {
+    display: block;
+    margin-bottom: 10px; }
+  .Table tr td,
+  .Table tr th {
+    max-width: 100px;
+    padding: 15px 0; }
+  .Table tr {
+    border-bottom: 1px solid white; }
+
 button {
   background: #4202ff;
+  background: radial-gradient(circle at top right, #4202ff, #a400c1);
   border: none;
   padding: 15px 25px;
   border-radius: 5px;
@@ -25,16 +74,77 @@ button {
   font-family: "Dosis", sans-serif; }
 
 button:hover {
-  background: #3400ce; }
+  background: #3400ce;
+  background: radial-gradient(circle at top right, #3400ce, #79008e); }
 
 button.small {
   padding: 10px 25px; }
 
+button.xs {
+  padding: 10px 20px;
+  font-size: 0.9em; }
+
 .Page {
   padding: 0 20px;
   padding-top: 60px; }
-  .Page .content {
-    padding: 20px 0; }
+  .Page .Content {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: auto; }
+    .Page .Content header {
+      text-align: center; }
+    .Page .Content footer {
+      text-align: center; }
+    .Page .Content .main {
+      padding: 60px 0; }
+  .Page.Home {
+    padding: 0; }
+    .Page.Home .Content,
+    .Page.Home .main {
+      padding: 0; }
+  .Page.Editions table td p {
+    font-size: 0.9em; }
+  .Page.Editions table td button,
+  .Page.Editions table th button {
+    margin-top: 10px; }
+  .Page.Editions table th p {
+    height: 70px; }
+  .Page.Editions table tr {
+    border-bottom: 1px solid #444; }
+  .Page.Editions table button.disabled {
+    background: #333;
+    color: #777; }
+  .Page.Editions table svg path {
+    fill: #4202ff; }
+  .Page.Editions .disclaimer {
+    padding: 15px 0;
+    font-size: 0.8em; }
+
+.Grid {
+  display: grid;
+  margin: auto; }
+  .Grid .Item .Media {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    background: #4202ff;
+    margin-bottom: 30px; }
+  .Grid .Item .Details {
+    line-height: 1.4em; }
+  .Grid.About {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 72px 32px; }
+
+.Hero .Grid {
+  position: relative;
+  grid-template-columns: 1fr 1.8fr;
+  grid-gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  height: calc(100vh - 60px);
+  text-align: left; }
 
 .Header {
   width: 100%;
@@ -74,7 +184,9 @@ button.small {
 .Footer {
   position: relative;
   text-align: center;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  padding: 25px 0;
+  opacity: 0.6; }
   .Footer a {
     color: #eee; }
 
@@ -86,7 +198,8 @@ button.small {
     background: black;
     position: fixed;
     left: 0;
-    top: 0; }
+    top: 0;
+    opacity: 0.5; }
   .Hero .content {
     position: relative;
     display: grid;
@@ -98,18 +211,18 @@ button.small {
     padding: 0 20px;
     height: calc(100vh - 60px);
     text-align: left; }
-    .Hero .content .blurb h2 {
-      font-size: 3.8em;
-      margin-bottom: 60px; }
-    .Hero .content .blurb p {
-      font-size: 1.2em;
-      line-height: 1.4em;
-      margin-bottom: 20px; }
-    .Hero .content video {
-      width: 100%;
-      height: 75%; }
-    .Hero .content img {
-      width: 100%; }
+  .Hero .Blurb h2 {
+    font-size: 3.8em;
+    margin-bottom: 60px; }
+  .Hero .Blurb p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin-bottom: 20px; }
+  .Hero video {
+    width: 100%;
+    height: 75%; }
+  .Hero img {
+    width: 100%; }
   .Hero .container {
     position: relative; }
     .Hero .container .content {

@@ -1,4 +1,6 @@
-import { About, Guide, Home, Pricing } from '../ui/components';
+import { About, Download, Editions, Guide, Home } from '../ui/components';
+
+import { DOWNLOAD_PATH } from './constants';
 
 export default [
   {
@@ -15,10 +17,10 @@ export default [
     component: About,
   },
   {
-    title: "Pricing For Nebula's Free and Pro Plans",
-    name: 'Pricing',
-    path: '/pricing',
-    component: Pricing,
+    title: 'The Different Flavours Of Nebula',
+    name: 'Editions',
+    path: '/editions',
+    component: Editions,
   },
   {
     title:
@@ -27,4 +29,14 @@ export default [
     path: '/guide',
     component: Guide,
   },
+  {
+    title: 'Download Nebula for Windows, Mac or Linux Today',
+    name: 'Download',
+    path: '/download',
+    component: Download,
+    shouldHideFromNav: true,
+  },
 ];
+
+export { default as ScrollToTop } from './ScrollToTop';
+export { DOWNLOAD_PATH };
