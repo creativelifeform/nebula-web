@@ -5,14 +5,14 @@ import React from 'react';
 export const Content = ({
   children,
   title = null,
-  description = null,
+  text = null,
   className = '',
 }) => (
   <section className={`Content ${className}`}>
     {title && (
       <header>
         <h2>{title}</h2>
-        {description && <p>{description}</p>}
+        {text && <p>{text}</p>}
       </header>
     )}
     <section className="main">{children}</section>
@@ -22,6 +22,6 @@ export const Content = ({
 Content.propTypes = {
   children: node,
   title: string,
-  description: string,
+  text: string,
   className: string,
 };

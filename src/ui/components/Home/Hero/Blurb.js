@@ -8,6 +8,6 @@ export default () => (
       Visually design rich, eye-catching 3D particle systems and effects for any
       JavaScript application on Windows, Mac or Linux.
     </p>
-    <Callout />
+    <Callout text={'Try Nebula For Free'} />
   </div>
 );

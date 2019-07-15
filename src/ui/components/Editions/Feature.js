@@ -34,10 +34,12 @@ Edition.propTypes = {
   hasFeature: oneOfType([bool, string]),
 };
 
+const inEdition = oneOfType([string, bool]);
+
 Feature.propTypes = {
   title: string,
   text: string,
-  inAlpha: bool,
-  inCommunity: bool,
-  inPro: bool,
+  inAlpha: inEdition,
+  inCommunity: inEdition,
+  inPro: inEdition,
 };

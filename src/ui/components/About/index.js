@@ -10,13 +10,13 @@ import {
   ThreeLink,
   ThreeNebulaLink,
 } from '../primitives/';
-import { DESC, TITLE } from './constants';
+import { TEXT, TITLE } from './constants';
 
 import React from 'react';
 
 export default () => (
   <Page className="About">
-    <Content title={TITLE} description={DESC}>
+    <Content title={TITLE} text={TEXT}>
       <Grid className="About">
         <GridItem>
           <GridItemMedia />
@@ -57,7 +57,7 @@ export default () => (
         </GridItem>
       </Grid>
       <footer>
-        <Callout />
+        <Callout text={'Try Nebula For Free'} />
       </footer>
     </Content>
   </Page>

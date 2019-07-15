@@ -1,14 +1,18 @@
-import { Content, Page } from '../primitives/';
+import { Callout, Content, Page } from '../primitives/';
 
 import { FEATURES } from './constants';
 import { Feature } from './Feature';
 import React from 'react';
 
+const ComingSoon = () => (
+  <Callout className="xs disabled" text="Coming Soon" onClick={() => {}} />
+);
+
 export default () => (
   <Page className="Editions">
     <Content
       title="Editions"
-      description="All the different ways you can start designing 3D particle systems for the web with Nebula"
+      text="All the different ways you can start designing 3D particle systems for the web with Nebula"
     >
       <table className="Table">
         <thead>
@@ -22,14 +26,14 @@ export default () => (
               <p>
                 <b>Free & stable</b> But comes with limited features.
               </p>
-              <button className="xs">Download</button>
+              <Callout className="xs" />
             </th>
             <th>
               <h4>Community*</h4>
               <p>
                 <b>Free!</b> Great for getting started with Nebula.
               </p>
-              <button className="xs disabled">Coming Soon</button>
+              <ComingSoon />
             </th>
             <th>
               <h4>Pro*</h4>
@@ -37,13 +41,13 @@ export default () => (
                 <b>$5 per account/month</b>The definitive edition with the
                 latest features.
               </p>
-              <button className="xs disabled">Coming Soon</button>
+              <ComingSoon />
             </th>
           </tr>
         </thead>
         <tbody>
-          {FEATURES.map(props => (
-            <Feature {...props} />
+          {FEATURES.map((props, i) => (
+            <Feature key={i} {...props} />
           ))}
         </tbody>
       </table>

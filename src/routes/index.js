@@ -1,4 +1,6 @@
-import { About, Editions, Guide, Home } from '../ui/components';
+import { About, Download, Editions, Guide, Home } from '../ui/components';
+
+import { DOWNLOAD_PATH } from './constants';
 
 export default [
   {
@@ -27,6 +29,14 @@ export default [
     path: '/guide',
     component: Guide,
   },
+  {
+    title: 'Download Nebula for Windows, Mac or Linux Today',
+    name: 'Download',
+    path: '/download',
+    component: Download,
+    shouldHideFromNav: true,
+  },
 ];
 
 export { default as ScrollToTop } from './ScrollToTop';
+export { DOWNLOAD_PATH };
