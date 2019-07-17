@@ -2,8 +2,9 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 import { DOWNLOAD_PATH } from '../../../routes/constants';
 import React from 'react';
+import { withContent } from '../utils';
 
-const Nav = ({ routes, history }) => (
+const Nav = ({ routes, history, content: { callout } }) => (
   <nav className="Nav">
     <ul>
       {routes.map(({ path, name, shouldHideFromNav }, i) =>
@@ -17,11 +18,11 @@ const Nav = ({ routes, history }) => (
       )}
       <li>
         <button onClick={() => history.push(DOWNLOAD_PATH)} className="small">
-          Download
+          {callout.small}
         </button>
       </li>
     </ul>
   </nav>
 );
 
-export default withRouter(Nav);
+export default withRouter(withContent(Nav));
