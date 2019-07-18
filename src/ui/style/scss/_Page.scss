@@ -40,9 +40,13 @@
         margin: $padding-xxl * 2 0;
         background: darken($app-bg, 2);
         text-align: center;
+        height: 400px;
+        display: flex;
+        justify-content: center;
       }
 
       .Form {
+        align-self: center;
         a {
           display: inline-block;
           margin-top: $padding-l;
@@ -92,7 +96,7 @@
 
       svg {
         path {
-          fill: $app-accent;
+          fill: $app-accent-alt;
         }
       }
     }

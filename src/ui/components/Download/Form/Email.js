@@ -17,6 +17,7 @@ export class Email extends Component {
           type="email"
           placeholder="alex@example.com"
           onChange={this.handleChange}
+          disabled={this.props.loading ? true : false}
         />
         <button type="submit" onClick={this.props.onSubmit}>
           {this.props.loading && <Spinner />}

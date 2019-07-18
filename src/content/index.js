@@ -6,7 +6,7 @@ export default {
   home: {
     title: 'Design particle systems for the web.',
     text:
-      'Design rich, eye-catching 3D particle systems and effects for any JavaScript application on Windows, Mac or Linux.',
+      'Design rich, eye-catching 3D particle systems and effects for any JavaScript application on Windows, Mac or Linux — with Nebula.',
   },
   about: {
     title: 'About Nebula',

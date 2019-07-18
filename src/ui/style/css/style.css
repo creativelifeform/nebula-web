@@ -124,6 +124,28 @@ button.xs,
   border: none;
   border-radius: 5px; }
 
+.Form .PlatformSelect .SelectWrap {
+  position: relative;
+  margin-left: 10px;
+  display: inline-block;
+  border-bottom: 1px dotted #eee; }
+  .Form .PlatformSelect .SelectWrap select {
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    background: none;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    color: #eee;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  .Form .PlatformSelect .SelectWrap .arrow {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    pointer-events: none; }
+
 .Form .EmailWithButton {
   height: 40px;
   margin-top: 20px; }
@@ -168,10 +190,15 @@ button.xs,
       .Page.Download .Content .main {
         margin: 60px 0;
         background: #0c0c0c;
-        text-align: center; }
-      .Page.Download .Content .Form a {
-        display: inline-block;
-        margin-top: 20px; }
+        text-align: center;
+        height: 400px;
+        display: flex;
+        justify-content: center; }
+      .Page.Download .Content .Form {
+        align-self: center; }
+        .Page.Download .Content .Form a {
+          display: inline-block;
+          margin-top: 20px; }
   .Page.Home {
     padding: 0; }
     .Page.Home .Content,
@@ -190,7 +217,7 @@ button.xs,
     background: #333;
     color: #777; }
   .Page.Editions table svg path {
-    fill: #4202ff; }
+    fill: #a400c1; }
   .Page.Editions .disclaimer {
     padding: 15px 0;
     font-size: 0.8em; }

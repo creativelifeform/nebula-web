@@ -2,6 +2,8 @@ import { About, Download, Editions, Guide, Home } from '../ui/components';
 
 import { DOWNLOAD_PATH } from './constants';
 
+const shouldHideFromNav = true;
+
 export default [
   {
     title: 'Nebula - A 3D Particle System Designer For The Web',
@@ -28,13 +30,14 @@ export default [
     name: 'Guide',
     path: '/guide',
     component: Guide,
+    shouldHideFromNav,
   },
   {
     title: 'Download Nebula for Windows, Mac or Linux Today',
     name: 'Download',
     path: '/download',
     component: Download,
-    shouldHideFromNav: true,
+    shouldHideFromNav,
   },
 ];
 

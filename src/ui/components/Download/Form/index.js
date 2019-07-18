@@ -7,7 +7,7 @@ import { mapValueToKey } from '../../../../common/utils';
 
 const mockApiRequest = data =>
   new Promise(resolve => {
-    setTimeout(() => resolve(data), 200000);
+    setTimeout(() => resolve(data), 2000);
   });
 
 export class Form extends Component {
