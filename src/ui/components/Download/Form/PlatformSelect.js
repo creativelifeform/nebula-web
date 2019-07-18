@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { func, string } from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PLATFORMS } from '../constants';
@@ -33,3 +34,8 @@ export class PlatformSelect extends Component {
     );
   }
 }
+
+PlatformSelect.propTypes = {
+  initialValue: string.isRequired,
+  onSelect: func.isRequired,
+};

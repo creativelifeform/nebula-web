@@ -2,6 +2,7 @@ import { Content, Page } from '../primitives';
 
 import { Form } from './Form/';
 import React from 'react';
+import { object } from 'prop-types';
 import { withContent } from '../utils';
 
 const Download = ({ content: { download } }) => (
@@ -11,5 +12,9 @@ const Download = ({ content: { download } }) => (
     </Content>
   </Page>
 );
+
+Download.propTypes = {
+  content: object.isRequired,
+};
 
 export default withContent(Download);

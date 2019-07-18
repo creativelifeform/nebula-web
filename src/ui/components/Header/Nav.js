@@ -1,4 +1,5 @@
 import { NavLink, withRouter } from 'react-router-dom';
+import { array, object } from 'prop-types';
 
 import { DOWNLOAD_PATH } from '../../../routes/constants';
 import React from 'react';
@@ -24,5 +25,11 @@ const Nav = ({ routes, history, content: { callout } }) => (
     </ul>
   </nav>
 );
+
+Nav.propTypes = {
+  routes: array.isRequired,
+  history: object.isRequired,
+  content: object.isRequired,
+};
 
 export default withRouter(withContent(Nav));

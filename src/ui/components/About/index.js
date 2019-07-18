@@ -12,6 +12,7 @@ import {
 } from '../primitives/';
 
 import React from 'react';
+import { object } from 'prop-types';
 import { withContent } from '../utils';
 
 const About = ({ content: { about, callout } }) => (
@@ -62,5 +63,9 @@ const About = ({ content: { about, callout } }) => (
     </Content>
   </Page>
 );
+
+About.propTypes = {
+  content: object.isRequired,
+};
 
 export default withContent(About);

@@ -1,12 +1,10 @@
 import { Callout, Content, Page } from '../primitives/';
 
+import { ComingSoon } from './ComingSoon';
 import { Feature } from './Feature';
 import React from 'react';
+import { object } from 'prop-types';
 import { withContent } from '../utils';
-
-const ComingSoon = () => (
-  <Callout className="xs disabled" text="Coming Soon" onClick={() => {}} />
-);
 
 const Editions = ({
   content: {
@@ -58,5 +56,9 @@ const Editions = ({
     </Content>
   </Page>
 );
+
+Editions.propTypes = {
+  content: object.isRequired,
+};
 
 export default withContent(Editions);

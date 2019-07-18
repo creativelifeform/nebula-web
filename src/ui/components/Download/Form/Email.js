@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { bool, func } from 'prop-types';
 
 import { Spinner } from './Spinner';
 
@@ -27,3 +28,9 @@ export class Email extends Component {
     );
   }
 }
+
+Email.propTypes = {
+  loading: bool.isRequired,
+  onEmail: func.isRequired,
+  onSubmit: func.isRequired,
+};
