@@ -1,14 +1,20 @@
 import { Content, Page } from '../primitives';
-import { linux, macos, windows } from 'platform-detect/os.mjs';
+import { PLATFORM, PLATFORMS } from './constants';
 
 import { Email } from './Email';
+import { PlatformSelect } from './PlatformSelect';
 import React from 'react';
+import { mapValueToKey } from '../../../common/utils';
+import os from 'platform-detect/os.mjs';
 import { withContent } from '../utils';
 
 const Download = ({ content: { download } }) => (
-  <Page className="Page Download">
+  <Page className="Download">
     <Content {...download}>
-      <Email />
+      <form>
+        <PlatformSelect initialValue={mapValueToKey(PLATFORMS, PLATFORM)} />
+        <Email />
+      </form>
     </Content>
   </Page>
 );

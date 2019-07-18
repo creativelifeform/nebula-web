@@ -20,6 +20,28 @@
     margin: auto;
   }
 
+  .full-width {
+  }
+
+  &.Download {
+    padding-left: 0;
+    padding-right: 0;
+
+    .Content {
+      header,
+      .main,
+      footer {
+        padding-left: $padding-l;
+        padding-right: $padding-l;
+      }
+      .main {
+        margin: $padding-xxl * 2 0;
+        background: darken($app-bg, 2);
+        text-align: center;
+      }
+    }
+  }
+
   &.Home {
     padding: 0;
 
