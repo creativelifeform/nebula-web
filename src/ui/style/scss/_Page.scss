@@ -28,6 +28,8 @@
     padding-right: 0;
 
     .Content {
+      max-width: 100%;
+
       header,
       .main,
       footer {
@@ -38,6 +40,13 @@
         margin: $padding-xxl * 2 0;
         background: darken($app-bg, 2);
         text-align: center;
+      }
+
+      .Form {
+        a {
+          display: inline-block;
+          margin-top: $padding-l;
+        }
       }
     }
   }

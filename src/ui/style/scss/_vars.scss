@@ -1,6 +1,8 @@
 $app-bg: #111;
 $app-color: #eee;
 $app-accent: #4202ff;
+$app-accent-alt: #a400c1;
+// $app-accent-alt: #0280ff;
 $app-font: 'Dosis', sans-serif;
 $app-font-header: 'Dosis', sans-serif;
 $app-font-body: 'Barlow', sans-serif;
@@ -12,18 +14,20 @@ $hero-image-w: 2956px;
 $hero-image-h: 1804px;
 $hero-canvas-h: 500px;
 
+$input-submit-h: 40px;
+$input-submit-w: 75px;
+$spinner-w: 20px;
+
 $button-bg: $app-accent;
-$button-gradient-purple: radial-gradient(circle at top right, #4202ff, #a400c1);
-$button-gradient-purple-hover: radial-gradient(
+$button-gradient: radial-gradient(
   circle at top right,
-  darken(#4202ff, 10),
-  darken(#a400c1, 10)
+  $app-accent,
+  $app-accent-alt
 );
-$button-gradient-blue: radial-gradient(circle at top right, #4202ff, #0280ff);
-$button-gradient-blue-hover: radial-gradient(
+$button-gradient-hover: radial-gradient(
   circle at top right,
-  darken(#4202ff, 10),
-  darken(#a400c1, 10)
+  darken($app-accent, 10),
+  darken($app-accent-alt, 10)
 );
 
 $padding-xs: 5px;
@@ -33,3 +37,5 @@ $padding-l: 20px;
 $padding-xl: 25px;
 $padding-xxl: 30px;
 $padding-letterbox: $padding-xxl * 2 0;
+
+$radius-s: 5px;

@@ -1,0 +1,34 @@
+.Form {
+  input {
+    padding: $padding-s;
+    border: none;
+    border-radius: $radius-s;
+  }
+
+  .EmailWithButton {
+    height: $input-submit-h;
+    margin-top: $padding-l;
+
+    input,
+    button {
+      display: inline-block;
+      height: $input-submit-h;
+      vertical-align: middle;
+    }
+
+    input {
+      width: 250px;
+      border-radius: $radius-s 0px 0px $radius-s;
+    }
+
+    button {
+      padding: $padding-s;
+      border-radius: 0px $radius-s $radius-s 0px;
+      width: $input-submit-w;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+}

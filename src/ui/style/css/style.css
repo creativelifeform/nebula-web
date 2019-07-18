@@ -21,6 +21,13 @@ h5 {
 b {
   font-weight: 900; }
 
+form {
+  font-family: "Barlow", sans-serif; }
+  form input,
+  form select {
+    font-family: "Barlow", sans-serif;
+    font-size: 1em; }
+
 .center {
   text-align: center; }
 
@@ -62,7 +69,8 @@ html {
   .Table tr {
     border-bottom: 1px solid white; }
 
-button {
+button,
+.button {
   background: #4202ff;
   background: radial-gradient(circle at top right, #4202ff, #a400c1);
   border: none;
@@ -73,16 +81,66 @@ button {
   cursor: pointer;
   font-family: "Dosis", sans-serif; }
 
-button:hover {
+button:hover,
+.button:hover {
   background: #3400ce;
   background: radial-gradient(circle at top right, #3400ce, #79008e); }
 
-button.small {
+button.small,
+.button.small {
   padding: 10px 25px; }
 
-button.xs {
+button.xs,
+.button.xs {
   padding: 10px 20px;
   font-size: 0.9em; }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg); } }
+
+.SpinnerWrap {
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+.Spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #b49bff;
+  border-top-color: #a400c1;
+  animation: spinner 0.6s linear infinite; }
+
+.Form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px; }
+
+.Form .EmailWithButton {
+  height: 40px;
+  margin-top: 20px; }
+  .Form .EmailWithButton input,
+  .Form .EmailWithButton button {
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle; }
+  .Form .EmailWithButton input {
+    width: 250px;
+    border-radius: 5px 0px 0px 5px; }
+  .Form .EmailWithButton button {
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    width: 75px; }
+  .Form .EmailWithButton a {
+    display: inline-block; }
 
 .Page {
   padding: 0 20px;
@@ -100,15 +158,20 @@ button.xs {
   .Page.Download {
     padding-left: 0;
     padding-right: 0; }
-    .Page.Download .Content header,
-    .Page.Download .Content .main,
-    .Page.Download .Content footer {
-      padding-left: 20px;
-      padding-right: 20px; }
-    .Page.Download .Content .main {
-      margin: 60px 0;
-      background: #0c0c0c;
-      text-align: center; }
+    .Page.Download .Content {
+      max-width: 100%; }
+      .Page.Download .Content header,
+      .Page.Download .Content .main,
+      .Page.Download .Content footer {
+        padding-left: 20px;
+        padding-right: 20px; }
+      .Page.Download .Content .main {
+        margin: 60px 0;
+        background: #0c0c0c;
+        text-align: center; }
+      .Page.Download .Content .Form a {
+        display: inline-block;
+        margin-top: 20px; }
   .Page.Home {
     padding: 0; }
     .Page.Home .Content,
