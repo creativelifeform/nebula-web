@@ -20,6 +20,41 @@
     margin: auto;
   }
 
+  .full-width {
+  }
+
+  &.Download {
+    padding-left: 0;
+    padding-right: 0;
+
+    .Content {
+      max-width: 100%;
+
+      header,
+      .main,
+      footer {
+        padding-left: $padding-l;
+        padding-right: $padding-l;
+      }
+      .main {
+        margin: $padding-xxl * 2 0;
+        background: darken($app-bg, 2);
+        text-align: center;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .Form {
+        align-self: center;
+        a {
+          display: inline-block;
+          margin-top: $padding-l;
+        }
+      }
+    }
+  }
+
   &.Home {
     padding: 0;
 
@@ -61,7 +96,7 @@
 
       svg {
         path {
-          fill: $app-accent;
+          fill: $app-accent-alt;
         }
       }
     }

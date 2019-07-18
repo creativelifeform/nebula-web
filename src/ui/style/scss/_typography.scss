@@ -26,6 +26,16 @@ b {
   font-weight: 900;
 }
 
+form {
+  font-family: $app-font-body;
+
+  input,
+  select {
+    font-family: $app-font-body;
+    font-size: 1em;
+  }
+}
+
 .center {
   text-align: center;
 }

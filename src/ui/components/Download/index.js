@@ -1,12 +1,20 @@
 import { Content, Page } from '../primitives';
 
+import { Form } from './Form/';
 import React from 'react';
+import { object } from 'prop-types';
+import { withContent } from '../utils';
 
-export default () => (
-  <Page className="Page Download">
-    <Content
-      title="Download"
-      text="Download Nebula for Windows, Mac or Linux Today"
-    />
+const Download = ({ content: { download } }) => (
+  <Page className="Download">
+    <Content {...download}>
+      <Form />
+    </Content>
   </Page>
 );
+
+Download.propTypes = {
+  content: object.isRequired,
+};
+
+export default withContent(Download);

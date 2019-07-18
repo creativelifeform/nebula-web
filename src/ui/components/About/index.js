@@ -10,13 +10,14 @@ import {
   ThreeLink,
   ThreeNebulaLink,
 } from '../primitives/';
-import { TEXT, TITLE } from './constants';
 
 import React from 'react';
+import { object } from 'prop-types';
+import { withContent } from '../utils';
 
-export default () => (
+const About = ({ content: { about, callout } }) => (
   <Page className="About">
-    <Content title={TITLE} text={TEXT}>
+    <Content {...about}>
       <Grid className="About">
         <GridItem>
           <GridItemMedia />
@@ -57,8 +58,14 @@ export default () => (
         </GridItem>
       </Grid>
       <footer>
-        <Callout text={'Try Nebula For Free'} />
+        <Callout text={callout.large} />
       </footer>
     </Content>
   </Page>
 );
+
+About.propTypes = {
+  content: object.isRequired,
+};
+
+export default withContent(About);

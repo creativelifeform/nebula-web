@@ -1,19 +1,18 @@
 import { Callout, Content, Page } from '../primitives/';
 
-import { FEATURES } from './constants';
+import { ComingSoon } from './ComingSoon';
 import { Feature } from './Feature';
 import React from 'react';
+import { object } from 'prop-types';
+import { withContent } from '../utils';
 
-const ComingSoon = () => (
-  <Callout className="xs disabled" text="Coming Soon" onClick={() => {}} />
-);
-
-export default () => (
+const Editions = ({
+  content: {
+    editions: { title, text, features },
+  },
+}) => (
   <Page className="Editions">
-    <Content
-      title="Editions"
-      text="All the different ways you can start designing 3D particle systems for the web with Nebula"
-    >
+    <Content title={title} text={text}>
       <table className="Table">
         <thead>
           <tr>
@@ -46,7 +45,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-          {FEATURES.map((props, i) => (
+          {features.map((props, i) => (
             <Feature key={i} {...props} />
           ))}
         </tbody>
@@ -57,3 +56,9 @@ export default () => (
     </Content>
   </Page>
 );
+
+Editions.propTypes = {
+  content: object.isRequired,
+};
+
+export default withContent(Editions);
