@@ -12,7 +12,7 @@
     }
 
     .main {
-      padding: $padding-xxl * 2 0;
+      padding-top: $padding-xxl * 2;
     }
 
     padding: $padding-letterbox;
@@ -109,6 +109,27 @@
 }
 
 @media all and (min-width: 15em) {
+  .Page {
+    &.Editions {
+      table {
+        text-align: center;
+        th {
+          p {
+            display: none;
+          }
+
+          button {
+            font-size: 0.8em;
+            padding: 5px 10px;
+          }
+        }
+
+        td {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
 }
 
 @media all and (min-width: 35em) {
@@ -118,6 +139,27 @@
 }
 
 @media all and (min-width: 45em) {
+  .Page {
+    &.Editions {
+      table {
+        text-align: left;
+        th {
+          p {
+            display: block;
+          }
+
+          button {
+            font-size: 1em;
+            padding: 10px 20px;
+          }
+        }
+
+        td {
+          font-size: 1em;
+        }
+      }
+    }
+  }
 }
 
 @media all and (min-width: 60em) {

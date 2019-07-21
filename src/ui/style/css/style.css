@@ -176,7 +176,7 @@ button.xs,
     .Page .Content footer {
       text-align: center; }
     .Page .Content .main {
-      padding: 60px 0; }
+      padding-top: 60px; }
   .Page.Download {
     padding-left: 0;
     padding-right: 0; }
@@ -221,6 +221,28 @@ button.xs,
   .Page.Editions .disclaimer {
     padding: 15px 0;
     font-size: 0.8em; }
+
+@media all and (min-width: 15em) {
+  .Page.Editions table {
+    text-align: center; }
+    .Page.Editions table th p {
+      display: none; }
+    .Page.Editions table th button {
+      font-size: 0.8em;
+      padding: 5px 10px; }
+    .Page.Editions table td {
+      font-size: 0.8em; } }
+
+@media all and (min-width: 45em) {
+  .Page.Editions table {
+    text-align: left; }
+    .Page.Editions table th p {
+      display: block; }
+    .Page.Editions table th button {
+      font-size: 1em;
+      padding: 10px 20px; }
+    .Page.Editions table td {
+      font-size: 1em; } }
 
 .Grid {
   display: grid;
