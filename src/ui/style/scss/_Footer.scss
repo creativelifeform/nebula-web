@@ -2,7 +2,7 @@
   position: relative;
   text-align: center;
   font-size: 0.8em;
-  padding: $padding-xl 0;
+
   opacity: 0.6;
 
   a {
@@ -11,6 +11,9 @@
 }
 
 @media all and (min-width: 15em) {
+  .Footer {
+    padding: 0;
+  }
 }
 
 @media all and (min-width: 35em) {
@@ -20,6 +23,9 @@
 }
 
 @media all and (min-width: 45em) {
+  .Footer {
+    padding: $padding-xl 0;
+  }
 }
 
 @media all and (min-width: 60em) {

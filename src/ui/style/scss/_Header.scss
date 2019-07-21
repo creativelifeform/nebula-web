@@ -28,7 +28,6 @@
 
         a {
           background: $header-bg;
-          padding: $padding-xs $padding-s;
           border-radius: $padding-xs;
         }
 
@@ -82,8 +81,13 @@
 
           a {
             display: block;
-            padding: $padding-m;
+            padding: $padding-s;
             text-align: center;
+          }
+
+          a.active {
+            background: black;
+            text-decoration: underline;
           }
         }
 
@@ -119,6 +123,15 @@
         li {
           display: inline-block;
           margin-right: $padding-m;
+
+          a.active {
+            text-decoration: none;
+            background: lighten($app-bg, 10);
+          }
+        }
+
+        li.has-button {
+          padding: 0;
         }
       }
     }

@@ -36,6 +36,17 @@
 }
 
 @media all and (min-width: 15em) {
+  .Grid {
+    display: block;
+  }
+
+  .Hero {
+    .Grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 @media all and (min-width: 35em) {
@@ -45,6 +56,15 @@
 }
 
 @media all and (min-width: 45em) {
+  .Grid {
+    display: grid;
+  }
+
+  .Hero {
+    .Grid {
+      display: grid;
+    }
+  }
 }
 
 @media all and (min-width: 60em) {

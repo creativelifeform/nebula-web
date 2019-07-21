@@ -23,13 +23,7 @@
   }
 
   .Blurb {
-    h2 {
-      font-size: 3.8em;
-      margin-bottom: $padding-xxl * 2;
-    }
-
     p {
-      font-size: 1.1em;
       line-height: 1.4em;
       margin-bottom: $padding-l;
     }
@@ -79,6 +73,22 @@
 }
 
 @media all and (min-width: 15em) {
+  .Hero {
+    .Blurb {
+      text-align: center;
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+    video {
+      display: none;
+    }
+  }
 }
 
 @media all and (min-width: 35em) {
@@ -88,6 +98,23 @@
 }
 
 @media all and (min-width: 45em) {
+  .Hero {
+    .Blurb {
+      text-align: left;
+
+      h2 {
+        font-size: 3.8em;
+        margin-bottom: $padding-xxl * 2;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+    video {
+      display: block;
+    }
+  }
 }
 
 @media all and (min-width: 60em) {
