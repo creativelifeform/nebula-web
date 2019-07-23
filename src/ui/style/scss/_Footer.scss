@@ -12,7 +12,8 @@
 
 @media all and (min-width: 15em) {
   .Footer {
-    padding: 0;
+    padding: $padding-m;
+    padding-top: 0;
   }
 }
 
@@ -24,7 +25,7 @@
 
 @media all and (min-width: 45em) {
   .Footer {
-    padding: $padding-xl 0;
+    padding: $padding-xl $padding-m;
   }
 }
 

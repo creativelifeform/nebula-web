@@ -36,13 +36,14 @@
         padding-left: $padding-l;
         padding-right: $padding-l;
       }
+
       .main {
         margin: $padding-xxl * 2 0;
         background: darken($app-bg, 2);
         text-align: center;
-        height: 400px;
         display: flex;
         justify-content: center;
+        padding: 0;
       }
 
       .Form {
@@ -100,11 +101,11 @@
         }
       }
     }
+  }
 
-    .disclaimer {
-      padding: $padding-m 0;
-      font-size: 0.8em;
-    }
+  .disclaimer {
+    padding: $padding-m 0;
+    font-size: 0.8em;
   }
 }
 
@@ -126,6 +127,14 @@
 
         td {
           font-size: 0.8em;
+        }
+      }
+    }
+
+    &.Download {
+      .Content {
+        .main {
+          height: 200px;
         }
       }
     }
@@ -156,6 +165,13 @@
 
         td {
           font-size: 1em;
+        }
+      }
+    }
+    &.Download {
+      .Content {
+        .main {
+          height: 400px;
         }
       }
     }

@@ -45,14 +45,16 @@ a {
 }
 
 .Code {
-  font-family: monospace;
+  color: rgb(221, 221, 221);
+  font-size: 0.8em;
+  font-family: Input, 'SF Mono', Menlo, Monaco, Courier, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
   background: lighten($app-bg, 10);
-  padding: 4px;
-  border-radius: 3px;
-
-  a {
-    // text-decoration: none;
-  }
+  padding: 0.3em 0.4em;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.04);
 }
 
 @media all and (min-width: 15em) {

@@ -29,13 +29,13 @@ export default {
         inCommunity: 'Unlimited',
         inPro: 'Unlimited',
       },
-      // {
-      //   title: 'Projects',
-      //   text: 'The number of projects you can have',
-      //   inAlpha: 'Local: unlimitied, Cloud: 0',
-      //   inCommunity: 'Local: unlimited, Cloud: 5',
-      //   inPro: 'Local: unlimited, Cloud: unlimited',
-      // },
+      {
+        title: 'Projects',
+        text: 'The number of projects you can have',
+        inAlpha: 'Local: unlimitied, Cloud: 0',
+        inCommunity: 'Local: unlimited, Cloud: 5',
+        inPro: 'Local: unlimited, Cloud: unlimited',
+      },
       {
         title: 'Voyager Access',
         text:

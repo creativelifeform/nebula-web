@@ -41,6 +41,7 @@ class Nav extends Component {
       content: { callout },
     } = this.props;
     const { mobileMenuIsActive } = this.state;
+    const activeClass = mobileMenuIsActive ? 'active' : '';
 
     return (
       <nav className="Nav">
@@ -48,25 +49,27 @@ class Nav extends Component {
           isOpen={mobileMenuIsActive}
           toggle={this.handleMobileMenuToggle}
         />
-        <ul className={`${mobileMenuIsActive ? 'active' : ''}`}>
-          {routes.map(({ path, name, shouldHideFromNav }, i) =>
-            shouldHideFromNav ? null : (
-              <li key={i}>
-                <NavLink exact to={path}>
-                  {name}
-                </NavLink>
-              </li>
-            )
-          )}
-          <li className="has-button">
-            <button
-              onClick={() => history.push(DOWNLOAD_PATH)}
-              className="small"
-            >
-              {callout.small}
-            </button>
-          </li>
-        </ul>
+        <div className={`ul-container ${activeClass}`}>
+          <ul className={`${activeClass}`}>
+            {routes.map(({ path, name, shouldHideFromNav }, i) =>
+              shouldHideFromNav ? null : (
+                <li key={i}>
+                  <NavLink exact to={path}>
+                    {name}
+                  </NavLink>
+                </li>
+              )
+            )}
+            <li className="has-button">
+              <button
+                onClick={() => history.push(DOWNLOAD_PATH)}
+                className="small"
+              >
+                {callout.small}
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
     );
   }

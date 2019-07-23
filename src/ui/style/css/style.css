@@ -35,10 +35,16 @@ a {
   color: #eee; }
 
 .Code {
-  font-family: monospace;
+  color: #dddddd;
+  font-size: 0.8em;
+  font-family: Input, 'SF Mono', Menlo, Monaco, Courier, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
   background: #2b2b2b;
-  padding: 4px;
-  border-radius: 3px; }
+  padding: 0.3em 0.4em;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.04); }
 
 html,
 body,
@@ -155,7 +161,6 @@ button.xs,
     height: 40px;
     vertical-align: middle; }
   .Form .EmailWithButton input {
-    width: 250px;
     border-radius: 5px 0px 0px 5px; }
   .Form .EmailWithButton button {
     padding: 10px;
@@ -191,9 +196,9 @@ button.xs,
         margin: 60px 0;
         background: #0c0c0c;
         text-align: center;
-        height: 400px;
         display: flex;
-        justify-content: center; }
+        justify-content: center;
+        padding: 0; }
       .Page.Download .Content .Form {
         align-self: center; }
         .Page.Download .Content .Form a {
@@ -218,7 +223,7 @@ button.xs,
     color: #777; }
   .Page.Editions table svg path {
     fill: #a400c1; }
-  .Page.Editions .disclaimer {
+  .Page .disclaimer {
     padding: 15px 0;
     font-size: 0.8em; }
 
@@ -231,7 +236,9 @@ button.xs,
       font-size: 0.8em;
       padding: 5px 10px; }
     .Page.Editions table td {
-      font-size: 0.8em; } }
+      font-size: 0.8em; }
+  .Page.Download .Content .main {
+    height: 200px; } }
 
 @media all and (min-width: 45em) {
   .Page.Editions table {
@@ -242,7 +249,9 @@ button.xs,
       font-size: 1em;
       padding: 10px 20px; }
     .Page.Editions table td {
-      font-size: 1em; } }
+      font-size: 1em; }
+  .Page.Download .Content .main {
+    height: 400px; } }
 
 .Grid {
   display: grid;
@@ -273,6 +282,8 @@ button.xs,
 @media all and (min-width: 15em) {
   .Grid {
     display: block; }
+    .Grid .Item {
+      margin-bottom: 30px; }
   .Hero .Grid {
     display: flex;
     align-items: center;
@@ -322,38 +333,67 @@ button.xs,
 @media all and (min-width: 15em) {
   .Header .Nav .fa-bars {
     cursor: pointer; }
+  .Header .Nav .ul-container {
+    background: black;
+    position: absolute;
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 0;
+    display: none; }
   .Header .Nav ul {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 60px;
     width: 100%;
-    background: black; }
+    margin-top: -60px; }
     .Header .Nav ul li {
       display: block;
       margin: 0;
       text-align: center; }
       .Header .Nav ul li a {
         display: block;
-        padding: 10px;
-        text-align: center; }
+        padding: 20px;
+        text-align: center;
+        border-radius: 0;
+        font-size: 1.5em; }
+      .Header .Nav ul li a:hover {
+        background: black;
+        color: #7b4fff; }
       .Header .Nav ul li a.active {
         background: black;
         text-decoration: underline; }
     .Header .Nav ul li.has-button {
       padding: 15px 0; }
   .Header .Nav ul.active {
-    display: block; } }
+    display: block; }
+  .Header .Nav .ul-container.active {
+    display: flex; } }
 
 @media all and (min-width: 45em) {
   .Header .Nav .Hamburger {
     display: none; }
+  .Header .Nav .ul-container {
+    background: none;
+    position: static;
+    display: block;
+    top: 0;
+    height: auto; }
   .Header .Nav ul {
     display: block;
-    position: static; }
+    position: static;
+    margin-top: 0px; }
     .Header .Nav ul li {
       display: inline-block;
       margin-right: 15px; }
+      .Header .Nav ul li a {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1em; }
+      .Header .Nav ul li a:hover {
+        color: #eee;
+        background: #1e1e1e; }
       .Header .Nav ul li a.active {
         text-decoration: none;
         background: #2b2b2b; }
@@ -370,11 +410,12 @@ button.xs,
 
 @media all and (min-width: 15em) {
   .Footer {
-    padding: 0; } }
+    padding: 15px;
+    padding-top: 0; } }
 
 @media all and (min-width: 45em) {
   .Footer {
-    padding: 25px 0; } }
+    padding: 25px 15px; } }
 
 .Hero {
   text-align: center; }
@@ -430,9 +471,9 @@ button.xs,
   .Hero .Blurb {
     text-align: center; }
     .Hero .Blurb h2 {
-      font-size: 1.5em; }
+      font-size: 1.2em; }
     .Hero .Blurb p {
-      font-size: 1em; }
+      font-size: 0.9em; }
   .Hero video {
     display: none; } }
 

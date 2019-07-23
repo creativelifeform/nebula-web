@@ -38,6 +38,10 @@
 @media all and (min-width: 15em) {
   .Grid {
     display: block;
+
+    .Item {
+      margin-bottom: $padding-xxl;
+    }
   }
 
   .Hero {

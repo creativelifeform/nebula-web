@@ -68,6 +68,10 @@ export class Form extends Component {
             </a>
           </div>
         )}
+        <div className="disclaimer">
+          We will only send you Nebula product updates, <br />
+          we will <b>never</b> spam you. Unsubscribe at any time!
+        </div>
       </div>
     );
   }
