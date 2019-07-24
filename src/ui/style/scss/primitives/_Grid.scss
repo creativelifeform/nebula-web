@@ -34,3 +34,33 @@
     text-align: left;
   }
 }
+
+@include phone {
+  .Grid {
+    display: block;
+
+    .Item {
+      margin-bottom: $padding-xxl;
+    }
+  }
+
+  .Hero {
+    .Grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@include tablet {
+  .Grid {
+    display: grid;
+  }
+
+  .Hero {
+    .Grid {
+      display: grid;
+    }
+  }
+}

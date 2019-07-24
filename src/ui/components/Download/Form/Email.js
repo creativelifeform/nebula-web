@@ -16,7 +16,7 @@ export class Email extends Component {
       <div className="EmailWithButton">
         <input
           type="email"
-          placeholder="alex@example.com"
+          placeholder="name@example.com"
           onChange={this.handleChange}
           disabled={this.props.loading ? true : false}
         />

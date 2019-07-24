@@ -45,12 +45,35 @@ a {
 }
 
 .Code {
-  font-family: monospace;
+  color: rgb(221, 221, 221);
+  font-size: 0.8em;
+  font-family: Input, 'SF Mono', Menlo, Monaco, Courier, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
   background: lighten($app-bg, 10);
-  padding: 4px;
-  border-radius: 3px;
+  padding: 0.3em 0.4em;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.04);
+}
 
-  a {
-    // text-decoration: none;
-  }
+@media all and (min-width: 15em) {
+}
+
+@media all and (min-width: 35em) {
+}
+
+@media all and (min-width: 40em) {
+}
+
+@media all and (min-width: 45em) {
+}
+
+@media all and (min-width: 60em) {
+}
+
+@media all and (min-width: 70em) {
+}
+
+@media all and (min-width: 80em) {
 }

@@ -1,16 +1,25 @@
+import { func, object, string } from 'prop-types';
+
 import { DOWNLOAD_PATH } from '../../../routes/constants';
 import React from 'react';
 import { withRouter } from 'react-router';
 
-const component = ({
+const Component = ({
   text = 'Download',
   className = '',
-  onClick = e => history.push(DOWNLOAD_PATH),
   history,
+  onClick = e => history.push(DOWNLOAD_PATH),
 }) => (
   <button onClick={onClick} className={className}>
     {text}
   </button>
 );
 
-export const Callout = withRouter(component);
+Component.propTypes = {
+  text: string,
+  className: string,
+  history: object,
+  onClick: func,
+};
+
+export const Callout = withRouter(Component);

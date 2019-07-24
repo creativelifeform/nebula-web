@@ -1,3 +1,12 @@
+.Page.Home {
+  padding: 0;
+
+  .Content,
+  .main {
+    padding: 0;
+  }
+}
+
 .Hero {
   canvas {
     width: 100vw;
@@ -23,13 +32,7 @@
   }
 
   .Blurb {
-    h2 {
-      font-size: 3.8em;
-      margin-bottom: $padding-xxl * 2;
-    }
-
     p {
-      font-size: 1.1em;
       line-height: 1.4em;
       margin-bottom: $padding-l;
     }
@@ -53,7 +56,6 @@
       top: 10%;
       left: 50%;
       text-align: center;
-
       font-size: 2em;
 
       .content-wrap {
@@ -76,4 +78,53 @@
   }
 
   text-align: center;
+}
+
+@include phone {
+  .Hero {
+    .Blurb {
+      text-align: center;
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+    }
+    video {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .Hero {
+    .Blurb {
+      text-align: left;
+
+      h2 {
+        font-size: 2.8em;
+        margin-bottom: $padding-xxl * 2;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+    video {
+      display: block;
+    }
+  }
+}
+
+@include desktop {
+  .Hero {
+    .Blurb {
+      h2 {
+        font-size: 3.8em;
+      }
+    }
+  }
 }

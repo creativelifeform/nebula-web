@@ -50,7 +50,7 @@ const Editions = ({
           ))}
         </tbody>
       </table>
-      <p className="center disclaimer">
+      <p className="center Disclaimer">
         * Pricing and features subject to change without notice
       </p>
     </Content>
