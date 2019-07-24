@@ -4,9 +4,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import routes, { ScrollToTop } from './routes';
 
 import Title from './Title';
-import style from './ui/style';
-
-style();
+import style from './ui/style'; // eslint-disable-line
 
 class App extends Component {
   render() {
