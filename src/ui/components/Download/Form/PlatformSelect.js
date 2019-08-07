@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PLATFORMS } from '../constants';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+const PLATFORM_KEYS = Object.keys(PLATFORMS);
+
 export class PlatformSelect extends Component {
   state = {
     value: this.props.initialValue,
   };
 
   handleChange = ({ target: { value } }) =>
-    this.setState({ value }, () => this.props.onSelect(PLATFORMS[value]));
+    this.setState({ value }, () => this.props.onSelect(value));
 
   render() {
     return (
@@ -19,9 +21,9 @@ export class PlatformSelect extends Component {
         Please enter your email to download Nebula for
         <div className="SelectWrap">
           <select onChange={this.handleChange} value={this.state.value}>
-            {Object.keys(PLATFORMS).map((platform, i) => (
-              <option key={i} value={platform}>
-                {PLATFORMS[platform]}
+            {PLATFORM_KEYS.map((platform, i) => (
+              <option key={i} value={PLATFORMS[platform]}>
+                {PLATFORM_KEYS[i]}
               </option>
             ))}
           </select>

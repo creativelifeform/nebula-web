@@ -1,14 +1,9 @@
-import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 
+import Api from '../../../../api';
 import { Email } from './Email';
+import { PLATFORM } from '../constants';
 import { PlatformSelect } from './PlatformSelect';
-import { mapValueToKey } from '../../../../common/utils';
-
-const mockApiRequest = data =>
-  new Promise(resolve => {
-    setTimeout(() => resolve(data), 2000);
-  });
 
 export class Form extends Component {
   state = {
@@ -26,12 +21,11 @@ export class Form extends Component {
   handleOnSubmit = () => {
     const { platform, email } = this.state;
 
+    console.log(this.state);
+
     this.setState({ loading: true }, async () => {
       try {
-        const data = await mockApiRequest({
-          version: '1.0.0',
-          link: 'https://example.com',
-        });
+        const data = await Api.sendSignupRequest({ platform, email });
 
         console.log(data);
 
@@ -50,7 +44,7 @@ export class Form extends Component {
         <form onSubmit={e => e.preventDefault()}>
           <PlatformSelect
             onSelect={this.handleOnSelect}
-            initialValue={mapValueToKey(PLATFORMS, PLATFORM)}
+            initialValue={PLATFORM}
           />
           {!data && (
             <Email
