@@ -1,9 +1,11 @@
+import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 
 import Api from '../../../../api';
 import { Email } from './Email';
-import { PLATFORM } from '../constants';
+import { Error } from './Error';
 import { PlatformSelect } from './PlatformSelect';
+import { mapValueToKey } from '../../../../common/utils';
 
 export class Form extends Component {
   state = {
@@ -14,24 +16,21 @@ export class Form extends Component {
     loading: false,
   };
 
-  handleOnSelect = platform => this.setState({ platform, data: null });
+  handleOnSelect = platform =>
+    this.setState({ platform, data: null, error: null });
 
   handleOnEmail = email => this.setState({ email });
 
   handleOnSubmit = () => {
     const { platform, email } = this.state;
 
-    console.log(this.state);
-
-    this.setState({ loading: true }, async () => {
+    this.setState({ loading: true, error: null }, async () => {
       try {
         const data = await Api.sendSignupRequest({ platform, email });
 
-        console.log(data);
-
         this.setState({ data, loading: false });
       } catch (error) {
-        this.setState({ loading: false, error });
+        this.setState({ loading: false, error: error.json });
       }
     });
   };
@@ -58,10 +57,11 @@ export class Form extends Component {
         {data && (
           <div>
             <a className="button" href={data.link} download={data.link}>
-              Download Nebula v{data.version} for {platform}
+              Download Nebula for {mapValueToKey(PLATFORMS, platform)}
             </a>
           </div>
         )}
+        {error && <Error json={error} />}
         <div className="Disclaimer">
           We will only send you Nebula product updates, <br />
           we will <b>never</b> spam you. Unsubscribe at any time!
