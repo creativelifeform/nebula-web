@@ -1,21 +1,21 @@
 import os from 'platform-detect/os.mjs';
 
 export const PLATFORMS = {
-  linux: 'Linux',
-  windows: 'Windows',
-  macos: 'MacOS',
+  Linux: 'linux',
+  Windows: 'win',
+  MacOS: 'osx',
 };
 
 export const PLATFORM = (() => {
   if (os.linux) {
-    return 'Linux';
+    return 'linux';
   }
 
   if (os.windows) {
-    return 'Windows';
+    return 'win';
   }
 
   if (os.macos) {
-    return 'MacOS';
+    return 'osx';
   }
 })();

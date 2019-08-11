@@ -27,6 +27,18 @@
         display: inline-block;
         margin-top: $padding-l;
       }
+
+      .Error {
+        margin-top: $padding-m;
+        padding: $padding-m;
+        font-size: 0.9em;
+        background: $app-error;
+        border-radius: $radius-s;
+
+        span.message {
+          padding-left: $padding-s;
+        }
+      }
     }
   }
 }
@@ -35,7 +47,7 @@
   .Page.Download {
     .Content {
       .main {
-        height: 200px;
+        height: 300px;
       }
     }
   }

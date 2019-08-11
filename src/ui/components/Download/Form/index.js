@@ -1,14 +1,11 @@
 import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 
+import Api from '../../../../api';
 import { Email } from './Email';
+import { Error } from './Error';
 import { PlatformSelect } from './PlatformSelect';
 import { mapValueToKey } from '../../../../common/utils';
-
-const mockApiRequest = data =>
-  new Promise(resolve => {
-    setTimeout(() => resolve(data), 2000);
-  });
 
 export class Form extends Component {
   state = {
@@ -19,25 +16,21 @@ export class Form extends Component {
     loading: false,
   };
 
-  handleOnSelect = platform => this.setState({ platform, data: null });
+  handleOnSelect = platform =>
+    this.setState({ platform, data: null, error: null });
 
   handleOnEmail = email => this.setState({ email });
 
   handleOnSubmit = () => {
     const { platform, email } = this.state;
 
-    this.setState({ loading: true }, async () => {
+    this.setState({ loading: true, error: null }, async () => {
       try {
-        const data = await mockApiRequest({
-          version: '1.0.0',
-          link: 'https://example.com',
-        });
-
-        console.log(data);
+        const data = await Api.sendSignupRequest({ platform, email });
 
         this.setState({ data, loading: false });
       } catch (error) {
-        this.setState({ loading: false, error });
+        this.setState({ loading: false, error: error.json });
       }
     });
   };
@@ -50,7 +43,7 @@ export class Form extends Component {
         <form onSubmit={e => e.preventDefault()}>
           <PlatformSelect
             onSelect={this.handleOnSelect}
-            initialValue={mapValueToKey(PLATFORMS, PLATFORM)}
+            initialValue={PLATFORM}
           />
           {!data && (
             <Email
@@ -64,10 +57,11 @@ export class Form extends Component {
         {data && (
           <div>
             <a className="button" href={data.link} download={data.link}>
-              Download Nebula v{data.version} for {platform}
+              Download Nebula for {mapValueToKey(PLATFORMS, platform)}
             </a>
           </div>
         )}
+        {error && <Error json={error} />}
         <div className="Disclaimer">
           We will only send you Nebula product updates, <br />
           we will <b>never</b> spam you. Unsubscribe at any time!

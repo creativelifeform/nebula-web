@@ -482,10 +482,18 @@ button.xs,
       .Page.Download .Content .Form a {
         display: inline-block;
         margin-top: 20px; }
+      .Page.Download .Content .Form .Error {
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 0.9em;
+        background: red;
+        border-radius: 5px; }
+        .Page.Download .Content .Form .Error span.message {
+          padding-left: 10px; }
 
 @media (min-width: 15em) {
   .Page.Download .Content .main {
-    height: 200px; } }
+    height: 300px; } }
 
 @media (min-width: 45em) {
   .Page.Download .Content .main {
