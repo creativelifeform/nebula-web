@@ -10,7 +10,9 @@ export default class Canvas extends Component {
   }
 
   async componentDidMount() {
-    this.visualisation = await new Visualisation(this.canvas).start();
+    if (this.canCreateWebGLContext) {
+      this.visualisation = await new Visualisation(this.canvas).start();
+    }
 
     window.addEventListener('resize', this.handleResize);
   }
@@ -25,6 +27,10 @@ export default class Canvas extends Component {
 
   render() {
     return <canvas ref={this.canvasRef} className="canvas" />;
+  }
+
+  get canCreateWebGLContext() {
+    return navigator.userAgent !== 'ReactSnap';
   }
 
   get canvas() {

@@ -11,3 +11,4 @@ export const TEST_EMAIL = REACT_APP_TEST_EMAIL;
 export const __DEV__ = NODE_ENV === 'development';
 export const __PROD__ = NODE_ENV === 'production';
 export const __TEST__ = NODE_ENV === 'test';
+export const __SNAP__ = NODE_ENV === 'snap';
