@@ -59,7 +59,8 @@
     "not op_mini all"
   ],
   "reactSnap": {
-    "skipThirdPartyRequests": true
+    "skipThirdPartyRequests": true,
+    "fixWebpackChunksIssue": false
   },
   "devDependencies": {
     "eslint-plugin-import": "^2.14.0",

@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const prepare = data => {
   data.particleSystemState.emitters.forEach(emitter => {
     emitter.totalEmitTimes = Infinity;

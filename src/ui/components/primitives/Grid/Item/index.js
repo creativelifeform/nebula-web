@@ -1,6 +1,5 @@
-import { node, string } from 'prop-types';
-
 import React from 'react';
+import { node } from 'prop-types';
 
 export const GridItem = ({ children }) => (
   <div className="Item">{children}</div>

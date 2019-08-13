@@ -16,7 +16,7 @@ class App extends Component {
             <Header routes={routes} />
             <Switch>
               {routes.map(route => (
-                <Route key={route.title} {...route} />
+                <Route key={route.name} {...route} />
               ))}
               <Route component={NotFound} />
             </Switch>
