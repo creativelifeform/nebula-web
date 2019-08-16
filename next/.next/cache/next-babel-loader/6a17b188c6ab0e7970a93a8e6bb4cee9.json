@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const DOWNLOAD_PATH = \"/download\";","map":{"version":3,"sources":["/Users/rohandeshpande/Projects/nebula-web/next/common/constants.js"],"names":["DOWNLOAD_PATH"],"mappings":"AAAA,OAAO,MAAMA,aAAa,GAAG,WAAtB","sourcesContent":["export const DOWNLOAD_PATH = \"/download\";\n"]},"metadata":{},"sourceType":"module"}

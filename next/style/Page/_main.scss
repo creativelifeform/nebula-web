@@ -1,0 +1,22 @@
+.Page {
+  padding: 0 $padding-l;
+  padding-top: $header-h;
+
+  .Content {
+    header {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    .main {
+      padding-top: $padding-xxl * 2;
+    }
+
+    padding: $padding-letterbox;
+    max-width: 1200px;
+    margin: auto;
+  }
+}

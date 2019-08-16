@@ -1,0 +1,571 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  font-family: "Dosis", sans-serif; }
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  font-family: "Dosis", sans-serif; }
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-family: "Dosis", sans-serif; }
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 15px;
+  font-family: "Dosis", sans-serif; }
+
+b {
+  font-weight: 900; }
+
+form {
+  font-family: "Barlow", sans-serif; }
+  form input,
+  form select {
+    font-family: "Barlow", sans-serif;
+    font-size: 1em; }
+
+.center {
+  text-align: center; }
+
+a {
+  color: #eee; }
+
+.Code {
+  color: #dddddd;
+  font-size: 0.8em;
+  font-family: Input, 'SF Mono', Menlo, Monaco, Courier, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: #2b2b2b;
+  padding: 0.3em 0.4em;
+  border-radius: 0.4em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.04); }
+
+html,
+body,
+main,
+.App {
+  font-family: "Barlow", sans-serif;
+  background-color: #111;
+  color: #eee; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+button,
+.button {
+  outline: none;
+  background: #4202ff;
+  background: radial-gradient(circle at top right, #4202ff, #a400c1);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Dosis", sans-serif; }
+
+button:hover,
+.button:hover {
+  background: #3400ce;
+  background: radial-gradient(circle at top right, #3400ce, #79008e); }
+
+button.small,
+.button.small {
+  padding: 10px 25px; }
+
+button.xs,
+.button.xs {
+  padding: 10px 20px;
+  font-size: 0.9em; }
+
+.Form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px; }
+
+.Form .PlatformSelect .SelectWrap {
+  position: relative;
+  margin-left: 10px;
+  display: inline-block;
+  border-bottom: 1px dotted #eee; }
+  .Form .PlatformSelect .SelectWrap select {
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    background: none;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    color: #eee;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  .Form .PlatformSelect .SelectWrap .arrow {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    pointer-events: none; }
+
+.Form .EmailWithButton {
+  height: 40px;
+  margin-top: 20px; }
+  .Form .EmailWithButton input,
+  .Form .EmailWithButton button {
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle; }
+  .Form .EmailWithButton input {
+    border-radius: 5px 0px 0px 5px; }
+  .Form .EmailWithButton button {
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    width: 75px; }
+  .Form .EmailWithButton a {
+    display: inline-block; }
+
+.Table {
+  width: 100%;
+  text-align: left; }
+  .Table tr th p b {
+    display: block;
+    margin-bottom: 10px; }
+  .Table tr td,
+  .Table tr th {
+    max-width: 100px;
+    padding: 15px 0; }
+  .Table tr {
+    border-bottom: 1px solid white; }
+
+.Grid {
+  display: grid;
+  margin: auto; }
+  .Grid .Item .Media {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    background: #4202ff;
+    margin-bottom: 30px; }
+  .Grid .Item .Details {
+    line-height: 1.4em; }
+  .Grid.About {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 72px 32px; }
+
+.Hero .Grid {
+  position: relative;
+  grid-template-columns: 1fr 1.8fr;
+  grid-gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  height: calc(100vh - 60px);
+  text-align: left; }
+
+@media (min-width: 15em) {
+  .Grid {
+    display: block; }
+    .Grid .Item {
+      margin-bottom: 30px; }
+  .Hero .Grid {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+@media (min-width: 45em) {
+  .Grid {
+    display: grid; }
+  .Hero .Grid {
+    display: grid; } }
+
+.Disclaimer {
+  padding: 15px 0;
+  font-size: 0.8em; }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg); } }
+
+.SpinnerWrap {
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+.Spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #b49bff;
+  border-top-color: #a400c1;
+  animation: spinner 0.6s linear infinite; }
+
+.Header {
+  width: 100%;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #000;
+  font-family: "Dosis", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  position: fixed; }
+  .Header a {
+    text-decoration: none;
+    color: #eee; }
+
+.Logo {
+  font-weight: 700;
+  font-size: 1.2em; }
+
+.Nav {
+  font-size: 0.9em; }
+  .Nav .Hamburger {
+    cursor: pointer; }
+  .Nav ul li {
+    display: inline-block; }
+    .Nav ul li a {
+      background: #000;
+      border-radius: 5px; }
+    .Nav ul li a:hover {
+      background: #1e1e1e; }
+    .Nav ul li a.active {
+      background: #2b2b2b; }
+  .Nav ul li:last-child {
+    margin-right: 0; }
+  .Nav button {
+    font-family: "Dosis", sans-serif; }
+
+@media (min-width: 15em) {
+  .Nav .fa-bars {
+    cursor: pointer; }
+  .Nav .ul-container {
+    background: black;
+    position: absolute;
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 0;
+    display: none; }
+  .Nav ul {
+    display: none;
+    width: 100%;
+    margin-top: -60px; }
+    .Nav ul li {
+      display: block;
+      margin: 0;
+      text-align: center; }
+      .Nav ul li a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0;
+        font-size: 1.5em; }
+      .Nav ul li a:hover {
+        background: black;
+        color: #7b4fff; }
+      .Nav ul li a.active {
+        background: black;
+        text-decoration: underline; }
+    .Nav ul li.has-button {
+      padding: 15px 0; }
+  .Nav ul.active {
+    display: block; }
+  .Nav .ul-container.active {
+    display: flex; } }
+
+@media (min-width: 45em) {
+  .Nav .Hamburger {
+    display: none; }
+  .Nav .ul-container {
+    background: none;
+    position: static;
+    display: block;
+    top: 0;
+    height: auto; }
+  .Nav ul {
+    display: block;
+    position: static;
+    margin-top: 0px; }
+    .Nav ul li {
+      display: inline-block;
+      margin-right: 15px; }
+      .Nav ul li a {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1em; }
+      .Nav ul li a:hover {
+        color: #eee;
+        background: #1e1e1e; }
+      .Nav ul li a.active {
+        text-decoration: none;
+        background: #2b2b2b; }
+    .Nav ul li.has-button {
+      padding: 0; } }
+
+.Page {
+  padding: 0 20px;
+  padding-top: 60px; }
+  .Page .Content {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: auto; }
+    .Page .Content header {
+      text-align: center; }
+    .Page .Content footer {
+      text-align: center; }
+    .Page .Content .main {
+      padding-top: 60px; }
+
+.Page.Home {
+  padding: 0; }
+  .Page.Home .Content,
+  .Page.Home .main {
+    padding: 0; }
+
+.Hero {
+  text-align: center; }
+  .Hero canvas {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.5; }
+  .Hero .content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    height: calc(100vh - 60px);
+    text-align: left; }
+  .Hero .Blurb p {
+    line-height: 1.4em;
+    margin-bottom: 20px; }
+  .Hero video {
+    width: 100%;
+    height: 75%; }
+  .Hero img {
+    width: 100%; }
+  .Hero .container {
+    position: relative; }
+    .Hero .container .content {
+      position: absolute;
+      z-index: 2;
+      top: 10%;
+      left: 50%;
+      text-align: center;
+      font-size: 2em; }
+      .Hero .container .content .content-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .Hero .container .content .content-wrap .blurb {
+          width: 100%; }
+        .Hero .container .content .content-wrap .image {
+          width: 985.33333px;
+          height: 601.33333px;
+          transform: translateX(-50%) translateY(0%);
+          margin: auto; }
+
+@media (min-width: 15em) {
+  .Hero .Blurb {
+    text-align: center; }
+    .Hero .Blurb h2 {
+      font-size: 1.2em; }
+    .Hero .Blurb p {
+      font-size: 0.9em; }
+  .Hero video {
+    display: none; } }
+
+@media (min-width: 45em) {
+  .Hero .Blurb {
+    text-align: left; }
+    .Hero .Blurb h2 {
+      font-size: 2.8em;
+      margin-bottom: 60px; }
+    .Hero .Blurb p {
+      font-size: 1.1em; }
+  .Hero video {
+    display: block; } }
+
+@media (min-width: 60em) {
+  .Hero .Blurb h2 {
+    font-size: 3.8em; } }
+
+.Page.Editions table td p {
+  font-size: 0.9em; }
+
+.Page.Editions table td button,
+.Page.Editions table th button {
+  margin-top: 10px; }
+
+.Page.Editions table th p {
+  height: 70px; }
+
+.Page.Editions table tr {
+  border-bottom: 1px solid #444; }
+
+.Page.Editions table button.disabled {
+  background: #333;
+  color: #777; }
+
+.Page.Editions table svg path {
+  fill: #a400c1; }
+
+@media (min-width: 15em) {
+  .Page.Editions table {
+    text-align: center; }
+    .Page.Editions table th p {
+      display: none; }
+    .Page.Editions table th button {
+      font-size: 0.8em;
+      padding: 5px 10px; }
+    .Page.Editions table td {
+      font-size: 0.8em; } }
+
+@media (min-width: 45em) {
+  .Page.Editions table {
+    text-align: left; }
+    .Page.Editions table th p {
+      display: block; }
+    .Page.Editions table th button {
+      font-size: 1em;
+      padding: 10px 20px; }
+    .Page.Editions table td {
+      font-size: 1em; } }
+
+.Page.Download {
+  padding-left: 0;
+  padding-right: 0; }
+  .Page.Download .Content {
+    max-width: 100%; }
+    .Page.Download .Content header,
+    .Page.Download .Content .main,
+    .Page.Download .Content footer {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .Page.Download .Content .main {
+      margin: 60px 0;
+      background: #0c0c0c;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 0; }
+    .Page.Download .Content .Form {
+      align-self: center; }
+      .Page.Download .Content .Form a {
+        display: inline-block;
+        margin-top: 20px; }
+      .Page.Download .Content .Form .Error {
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 0.9em;
+        background: red;
+        border-radius: 5px; }
+        .Page.Download .Content .Form .Error span.message {
+          padding-left: 10px; }
+
+@media (min-width: 15em) {
+  .Page.Download .Content .main {
+    height: 300px; } }
+
+@media (min-width: 45em) {
+  .Page.Download .Content .main {
+    height: 400px; } }
+
+.Footer {
+  position: relative;
+  text-align: center;
+  font-size: 0.8em;
+  opacity: 0.6; }
+  .Footer a {
+    color: #eee; }
+
+@media (min-width: 15em) {
+  .Footer {
+    padding: 15px;
+    padding-top: 0; } }
+
+@media (min-width: 45em) {
+  .Footer {
+    padding: 25px 15px; } }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/
