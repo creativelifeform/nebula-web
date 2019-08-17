@@ -1,12 +1,12 @@
-import { node, string } from "prop-types";
+import { node, string } from 'prop-types';
 
-import React from "react";
+import React from 'react';
 
 export const Content = ({
   children,
   title = null,
   text = null,
-  className = ""
+  className = '',
 }) => (
   <section className={`Content ${className}`}>
     {title && (
@@ -23,5 +23,5 @@ Content.propTypes = {
   children: node,
   title: string,
   text: string,
-  className: string
+  className: string,
 };

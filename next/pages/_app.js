@@ -1,8 +1,7 @@
 import '../style/style.scss';
 
-import { Footer, Header } from '../common/components';
-
 import App from 'next/app';
+import { Layout } from '../common/components';
 import React from 'react';
 import routes from '../content/routes';
 
@@ -11,11 +10,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <main className="App">
-        <Header routes={routes} />
+      <Layout routes={routes}>
         <Component {...pageProps} />
-        <Footer />
-      </main>
+      </Layout>
     );
   }
 }

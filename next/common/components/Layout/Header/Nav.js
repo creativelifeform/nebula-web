@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { array, object } from 'prop-types';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { DOWNLOAD_PATH } from '../../../common/constants';
+import { DOWNLOAD_PATH } from '../../../../common/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { NavLink } from '../../../common/components';
-import { withContent } from '../../../common/utils';
+import { NavLink } from '../../../../common/components';
+import { withContent } from '../../../../common/utils';
 import { withRouter } from 'next/router';
 
 const Hamburger = ({ isOpen, toggle }) => (

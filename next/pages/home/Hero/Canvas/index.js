@@ -21,11 +21,15 @@ export default class Canvas extends Component {
   }
 
   componentWillUnmount() {
-    this.visualisation.stop();
+    const { visualisation } = this;
+
+    visualisation && visualisation.stop();
   }
 
   handleResize = e => {
-    this.visualisation.resize();
+    const { visualisation } = this;
+
+    visualisation && visualisation.resize();
   };
 
   render() {
