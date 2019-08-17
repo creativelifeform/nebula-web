@@ -4,7 +4,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { DOWNLOAD_PATH } from '../../../common/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
+import { NavLink } from '../../../common/components';
 import { withContent } from '../../../common/utils';
 import { withRouter } from 'next/router';
 
@@ -55,9 +55,7 @@ class Nav extends Component {
             {routes.map(({ path, name, shouldHideFromNav }, i) =>
               shouldHideFromNav ? null : (
                 <li key={i}>
-                  <Link href={path}>
-                    <a href={path}>{name}</a>
-                  </Link>
+                  <NavLink href={path} name={name} />
                 </li>
               )
             )}
@@ -79,7 +77,6 @@ class Nav extends Component {
 Nav.propTypes = {
   routes: array.isRequired,
   router: object.isRequired,
-  location: object.isRequired,
   content: object.isRequired,
 };
 
