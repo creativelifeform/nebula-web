@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -100,7 +100,7 @@ module.exports =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "undefined/_next/static/videos/hero-video-fd25444b8678e55d24a18660567c06d5.mp4";
+module.exports = "/_next/static/assets/hero-video.mp4";
 
 /***/ }),
 
@@ -2451,10 +2451,13 @@ class Canvas extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_hero_video_mp4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/hero-video.mp4 */ "./assets/hero-video.mp4");
+/* harmony import */ var _assets_hero_video_mp4__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_hero_video_mp4__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/rohandeshpande/Projects/nebula-web/next/pages/home/Hero/Video.js";
 
+
 /* harmony default export */ __webpack_exports__["default"] = (() => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-  src: __webpack_require__(/*! ../../../assets/hero-video.mp4 */ "./assets/hero-video.mp4"),
+  src: _assets_hero_video_mp4__WEBPACK_IMPORTED_MODULE_1___default.a,
   preload: "auto",
   autoPlay: true,
   loop: true,
@@ -2462,7 +2465,7 @@ var _jsxFileName = "/Users/rohandeshpande/Projects/nebula-web/next/pages/home/He
   muted: true,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 4
+    lineNumber: 5
   },
   __self: undefined
 }));
@@ -2584,7 +2587,7 @@ var _jsxFileName = "/Users/rohandeshpande/Projects/nebula-web/next/pages/index.j
 
 /***/ }),
 
-/***/ 6:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

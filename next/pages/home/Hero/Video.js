@@ -1,8 +1,9 @@
 import React from 'react';
+import video from '../../../assets/hero-video.mp4';
 
 export default () => (
   <video
-    src={require('../../../assets/hero-video.mp4')}
+    src={video}
     preload="auto"
     autoPlay={true}
     loop={true}
