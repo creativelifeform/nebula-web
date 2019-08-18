@@ -6,8 +6,12 @@ import Header from './Header';
 import React from 'react';
 import { withRouter } from 'next/router';
 
-const getTitle = (pathname, routes) =>
-  routes.find(({ path }) => path === pathname).title;
+const getTitle = (pathname, routes) => {
+  const route = routes.find(({ path }) => path === pathname) || {};
+  const { title = routes.find(({ path }) => path === '/').title } = route;
+
+  return title;
+};
 
 const Layout = ({ children, router: { pathname }, routes }) => (
   <>

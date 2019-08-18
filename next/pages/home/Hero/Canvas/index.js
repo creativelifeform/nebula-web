@@ -9,7 +9,7 @@ export default class Canvas extends Component {
 
   async componentDidMount() {
     // guards against nextjs errors for window being undefined on the server
-    if (!window) {
+    if (typeof window === 'undefined') {
       return;
     }
 
