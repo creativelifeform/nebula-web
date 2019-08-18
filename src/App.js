@@ -1,4 +1,4 @@
-import { Footer, Header } from './ui/components';
+import { Footer, Header, NotFound } from './ui/components';
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import routes, { ScrollToTop } from './routes';
@@ -16,9 +16,9 @@ class App extends Component {
             <Header routes={routes} />
             <Switch>
               {routes.map(route => (
-                <Route key={route.title} {...route} />
+                <Route key={route.name} {...route} />
               ))}
-              <Route component={() => <div>404 File Not Found</div>} />
+              <Route component={NotFound} />
             </Switch>
             <Footer />
           </div>
