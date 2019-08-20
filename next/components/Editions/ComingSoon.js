@@ -1,4 +1,4 @@
-import { Callout } from '../../common/components';
+import { Callout } from '../primitives';
 import React from 'react';
 
 export const ComingSoon = () => (

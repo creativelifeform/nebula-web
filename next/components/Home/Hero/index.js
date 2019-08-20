@@ -1,4 +1,4 @@
-import { Content, Grid } from '../../../common/components';
+import { Content, Grid } from '../../primitives';
 
 import Blurb from './Blurb';
 import React from 'react';

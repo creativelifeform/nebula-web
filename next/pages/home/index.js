@@ -1,9 +1,4 @@
-import Hero from './Hero';
-import { Page } from '../../common/components';
+import { Home } from '../../components';
 import React from 'react';
 
-export default () => (
-  <Page className="Home">
-    <Hero />
-  </Page>
-);
+export default () => <Home />;

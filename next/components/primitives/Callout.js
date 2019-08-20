@@ -1,6 +1,6 @@
 import { func, object, string } from 'prop-types';
 
-import { DOWNLOAD_PATH } from '../../constants';
+import { DOWNLOAD_PATH } from '../../common/constants';
 import React from 'react';
 import { withRouter } from 'next/router';
 

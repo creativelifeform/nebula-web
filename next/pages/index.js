@@ -1,4 +1,4 @@
-import Home from './home';
+import Index from './home';
 import React from 'react';
 
-export default () => <Home />;
+export default () => <Index />;

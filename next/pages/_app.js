@@ -1,7 +1,7 @@
 import '../style/style.scss';
 
 import App from 'next/app';
-import { Layout } from '../common/components';
+import { Layout } from '../components';
 import React from 'react';
 import routes from '../content/routes';
 

@@ -1,7 +1,5 @@
 import * as THREE from 'three';
 
-import ParticleSystem, { SpriteRenderer } from 'three-nebula';
-
 import { test as DEFAULT_DATA } from './data.js';
 
 const { PerspectiveCamera, Scene, WebGLRenderer } = THREE;
@@ -136,7 +134,12 @@ export class Visualisation {
     return this;
   }
 
-  makeParticleSystem() {
+  async makeParticleSystem() {
+    const {
+      default: ParticleSystem,
+      SpriteRenderer,
+    } = await import('three-nebula');
+
     return new Promise(resolve => {
       ParticleSystem.fromJSONAsync(this.data.particleSystemState, THREE)
         .then(particleSystem => {

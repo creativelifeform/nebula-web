@@ -1,20 +1,4 @@
-import { Content, Page } from '../../common/components';
-
-import { Form } from './Form/';
+import { Download } from '../../components';
 import React from 'react';
-import { object } from 'prop-types';
-import { withContent } from '../../common/utils';
 
-const Download = ({ content: { download } }) => (
-  <Page className="Download">
-    <Content {...download}>
-      <Form />
-    </Content>
-  </Page>
-);
-
-Download.propTypes = {
-  content: object.isRequired,
-};
-
-export default withContent(Download);
+export default () => <Download />;
