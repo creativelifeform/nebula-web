@@ -19,6 +19,7 @@ const Layout = ({ children, router: { pathname }, routes }) => (
       <title>{getTitle(pathname, routes)}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="description" content={getTitle('/', routes)} />
     </Head>
     <main className="App">
       <Header routes={routes} />

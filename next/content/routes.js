@@ -1,6 +1,6 @@
 export default [
   {
-    title: 'Nebula - A 3D Particle System Designer For The Web',
+    title: 'Nebula - A 3D Particle System Designer For Desktop And The Web',
     name: 'Home',
     path: '/',
   },

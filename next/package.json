@@ -10,14 +10,16 @@
     "@fortawesome/fontawesome-svg-core": "1.2.21",
     "@fortawesome/free-solid-svg-icons": "5.10.1",
     "@fortawesome/react-fontawesome": "0.1.4",
-    "next": "latest",
+    "next": "^9.0.4",
     "platform-detect": "2.0.3",
     "rd-fetch": "1.0.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "reset-css": "4.0.1",
     "three": "0.106.2",
-    "three-nebula": "5.0.0-alpha"
+    "three-nebula": "5.0.0-alpha",
+    "typeface-barlow": "0.0.71",
+    "typeface-dosis": "0.0.72"
   },
   "license": "ISC",
   "keywords": [],
