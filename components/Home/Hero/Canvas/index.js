@@ -36,6 +36,10 @@ export default class Canvas extends Component {
     return <canvas ref={this.canvasRef} className="canvas" />;
   }
 
+  get canCreateWebGLContext() {
+    return navigator.userAgent !== 'ReactSnap';
+  }
+
   get canvas() {
     return this.canvasRef.current;
   }
