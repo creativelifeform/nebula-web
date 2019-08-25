@@ -1,4 +1,6 @@
-export default [
+// using module.exports as this file is required by node
+
+module.exports = [
   {
     title: 'Nebula - A 3D Particle System Designer For Desktop And The Web',
     name: 'Home',
@@ -13,13 +15,6 @@ export default [
     title: 'The Different Flavours Of Nebula',
     name: 'Editions',
     path: '/editions',
-  },
-  {
-    title:
-      'A User Guide & Manual For Designing 3D Particle Systems With Nebula',
-    name: 'Guide',
-    path: '/guide',
-    shouldHideFromNav: true,
   },
   {
     title: 'Download Nebula for Windows, Mac or Linux Today',
