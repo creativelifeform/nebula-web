@@ -1,11 +1,10 @@
 import { Content, Grid } from '../../primitives';
 
 import Blurb from './Blurb';
+import Canvas from './Canvas';
 import React from 'react';
 import Video from './Video';
 import dynamic from 'next/dynamic';
-
-const Canvas = dynamic(import('./Canvas'), { ssr: true });
 
 export default () => (
   <Content className="Hero">
