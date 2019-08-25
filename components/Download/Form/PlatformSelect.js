@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { func, string } from 'prop-types';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import IconArrowDown from './IconArrowDown';
 import { PLATFORMS } from '../constants';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const PLATFORM_KEYS = Object.keys(PLATFORMS);
 
@@ -27,10 +26,7 @@ export class PlatformSelect extends Component {
               </option>
             ))}
           </select>
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            className="fa-chevron-down fa-xs arrow"
-          />
+          <IconArrowDown />
         </div>
       </div>
     );
