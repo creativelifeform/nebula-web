@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass');
 const withAssetsImport = require('next-assets-import');
 const withProgressBar = require('next-progressbar');
+const routes = require('./content/routes');
 
 require('dotenv').config();
 
@@ -19,9 +20,13 @@ module.exports = withProgressBar(
         TEST_EMAIL,
       },
       exportPathMap: function() {
-        return {
-          '/': { page: '/' },
-        };
+        const map = {};
+
+        routes.forEach(({ path }) => {
+          map[path] = { page: path };
+        });
+
+        return map;
       },
     })
   )
