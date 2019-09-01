@@ -1,8 +1,8 @@
+import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 import { func, string } from 'prop-types';
 
 import IconArrowDown from './IconArrowDown';
-import { PLATFORMS } from '../constants';
 
 const PLATFORM_KEYS = Object.keys(PLATFORMS);
 
@@ -10,6 +10,10 @@ export class PlatformSelect extends Component {
   state = {
     value: this.props.initialValue,
   };
+
+  componentDidMount() {
+    console.log('PlatformSelect mounted', PLATFORM);
+  }
 
   handleChange = ({ target: { value } }) =>
     this.setState({ value }, () => this.props.onSelect(value));
