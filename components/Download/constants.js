@@ -8,21 +8,15 @@ export const PLATFORMS = {
 };
 
 export const PLATFORM = (() => {
-  console.log('NEW', platform.os);
-  console.log('OLD', os);
-
   if (os.linux) {
-    console.log('it should be linux');
     return 'linux';
   }
 
   if (os.windows) {
-    console.log('it should be windows');
     return 'win';
   }
 
   if (os.macos) {
-    console.log('it should be macos');
     return 'osx';
   }
 })();
