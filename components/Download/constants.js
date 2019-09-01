@@ -1,4 +1,5 @@
 import os from 'platform-detect/os.mjs';
+import platform from 'platform';
 
 export const PLATFORMS = {
   Linux: 'linux',
@@ -7,6 +8,9 @@ export const PLATFORMS = {
 };
 
 export const PLATFORM = (() => {
+  console.log('NEW', platform.os);
+  console.log('OLD', os);
+
   if (os.linux) {
     return 'linux';
   }
