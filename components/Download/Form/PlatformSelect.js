@@ -13,6 +13,7 @@ export class PlatformSelect extends Component {
 
   componentDidMount() {
     console.log('PlatformSelect mounted', PLATFORM);
+    this.setState({ value: PLATFORM }, () => console.log(this.state));
   }
 
   handleChange = ({ target: { value } }) =>
@@ -25,11 +26,14 @@ export class PlatformSelect extends Component {
         Please enter your email to download Nebula for
         <div className="SelectWrap">
           <select onChange={this.handleChange} value={this.state.value}>
-            {PLATFORM_KEYS.map((platform, i) => (
-              <option key={i} value={PLATFORMS[platform]}>
-                {PLATFORM_KEYS[i]}
-              </option>
-            ))}
+            {PLATFORM_KEYS.map((platform, i) => {
+              console.log(PLATFORMS[platform]);
+              return (
+                <option key={i} value={PLATFORMS[platform]}>
+                  {PLATFORM_KEYS[i]}
+                </option>
+              );
+            })}
           </select>
           <IconArrowDown />
         </div>
