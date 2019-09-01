@@ -15,6 +15,7 @@ export class PlatformSelect extends Component {
     this.setState({ value }, () => this.props.onSelect(value));
 
   render() {
+    console.log('PlatformSelect initialValue: ' + this.props.initialValue);
     return (
       <div className="PlatformSelect">
         Please enter your email to download Nebula for
