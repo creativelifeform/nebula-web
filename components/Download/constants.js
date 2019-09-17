@@ -1,5 +1,4 @@
 import os from 'platform-detect/os.mjs';
-import platform from 'platform';
 
 export const PLATFORMS = {
   Windows: 'win',
