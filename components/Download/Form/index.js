@@ -1,6 +1,7 @@
 import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 
+import { Analytics } from '../../primitives/Analytics';
 import Api from '../../../common/api';
 import { Email } from './Email';
 import { Error } from './Error';
@@ -61,7 +62,17 @@ export class Form extends Component {
             </a>
           </div>
         )}
-        {error && <Error json={error} />}
+        {error && (
+          <Analytics>
+            {({ event }) => {
+              event({
+                category: 'DOWNLOAD',
+                action: `Error: ${JSON.stringify(error)}`,
+              });
+            }}
+            <Error json={error} />
+          </Analytics>
+        )}
         <div className="Disclaimer">
           We will only send you Nebula product updates, <br />
           we will <b>never</b> spam you. Unsubscribe at any time!

@@ -1,8 +1,9 @@
+import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 import { func, string } from 'prop-types';
 
+import { Analytics } from '../../primitives/Analytics';
 import IconArrowDown from './IconArrowDown';
-import { PLATFORMS } from '../constants';
 
 const PLATFORM_KEYS = Object.keys(PLATFORMS);
 
@@ -10,6 +11,14 @@ export class PlatformSelect extends Component {
   state = {
     value: this.props.initialValue,
   };
+
+  /**
+   * Force fixes issues caused with the static site always rendering linux first
+   *
+   */
+  componentDidMount() {
+    this.setState({ value: PLATFORM });
+  }
 
   handleChange = ({ target: { value } }) =>
     this.setState({ value }, () => this.props.onSelect(value));
@@ -19,13 +28,27 @@ export class PlatformSelect extends Component {
       <div className="PlatformSelect">
         Please enter your email to download Nebula for
         <div className="SelectWrap">
-          <select onChange={this.handleChange} value={this.state.value}>
-            {PLATFORM_KEYS.map((platform, i) => (
-              <option key={i} value={PLATFORMS[platform]}>
-                {PLATFORM_KEYS[i]}
-              </option>
-            ))}
-          </select>
+          <Analytics>
+            {({ event }) => (
+              <select
+                onChange={e => {
+                  event({
+                    category: 'DOWNLOAD',
+                    action: this.state.value,
+                  });
+                  this.handleChange(e);
+                }}
+                value={this.state.value}
+              >
+                {PLATFORM_KEYS.map((platform, i) => (
+                  <option key={i} value={PLATFORMS[platform]}>
+                    {PLATFORM_KEYS[i]}
+                  </option>
+                ))}
+              </select>
+            )}
+          </Analytics>
+
           <IconArrowDown />
         </div>
       </div>

@@ -1,9 +1,9 @@
 import os from 'platform-detect/os.mjs';
 
 export const PLATFORMS = {
-  Linux: 'linux',
   Windows: 'win',
   MacOS: 'osx',
+  Linux: 'linux',
 };
 
 export const PLATFORM = (() => {

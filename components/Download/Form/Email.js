@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { bool, func } from 'prop-types';
 
+import { Analytics } from '../../primitives/Analytics';
 import { Spinner } from './Spinner';
 
 export class Email extends Component {
@@ -20,10 +21,23 @@ export class Email extends Component {
           onChange={this.handleChange}
           disabled={this.props.loading ? true : false}
         />
-        <button type="submit" onClick={this.props.onSubmit}>
-          {this.props.loading && <Spinner />}
-          {!this.props.loading && 'Submit'}
-        </button>
+        <Analytics>
+          {({ event }) => (
+            <button
+              type="submit"
+              onClick={e => {
+                event({
+                  category: 'DOWNLOAD',
+                  action: 'submit',
+                });
+                this.props.onSubmit(e);
+              }}
+            >
+              {this.props.loading && <Spinner />}
+              {!this.props.loading && 'Submit'}
+            </button>
+          )}
+        </Analytics>
       </div>
     );
   }
