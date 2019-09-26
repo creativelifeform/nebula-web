@@ -1,15 +1,16 @@
 import React, { Component, createContext } from 'react';
 
-const { Provider, Consumer } = createContext({
+const defaultApi = {
   event: () => {},
   exception: () => {},
   init: () => {},
   pageview: () => {},
-});
+};
+const { Provider, Consumer } = createContext(defaultApi);
 
 export default class AnalyticsProvider extends Component {
   render() {
-    const { api, children } = this.props;
+    const { api = defaultApi, children } = this.props;
 
     return <Provider value={api}>{children}</Provider>;
   }
