@@ -6,7 +6,7 @@ const routes = require('./content/routes');
 require('dotenv').config();
 
 const {
-  env: { API_URL, TEST_EMAIL },
+  env: { API_URL, TEST_EMAIL, UA_ID },
 } = process;
 
 module.exports = withProgressBar(
@@ -18,6 +18,7 @@ module.exports = withProgressBar(
       env: {
         API_URL,
         TEST_EMAIL,
+        UA_ID,
       },
       exportPathMap: function() {
         const map = {};
