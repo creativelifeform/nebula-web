@@ -1,26 +1,36 @@
 import React, { Component, createContext } from 'react';
 import { UA_ID, __DEV__ } from '../../common/config';
-
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 
 const defaultApi = {
   event: ({ ec, ea, el, ev, dp }) => ({
-    send: () => console.table([{ ec, ea, el, ev, dp }]),
+    send: () => __DEV__ && console.table([{ ec, ea, el, ev, dp }]),
   }),
   pageview: path => ({
-    send: () => console.log(`Tracking pageview ${path}`),
+    send: () => __DEV__ && console.log(`Tracking pageview ${path}`),
   }),
 };
 const { Provider, Consumer } = createContext(defaultApi);
 
 /**
- * Provides the universal analytics API to consumers.
+ * Provides the universal analytics API to consumers and tracks page views.
  *
  */
 export default class AnalyticsProvider extends Component {
   state = {
     api: defaultApi,
   };
+
+  /**
+   * Tracks page views once the API has been set.
+   *
+   * @return {null}
+   */
+  static getDerivedStateFromProps({ pathname }, { api }) {
+    api._translateParams && api.pageview(pathname).send();
+
+    return null;
+  }
 
   /**
    * Sets the correct API to pass to consumers if we are client side.
@@ -59,6 +69,7 @@ export default class AnalyticsProvider extends Component {
 
 AnalyticsProvider.propTypes = {
   children: node,
+  pathname: string,
 };
 
 export const Analytics = Consumer;

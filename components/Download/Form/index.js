@@ -75,8 +75,7 @@ export class Form extends Component {
           </Analytics>
         )}
         <div className="Disclaimer">
-          We will only send you Nebula product updates, <br />
-          we will <b>never</b> spam you. Unsubscribe at any time!
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
     );

@@ -9,10 +9,7 @@ const Component = ({
   text = 'Download',
   className = '',
   router,
-  onClick = (e, track) => {
-    router.push(DOWNLOAD_PATH);
-    track.pageview(DOWNLOAD_PATH);
-  },
+  onClick = e => router.push(DOWNLOAD_PATH),
 }) => (
   <Analytics>
     {track => (
