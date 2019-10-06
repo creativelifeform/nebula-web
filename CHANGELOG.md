@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## `v1.1.1` - 2019-10-06
+
+### Added
+
+- `universal-analytics` dependency
+
+### Changed
+
+- `Analytics` component now uses `universal-analytics` instead of `next-ga`
+
+### Removed
+
+- `next-ga`
+
 ## `v1.1.0` - 2019-09-26
 
 ### Added
