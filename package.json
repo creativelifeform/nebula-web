@@ -21,7 +21,8 @@
     "three": "0.106.2",
     "three-nebula": "5.0.0-alpha",
     "typeface-barlow": "0.0.71",
-    "typeface-dosis": "0.0.72"
+    "typeface-dosis": "0.0.72",
+    "universal-analytics": "^0.4.20"
   },
   "license": "ISC",
   "keywords": [],

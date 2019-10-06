@@ -64,10 +64,11 @@ export class Form extends Component {
         )}
         {error && (
           <Analytics>
-            {({ event }) => {
-              event({
-                category: 'DOWNLOAD',
-                action: `Error: ${JSON.stringify(error)}`,
+            {track => {
+              track.event({
+                ec: 'DOWNLOAD',
+                ea: 'submit_error',
+                el: JSON.stringify(error),
               });
             }}
             <Error json={error} />
