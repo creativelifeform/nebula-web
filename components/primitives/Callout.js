@@ -9,17 +9,24 @@ const Component = ({
   text = 'Download',
   className = '',
   router,
-  onClick = e => router.push(DOWNLOAD_PATH),
+  onClick = (e, track) => {
+    router.push(DOWNLOAD_PATH);
+    track.pageview(DOWNLOAD_PATH);
+  },
 }) => (
   <Analytics>
-    {({ event }) => (
+    {track => (
       <button
         onClick={e => {
-          event({
-            category: 'CALLOUT',
-            action: `${router.pathname} click`,
-          });
-          onClick(e);
+          track
+            .event({
+              ec: 'CALLOUT',
+              ea: 'click',
+              dp: router.pathname,
+            })
+            .send();
+
+          onClick(e, track);
         }}
         className={className}
       >

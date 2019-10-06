@@ -22,13 +22,13 @@ export class Email extends Component {
           disabled={this.props.loading ? true : false}
         />
         <Analytics>
-          {({ event }) => (
+          {track => (
             <button
               type="submit"
               onClick={e => {
-                event({
-                  category: 'DOWNLOAD',
-                  action: 'submit',
+                track.event({
+                  ec: 'DOWNLOAD',
+                  ea: 'submit',
                 });
                 this.props.onSubmit(e);
               }}
