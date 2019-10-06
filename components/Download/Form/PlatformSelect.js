@@ -29,12 +29,13 @@ export class PlatformSelect extends Component {
         Please enter your email to download Nebula for
         <div className="SelectWrap">
           <Analytics>
-            {({ event }) => (
+            {track => (
               <select
                 onChange={e => {
-                  event({
-                    category: 'DOWNLOAD',
-                    action: this.state.value,
+                  track.event({
+                    ec: 'DOWNLOAD',
+                    ea: 'select_platform',
+                    el: this.state.value,
                   });
                   this.handleChange(e);
                 }}
@@ -48,7 +49,6 @@ export class PlatformSelect extends Component {
               </select>
             )}
           </Analytics>
-
           <IconArrowDown />
         </div>
       </div>

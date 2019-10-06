@@ -29,6 +29,11 @@ module.exports = withProgressBar(
 
         return map;
       },
+      webpack(config) {
+        config.node = { fs: 'empty', net: 'empty', tls: 'empty' };
+
+        return config;
+      },
     })
   )
 );
