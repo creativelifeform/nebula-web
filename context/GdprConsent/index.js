@@ -11,13 +11,14 @@ const initialState = {
   hasGdprConsent:
     typeof window !== 'undefined'
       ? localStorage.getItem(LOCAL_STORAGE_KEY) || false
-      : true,
+      : false,
 };
 
 const { Provider, Consumer: GdprConsentConsumer } = createContext(initialState);
 
 class GdprConsentProvider extends Component {
-  state = { ...initialState };
+  // state = { ...initialState };
+  state = { hasGdprConsent: false };
 
   handleAccept = () => {
     const hasGdprConsent = true;

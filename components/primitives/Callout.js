@@ -1,6 +1,6 @@
 import { func, object, string } from 'prop-types';
 
-import { Analytics } from './Analytics';
+import { AnalyticsConsumer } from '../../context';
 import { DOWNLOAD_PATH } from '../../common/constants';
 import React from 'react';
 import { withRouter } from 'next/router';
@@ -11,7 +11,7 @@ const Component = ({
   router,
   onClick = e => router.push(DOWNLOAD_PATH),
 }) => (
-  <Analytics>
+  <AnalyticsConsumer>
     {track => (
       <button
         onClick={e => {
@@ -30,7 +30,7 @@ const Component = ({
         {text}
       </button>
     )}
-  </Analytics>
+  </AnalyticsConsumer>
 );
 
 Component.propTypes = {

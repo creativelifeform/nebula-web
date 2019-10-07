@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, func } from 'prop-types';
 
-import { Analytics } from '../../primitives/Analytics';
+import { AnalyticsConsumer } from '../../../context';
 import { Spinner } from './Spinner';
 
 export class Email extends Component {
@@ -21,7 +21,7 @@ export class Email extends Component {
           onChange={this.handleChange}
           disabled={this.props.loading ? true : false}
         />
-        <Analytics>
+        <AnalyticsConsumer>
           {track => (
             <button
               type="submit"
@@ -37,7 +37,7 @@ export class Email extends Component {
               {!this.props.loading && 'Submit'}
             </button>
           )}
-        </Analytics>
+        </AnalyticsConsumer>
       </div>
     );
   }
