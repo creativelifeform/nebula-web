@@ -10,7 +10,7 @@ const defaultApi = {
     send: () => __DEV__ && console.log(`Tracking pageview ${path}`),
   }),
 };
-const { Provider, Consumer } = createContext(defaultApi);
+const { Provider, Consumer: AnalyticsConsumer } = createContext(defaultApi);
 
 /**
  * Provides the universal analytics API to consumers and tracks page views.
@@ -75,4 +75,4 @@ AnalyticsProvider.propTypes = {
   pathname: string,
 };
 
-export const Analytics = Consumer;
+export { AnalyticsConsumer };

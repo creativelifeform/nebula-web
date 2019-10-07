@@ -3,6 +3,7 @@ import '../style/style.scss';
 import { AnalyticsProvider, Layout } from '../components';
 
 import App from 'next/app';
+import { GdprConsentProvider } from '../context';
 import React from 'react';
 import Router from 'next/router';
 import routes from '../content/routes';
@@ -13,11 +14,13 @@ class MyApp extends App {
     const pathname = Router.router ? Router.router.pathname : undefined;
 
     return (
-      <AnalyticsProvider api={analytics} pathname={pathname}>
-        <Layout routes={routes}>
-          <Component {...pageProps} />
-        </Layout>
-      </AnalyticsProvider>
+      <GdprConsentProvider>
+        <AnalyticsProvider api={analytics} pathname={pathname}>
+          <Layout routes={routes}>
+            <Component {...pageProps} />
+          </Layout>
+        </AnalyticsProvider>
+      </GdprConsentProvider>
     );
   }
 }
