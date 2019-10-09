@@ -1,30 +1,21 @@
 import React, { Component, createContext } from 'react';
+import { bool, node } from 'prop-types';
 
-const LOCAL_STORAGE_KEY = 'GDPR_CONSENT';
+import { COOKIE_KEY_GDPR_CONSENT } from '../../common/constants';
+import Cookies from 'js-cookie';
 
-/**
- * We default to assuming consent on the server so that we hide first then show
- * on the client if required.
- *
- */
-const initialState = {
-  hasGdprConsent:
-    typeof window !== 'undefined'
-      ? localStorage.getItem(LOCAL_STORAGE_KEY) || false
-      : false,
-};
-
-const { Provider, Consumer: GdprConsentConsumer } = createContext(initialState);
+const { Provider, Consumer: GdprConsentConsumer } = createContext();
 
 class GdprConsentProvider extends Component {
-  // state = { ...initialState };
-  state = { hasGdprConsent: false };
+  state = {
+    hasGdprConsent: this.props.hasGdprConsent,
+  };
 
   handleAccept = () => {
     const hasGdprConsent = true;
 
     this.setState({ hasGdprConsent }, () =>
-      localStorage.setItem(LOCAL_STORAGE_KEY, hasGdprConsent)
+      Cookies.set(COOKIE_KEY_GDPR_CONSENT, hasGdprConsent)
     );
   };
 
@@ -32,7 +23,7 @@ class GdprConsentProvider extends Component {
     const hasGdprConsent = false;
 
     this.setState({ hasGdprConsent }, () =>
-      localStorage.setItem(LOCAL_STORAGE_KEY, hasGdprConsent)
+      Cookies.setItem(COOKIE_KEY_GDPR_CONSENT, hasGdprConsent)
     );
   };
 
@@ -51,6 +42,11 @@ class GdprConsentProvider extends Component {
     );
   }
 }
+
+GdprConsentProvider.propTypes = {
+  children: node.isRequired,
+  hasGdprConsent: bool.isRequired,
+};
 
 export default GdprConsentProvider;
 

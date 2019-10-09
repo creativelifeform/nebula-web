@@ -20,3 +20,11 @@
     margin: auto;
   }
 }
+
+.Page.with-gdpr-consent {
+  padding-top: $header-h;
+}
+
+.Page.without-gdpr-consent {
+  padding-top: $header-h + $gdpr-h;
+}
