@@ -1,4 +1,5 @@
-import { GdprConsentConsumer } from '../../../context';
+import { AnalyticsConsumer, GdprConsentConsumer } from '../../../context';
+
 import React from 'react';
 
 const Gdpr = () => (
@@ -9,7 +10,21 @@ const Gdpr = () => (
           This website collects some information anonymously using Google
           Analytics. Please see our <a href="/privacy">privacy policy</a> for
           details
-          <button onClick={handleAccept}>OK</button>
+          <AnalyticsConsumer>
+            {track => (
+              <button
+                onClick={e => {
+                  handleAccept(e);
+                  track.event({
+                    ec: 'GDPR',
+                    ea: 'accept',
+                  });
+                }}
+              >
+                OK
+              </button>
+            )}
+          </AnalyticsConsumer>
         </div>
       ) : null
     }
