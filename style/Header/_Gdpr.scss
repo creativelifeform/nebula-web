@@ -10,4 +10,11 @@
   height: $gdpr-h;
   font-size: 0.8em;
   border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .message {
+    text-align: left;
+  }
 }

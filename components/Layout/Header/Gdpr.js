@@ -7,9 +7,11 @@ const Gdpr = () => (
     {({ hasGdprConsent, handleAccept }) =>
       !hasGdprConsent ? (
         <div className="Gdpr">
-          This website collects some information anonymously using Google
-          Analytics. Please see our <a href="/privacy">privacy policy</a> for
-          details
+          <div className="message">
+            This website collects some information anonymously using Google
+            Analytics. Please see our <a href="/privacy">privacy policy</a> for
+            details
+          </div>
           <AnalyticsConsumer>
             {track => (
               <button
