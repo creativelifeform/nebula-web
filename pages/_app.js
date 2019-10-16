@@ -14,6 +14,13 @@ class MyApp extends App {
   static async getInitialProps({ ctx }) {
     const hasGdprConsent = nextCookies(ctx)[COOKIE_KEY_GDPR_CONSENT] || false;
 
+    console.log({
+      hasGdprConsent:
+        typeof hasGdprConsent === 'string'
+          ? JSON.parse(hasGdprConsent)
+          : hasGdprConsent,
+    });
+
     return {
       hasGdprConsent:
         typeof hasGdprConsent === 'string'
