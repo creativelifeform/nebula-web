@@ -28,3 +28,11 @@ button.xs,
   padding: $padding-s $padding-l;
   font-size: 0.9em;
 }
+
+.Gdpr {
+  button {
+    padding: 5px $padding-m;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

@@ -4,14 +4,31 @@
   }
 }
 
+@mixin phone-landscape {
+  @media (min-width: 480px) {
+  }
+}
+
 @mixin tablet {
   @media (min-width: 45em) {
     @content;
   }
 }
 
+@mixin tablet-portrait {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (mid-width: 992px) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: 60em) {
+  @media (min-width: 1200px) {
     @content;
   }
 }

@@ -2,7 +2,7 @@ import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 import { func, string } from 'prop-types';
 
-import { Analytics } from '../../primitives/Analytics';
+import { AnalyticsConsumer } from '../../../context';
 import IconArrowDown from './IconArrowDown';
 
 const PLATFORM_KEYS = Object.keys(PLATFORMS);
@@ -28,7 +28,7 @@ export class PlatformSelect extends Component {
       <div className="PlatformSelect">
         Please enter your email to download Nebula for
         <div className="SelectWrap">
-          <Analytics>
+          <AnalyticsConsumer>
             {track => (
               <select
                 onChange={e => {
@@ -48,7 +48,7 @@ export class PlatformSelect extends Component {
                 ))}
               </select>
             )}
-          </Analytics>
+          </AnalyticsConsumer>
           <IconArrowDown />
         </div>
       </div>
