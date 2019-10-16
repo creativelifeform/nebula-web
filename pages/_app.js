@@ -30,11 +30,13 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, ...pageProps } = this.props;
+    const { Component, hasGdprConsent, ...pageProps } = this.props;
     const pathname = Router.router ? Router.router.pathname : undefined;
 
+    console.log('__app_render_has_gdpr_consent__', hasGdprConsent);
+
     return (
-      <GdprConsentProvider hasGdprConsent={pageProps.hasGdprConsent}>
+      <GdprConsentProvider hasGdprConsent={hasGdprConsent}>
         <AnalyticsProvider pathname={pathname}>
           <Layout routes={routes}>
             <Component {...pageProps} />
