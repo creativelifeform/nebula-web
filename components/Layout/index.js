@@ -1,4 +1,4 @@
-import { array, func, node, shape, string } from 'prop-types';
+import { array, node, shape, string } from 'prop-types';
 
 import Footer from './Footer';
 import Head from 'next/head';
@@ -35,12 +35,6 @@ Layout.propTypes = {
     pathname: string,
   }),
   routes: array,
-  analytics: shape({
-    event: func,
-    exception: func,
-    init: func,
-    pageview: func,
-  }),
 };
 
 export default withRouter(Layout);

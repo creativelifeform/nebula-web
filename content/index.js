@@ -17,6 +17,10 @@ const content = {
     title: 'Download',
     text: 'Download Nebula for Windows, Mac or Linux',
   },
+  privacy: {
+    title: 'Privacy Policy',
+    text: 'Our Privacy Policy',
+  },
   editions: {
     title: 'Editions',
     text:

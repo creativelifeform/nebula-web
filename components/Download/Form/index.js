@@ -1,7 +1,7 @@
 import { PLATFORM, PLATFORMS } from '../constants';
 import React, { Component } from 'react';
 
-import { Analytics } from '../../primitives/Analytics';
+import { AnalyticsConsumer } from '../../../context';
 import Api from '../../../common/api';
 import { Email } from './Email';
 import { Error } from './Error';
@@ -63,7 +63,7 @@ export class Form extends Component {
           </div>
         )}
         {error && (
-          <Analytics>
+          <AnalyticsConsumer>
             {track => {
               track.event({
                 ec: 'DOWNLOAD',
@@ -72,11 +72,10 @@ export class Form extends Component {
               });
             }}
             <Error json={error} />
-          </Analytics>
+          </AnalyticsConsumer>
         )}
         <div className="Disclaimer">
-          We will only send you Nebula product updates, <br />
-          we will <b>never</b> spam you. Unsubscribe at any time!
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
     );
