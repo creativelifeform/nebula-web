@@ -7,6 +7,7 @@ import { COOKIE_KEY_GDPR_CONSENT } from '../common/constants';
 import { Layout } from '../components';
 import React from 'react';
 import Router from 'next/router';
+import cookies from 'js-cookie';
 import nextCookies from 'next-cookies';
 import routes from '../content/routes';
 
