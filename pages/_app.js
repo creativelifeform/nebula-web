@@ -7,13 +7,12 @@ import { COOKIE_KEY_GDPR_CONSENT } from '../common/constants';
 import { Layout } from '../components';
 import React from 'react';
 import Router from 'next/router';
-import cookies from 'js-cookie';
 import nextCookies from 'next-cookies';
 import routes from '../content/routes';
 
 class MyApp extends App {
   static async getInitialProps({ ctx }) {
-    const hasGdprConsent = nextCookies(ctx)[COOKIE_KEY_GDPR_CONSENT] || false;
+    const hasGdprConsent = nextCookies(ctx)[COOKIE_KEY_GDPR_CONSENT] || true;
 
     console.log({
       hasGdprConsent:

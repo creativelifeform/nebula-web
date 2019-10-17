@@ -17,7 +17,7 @@ class GdprConsentProvider extends Component {
 
     if (!cookies[COOKIE_KEY_GDPR_CONSENT]) {
       console.log('no cookie');
-      return;
+      return this.setState({ hasGdprConsent: false });
     }
 
     const hasGdprConsentCookieValue = JSON.parse(
