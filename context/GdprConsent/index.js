@@ -11,6 +11,29 @@ class GdprConsentProvider extends Component {
     hasGdprConsent: this.props.hasGdprConsent,
   };
 
+  /**
+   * Manages the client side check for the COOKIE_KEY_GDPR_CONSENT cookie
+   *
+   */
+  componentDidMount() {
+    const cookies = Cookies.get();
+    const { hasGdprConsent } = this.state;
+
+    if (!cookies[COOKIE_KEY_GDPR_CONSENT]) {
+      return this.setState({ hasGdprConsent: false });
+    }
+
+    const hasGdprConsentCookieValue = JSON.parse(
+      cookies[COOKIE_KEY_GDPR_CONSENT]
+    );
+
+    if (hasGdprConsent !== hasGdprConsentCookieValue) {
+      return this.setState({
+        hasGdprConsent: hasGdprConsentCookieValue,
+      });
+    }
+  }
+
   handleAccept = () => {
     const hasGdprConsent = true;
 
