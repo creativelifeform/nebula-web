@@ -31,7 +31,8 @@ export class Form extends Component {
 
         this.setState({ data, loading: false });
       } catch (error) {
-        this.setState({ loading: false, error: error.json });
+        console.log(error);
+        this.setState({ loading: false, error });
       }
     });
   };
@@ -63,16 +64,18 @@ export class Form extends Component {
           </div>
         )}
         {error && (
-          <AnalyticsConsumer>
-            {track => {
-              track.event({
-                ec: 'DOWNLOAD',
-                ea: 'submit_error',
-                el: JSON.stringify(error),
-              });
-            }}
-            <Error json={error} />
-          </AnalyticsConsumer>
+          <>
+            <AnalyticsConsumer>
+              {track => {
+                track.event({
+                  ec: 'DOWNLOAD',
+                  ea: 'submit_error',
+                  el: JSON.stringify(error),
+                });
+              }}
+            </AnalyticsConsumer>
+            <Error json={error.json} />
+          </>
         )}
         <div className="Disclaimer">
           <a href="/privacy">Privacy Policy</a>

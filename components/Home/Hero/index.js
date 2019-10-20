@@ -4,7 +4,6 @@ import Blurb from './Blurb';
 import Canvas from './Canvas';
 import React from 'react';
 import Video from './Video';
-import dynamic from 'next/dynamic';
 
 export default () => (
   <Content className="Hero">
