@@ -11,15 +11,12 @@ import nextCookies from 'next-cookies';
 import routes from '../content/routes';
 
 class MyApp extends App {
+  /**
+   * Manages the server side check for the COOKIE_KEY_GDPR_CONSENT cookie.
+   *
+   */
   static async getInitialProps({ ctx }) {
     const hasGdprConsent = nextCookies(ctx)[COOKIE_KEY_GDPR_CONSENT] || true;
-
-    console.log({
-      hasGdprConsent:
-        typeof hasGdprConsent === 'string'
-          ? JSON.parse(hasGdprConsent)
-          : hasGdprConsent,
-    });
 
     return {
       hasGdprConsent:
@@ -32,8 +29,6 @@ class MyApp extends App {
   render() {
     const { Component, hasGdprConsent, ...pageProps } = this.props;
     const pathname = Router.router ? Router.router.pathname : undefined;
-
-    console.log('__app_render_has_gdpr_consent__', hasGdprConsent);
 
     return (
       <GdprConsentProvider hasGdprConsent={hasGdprConsent}>
