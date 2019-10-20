@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## `v1.2.1` - 2019-10-20
+
+### Fixed
+
+- Fixed bug where server side cookies were not being correctly passed to the client
+
 ## `v1.2.0` - 2019-10-16
 
 ### Added
