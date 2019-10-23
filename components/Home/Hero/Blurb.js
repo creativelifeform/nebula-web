@@ -1,3 +1,5 @@
+import { shape, string } from 'prop-types';
+
 import { Callout } from '../../primitives';
 import React from 'react';
 import { withContent } from '../../../common/utils';
@@ -14,5 +16,15 @@ const Blurb = ({
     <Callout text={large} />
   </div>
 );
+
+Blurb.propTypes = {
+  content: shape({
+    home: shape({
+      title: string,
+      text: string,
+    }),
+    callout: string,
+  }),
+};
 
 export default withContent(Blurb);

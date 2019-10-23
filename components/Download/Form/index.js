@@ -20,7 +20,7 @@ export class Form extends Component {
   handleOnSelect = platform =>
     this.setState({ platform, data: null, error: null });
 
-  handleOnEmail = email => this.setState({ email });
+  handleOnEmail = email => this.setState({ email, error: null });
 
   handleOnSubmit = () => {
     const { platform, email } = this.state;
