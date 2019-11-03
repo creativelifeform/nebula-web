@@ -27,11 +27,10 @@ export class Form extends Component {
 
     this.setState({ loading: true, error: null }, async () => {
       try {
-        const data = await Api.sendSignupRequest({ platform, email });
+        const response = await Api.sendSignupRequest({ platform, email });
 
-        this.setState({ data, loading: false });
+        this.setState({ data: response.json, loading: false });
       } catch (error) {
-        console.log(error);
         this.setState({ loading: false, error });
       }
     });
