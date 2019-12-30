@@ -135,10 +135,9 @@ export class Visualisation {
   }
 
   async makeParticleSystem() {
-    const {
-      default: ParticleSystem,
-      SpriteRenderer,
-    } = await import('three-nebula');
+    const { default: ParticleSystem, SpriteRenderer } = await import(
+      'three-nebula'
+    );
 
     return new Promise(resolve => {
       ParticleSystem.fromJSONAsync(this.data.particleSystemState, THREE)
