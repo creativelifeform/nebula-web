@@ -5,6 +5,7 @@ import { AnalyticsConsumer } from '../../../context';
 import Api from '../../../common/api';
 import { Email } from './Email';
 import { Error } from './Error';
+import Link from 'next/link';
 import { PlatformSelect } from './PlatformSelect';
 import { mapValueToKey } from '../../../common/utils';
 
@@ -77,7 +78,9 @@ export class Form extends Component {
           </>
         )}
         <div className="Disclaimer">
-          <a href="/privacy">Privacy Policy</a>
+          <Link href="/privacy">
+            <a href="/privacy">Privacy Policy</a>
+          </Link>
         </div>
       </div>
     );
