@@ -8,14 +8,10 @@ export default class Canvas extends Component {
   }
 
   async componentDidMount() {
-    // guards against nextjs errors for window being undefined on the server
-    if (typeof window === 'undefined') {
-      return;
-    }
+    const THREE = await import('three');
+    const { Visualisation } = await import('./Visualisation');
 
-    const { Visualisation } = require('./Visualisation');
-
-    this.visualisation = await new Visualisation(this.canvas).start();
+    this.visualisation = await new Visualisation(this.canvas, THREE).start();
 
     window.addEventListener('resize', this.handleResize);
   }
@@ -34,10 +30,6 @@ export default class Canvas extends Component {
 
   render() {
     return <canvas ref={this.canvasRef} className="canvas" />;
-  }
-
-  get canCreateWebGLContext() {
-    return navigator.userAgent !== 'ReactSnap';
   }
 
   get canvas() {
