@@ -1,8 +1,4 @@
-import * as THREE from 'three';
-
 import { test as DEFAULT_DATA } from './data.js';
-
-const { PerspectiveCamera, Scene, WebGLRenderer } = THREE;
 
 /**
  * Sets up three js and particle system environment so that they can be rendered
@@ -10,7 +6,8 @@ const { PerspectiveCamera, Scene, WebGLRenderer } = THREE;
  *
  */
 export class Visualisation {
-  constructor(canvas, data = DEFAULT_DATA) {
+  constructor(canvas, THREE, data = DEFAULT_DATA) {
+    this.THREE = THREE;
     this.canvas = canvas;
     this.data = data;
     this.shouldAnimate = true;
@@ -75,7 +72,7 @@ export class Visualisation {
   }
 
   makeScene() {
-    this.scene = new Scene();
+    this.scene = new this.THREE.Scene();
 
     return this;
   }
@@ -108,7 +105,7 @@ export class Visualisation {
     const { params, position, rotation } = cameraState;
     const { fov, nearPlane, farPlane } = params;
 
-    this.camera = new PerspectiveCamera(
+    this.camera = new this.THREE.PerspectiveCamera(
       fov,
       clientWidth / clientHeight,
       nearPlane,
@@ -128,7 +125,8 @@ export class Visualisation {
     } = this;
 
     this.webGlRenderer =
-      this.webGlRenderer || new WebGLRenderer({ canvas, ...options });
+      this.webGlRenderer ||
+      new this.THREE.WebGLRenderer({ canvas, ...options });
     this.webGlRenderer.setSize(clientWidth, clientHeight, false);
 
     return this;
@@ -140,10 +138,12 @@ export class Visualisation {
     );
 
     return new Promise(resolve => {
-      ParticleSystem.fromJSONAsync(this.data.particleSystemState, THREE)
+      ParticleSystem.fromJSONAsync(this.data.particleSystemState, this.THREE)
         .then(particleSystem => {
           this.particleSystem = particleSystem;
-          particleSystem.addRenderer(new SpriteRenderer(this.scene, THREE));
+          particleSystem.addRenderer(
+            new SpriteRenderer(this.scene, this.THREE)
+          );
 
           return resolve(this.render());
         })
