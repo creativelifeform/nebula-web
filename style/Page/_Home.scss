@@ -31,6 +31,18 @@
     text-align: left;
   }
 
+  .Gif {
+    width: 75%;
+    margin: $padding-xxl auto;
+    background: $app-accent;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
   .Blurb {
     p {
       line-height: 1.4em;
@@ -93,8 +105,13 @@
         font-size: 0.9em;
       }
     }
+
     video {
       display: none;
+    }
+
+    .Gif {
+      display: block;
     }
   }
 }
@@ -113,8 +130,13 @@
         font-size: 1.1em;
       }
     }
+
     video {
       display: block;
+    }
+
+    .Gif {
+      display: none;
     }
   }
 }
