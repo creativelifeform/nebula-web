@@ -12,6 +12,9 @@ import {
 } from '../primitives';
 
 import React from 'react';
+import deliver from '../../assets/about/deliver.jpg';
+import design from '../../assets/about/design.png';
+import develop from '../../assets/about/develop.png';
 import { object } from 'prop-types';
 import { withContent } from '../../common/utils';
 
@@ -20,7 +23,7 @@ const About = ({ content: { about, callout } }) => (
     <Content {...about}>
       <Grid className="About">
         <GridItem>
-          <GridItemMedia />
+          <GridItemMedia src={design} />
           <GridItemDetails title="Design">
             <p>
               Download the Nebula desktop app for your platform (Windows, Mac or
@@ -29,7 +32,7 @@ const About = ({ content: { about, callout } }) => (
           </GridItemDetails>
         </GridItem>
         <GridItem>
-          <GridItemMedia />
+          <GridItemMedia src={develop} />
           <GridItemDetails title="Develop">
             <p>
               Include{' '}
@@ -40,19 +43,22 @@ const About = ({ content: { about, callout } }) => (
               <Code>
                 <ThreeNebulaLink />
               </Code>{' '}
-              in your JavaScript application
+              in your JavaScript application and follow our tiny{' '}
+              <Code>
+                <a href="https://codesandbox.io/s/three-nebula-quickstart-kz6uv">
+                  quickstart
+                </a>
+              </Code>{' '}
+              example.
             </p>
           </GridItemDetails>
         </GridItem>
         <GridItem>
-          <GridItemMedia />
+          <GridItemMedia src={deliver} />
           <GridItemDetails title="Deliver">
             <p>
-              Use{' '}
-              <Code>
-                <ThreeNebulaLink />
-              </Code>{' '}
-              to render your particle system anywhere in your app
+              Render your particle system anywhere in your app and dazzle your
+              users with eye-catching effects!
             </p>
           </GridItemDetails>
         </GridItem>
