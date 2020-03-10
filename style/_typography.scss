@@ -3,14 +3,6 @@
   font-size: 1.2em;
 }
 
-.Nav {
-  ul {
-    li {
-      font-size: 0.9em;
-    }
-  }
-}
-
 h2 {
   font-size: 1.8em;
   margin-bottom: $padding-xxl;
@@ -44,10 +36,20 @@ b {
   font-weight: bold;
 }
 
+p {
+  line-height: 1.4em;
+}
+
+.Details {
+  p {
+    line-height: 1.8em;
+  }
+}
+
 table {
   td {
     p {
-      line-height: 1.3em;
+      line-height: 1.4em;
     }
   }
 }
@@ -59,6 +61,15 @@ form {
   select {
     font-family: $app-font-body;
     font-size: 1em;
+  }
+}
+
+footer {
+  font-size: 0.9em;
+
+  button,
+  .button {
+    font-size: 1rem;
   }
 }
 
@@ -84,9 +95,34 @@ a {
 }
 
 @include phone {
+  .Nav {
+    ul {
+      li {
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  .Blurb {
+    h2 {
+      font-size: 1.4em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+  }
 }
 
 @include tablet {
+  .Nav {
+    ul {
+      li {
+        font-size: 0.9em;
+      }
+    }
+  }
+
   .Blurb {
     h2 {
       font-size: 2.4em;
