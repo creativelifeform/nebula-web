@@ -1,6 +1,4 @@
 .Nav {
-  font-size: 0.9em;
-
   .Hamburger {
     cursor: pointer;
   }
@@ -67,7 +65,6 @@
           padding: $padding-l;
           text-align: center;
           border-radius: 0;
-          font-size: 1.5em;
         }
 
         a:hover {
@@ -122,7 +119,6 @@
         a {
           padding: $padding-s;
           border-radius: $padding-xs;
-          font-size: 1em;
         }
 
         a:hover {

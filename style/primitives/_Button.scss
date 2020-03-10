@@ -7,7 +7,6 @@ button,
   padding: $padding-m $padding-xl;
   border-radius: $radius-s;
   color: white;
-  font-size: 1em;
   cursor: pointer;
   font-family: $app-font-header;
 }
@@ -26,7 +25,6 @@ button.small,
 button.xs,
 .button.xs {
   padding: $padding-s $padding-l;
-  font-size: 0.9em;
 }
 
 .Gdpr {

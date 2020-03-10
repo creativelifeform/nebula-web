@@ -23,7 +23,10 @@ Blurb.propTypes = {
       title: string,
       text: string,
     }),
-    callout: string,
+    callout: shape({
+      small: string,
+      large: string,
+    }),
   }),
 };
 

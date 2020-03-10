@@ -1,31 +1,32 @@
 import * as Sentry from '@sentry/browser';
 
+import { object, oneOfType, string } from 'prop-types';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { object } from 'prop-types';
 
-const handleInvalidError = json => {
-  Sentry.captureMessage(JSON.stringify(json));
+const handleInvalidError = error => {
+  Sentry.captureMessage(JSON.stringify(error));
 
   return 'Sorry, our system is currently under heavy load, please try again later';
 };
 
-const Error = ({ json }) => {
+const Error = ({ error }) => {
   return (
     <div className="Error">
       <FontAwesomeIcon icon={faTimesCircle} />
       <span className="message">
-        {json.error && typeof json.error === 'string'
-          ? json.error
-          : handleInvalidError(json)}
+        {error.json && typeof error.json.error === 'string'
+          ? error.json.error
+          : handleInvalidError(error)}
       </span>
     </div>
   );
 };
 
 Error.propTypes = {
-  json: object,
+  error: oneOfType[(object, string)],
 };
 
 export { Error };

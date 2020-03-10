@@ -147,24 +147,40 @@ const Privacy = ({
       <h2>Use of Data</h2>
       <p>We use the collected data for various purposes:</p>
       <ul>
-        <li>To provide and maintain our Service</li>
-        <li>To notify you about changes to our Service</li>
         <li>
-          To allow you to participate in interactive features of our Service
-          when you choose to do so
+          <p>To provide and maintain our Service</p>
         </li>
-        <li>To provide customer support</li>
         <li>
-          To gather analysis or valuable information so that we can improve our
-          Service
+          <p>To notify you about changes to our Service</p>
         </li>
-        <li>To monitor the usage of our Service</li>
-        <li>To detect, prevent and address technical issues</li>
         <li>
-          To provide you with news, special offers and general information about
-          other goods, services and events which we offer that are similar to
-          those that you have already purchased or enquired about unless you
-          have opted not to receive such information
+          <p>
+            To allow you to participate in interactive features of our Service
+            when you choose to do so
+          </p>
+        </li>
+        <li>
+          <p>To provide customer support</p>
+        </li>
+        <li>
+          <p>
+            To gather analysis or valuable information so that we can improve
+            our Service
+          </p>
+        </li>
+        <li>
+          <p>To monitor the usage of our Service</p>
+        </li>
+        <li>
+          <p>To detect, prevent and address technical issues</p>
+        </li>
+        <li>
+          <p>
+            To provide you with news, special offers and general information
+            about other goods, services and events which we offer that are
+            similar to those that you have already purchased or enquired about
+            unless you have opted not to receive such information
+          </p>
         </li>
       </ul>
       <h2>Retention of Data</h2>
@@ -242,14 +258,24 @@ const Privacy = ({
       </p>
       <p>Nebula may process your Personal Data because:</p>
       <ul>
-        <li>We need to perform a contract with you</li>
-        <li>You have given us permission to do so</li>
         <li>
-          The processing is in our legitimate interests and it's not overridden
-          by your rights
+          <p>We need to perform a contract with you</p>
         </li>
-        <li>For payment processing purposes</li>
-        <li>To comply with the law</li>
+        <li>
+          <p>You have given us permission to do so</p>
+        </li>
+        <li>
+          <p>
+            The processing is in our legitimate interests and it's not
+            overridden by your rights
+          </p>
+        </li>
+        <li>
+          <p>For payment processing purposes</p>
+        </li>
+        <li>
+          <p>To comply with the law</p>
+        </li>
       </ul>
       <h2>
         Your Data Protection Rights Under General Data Protection Regulation
