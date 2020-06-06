@@ -74,7 +74,7 @@ export class Form extends Component {
                 });
               }}
             </AnalyticsConsumer>
-            <Error json={error.json} />
+            <Error error={error} />
           </>
         )}
         <div className="Disclaimer">

@@ -68,7 +68,6 @@
       top: 10%;
       left: 50%;
       text-align: center;
-      font-size: 2em;
 
       .content-wrap {
         display: flex;
@@ -98,11 +97,9 @@
       text-align: center;
 
       h2 {
-        font-size: 1.2em;
       }
 
       p {
-        font-size: 0.9em;
       }
     }
 
@@ -122,12 +119,10 @@
       text-align: left;
 
       h2 {
-        font-size: 2.8em;
         margin-bottom: $padding-xxl * 2;
       }
 
       p {
-        font-size: 1.1em;
       }
     }
 
@@ -145,7 +140,6 @@
   .Hero {
     .Blurb {
       h2 {
-        font-size: 3.8em;
       }
     }
   }

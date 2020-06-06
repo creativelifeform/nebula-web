@@ -1,29 +1,57 @@
+.Logo {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-bottom: $padding-xxl;
   font-family: $app-font-header;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: $padding-xl;
   font-family: $app-font-header;
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1.4em;
   margin-bottom: $padding-l;
   font-family: $app-font-header;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-bottom: $padding-m;
   font-family: $app-font-header;
 }
 
+button,
+.button {
+  font-size: 1em;
+}
+
 b {
-  font-weight: 900;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+.Details {
+  p {
+    line-height: 1.8em;
+  }
+}
+
+table {
+  td {
+    p {
+      line-height: 1.4em;
+    }
+  }
 }
 
 form {
@@ -33,6 +61,15 @@ form {
   select {
     font-family: $app-font-body;
     font-size: 1em;
+  }
+}
+
+footer {
+  font-size: 0.9em;
+
+  button,
+  .button {
+    font-size: 1rem;
   }
 }
 
@@ -57,23 +94,54 @@ a {
   border-color: rgba(255, 255, 255, 0.04);
 }
 
-@media all and (min-width: 15em) {
+@include phone {
+  .Nav {
+    ul {
+      li {
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  .Blurb {
+    h2 {
+      font-size: 1.4em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+  }
 }
 
-@media all and (min-width: 35em) {
+@include tablet {
+  .Nav {
+    ul {
+      li {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .Blurb {
+    h2 {
+      font-size: 2.4em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  }
 }
 
-@media all and (min-width: 40em) {
-}
+@include desktop {
+  .Blurb {
+    h2 {
+      font-size: 3em;
+    }
 
-@media all and (min-width: 45em) {
-}
-
-@media all and (min-width: 60em) {
-}
-
-@media all and (min-width: 70em) {
-}
-
-@media all and (min-width: 80em) {
+    p {
+      font-size: 1.2em;
+    }
+  }
 }
