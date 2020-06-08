@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../../../assets/hero-video.mp4';
+import video from '../../../assets/nebula-website-video-720p.mp4';
 
 /**
  * A video is displayed for medium-large viewports.
