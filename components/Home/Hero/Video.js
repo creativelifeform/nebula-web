@@ -1,10 +1,10 @@
 import React from 'react';
-import video from '../../../assets/nebula-website-video-720p.mp4';
+import video from '../../../assets/nebula-website-video-720p-60fps.mp4';
 
 /**
  * A video is displayed for medium-large viewports.
  */
-export default () => (
+const Video = () => (
   <video
     src={video}
     preload="auto"
@@ -14,3 +14,5 @@ export default () => (
     muted={true}
   />
 );
+
+export default Video;
