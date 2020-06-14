@@ -1,20 +1,23 @@
 import { Content, Grid } from '../../primitives';
-
+import dynamic from 'next/dynamic';
 import Blurb from './Blurb';
 import Canvas from './Canvas';
-import Gif from './Gif';
 import React from 'react';
-import Video from './Video';
 
-export default () => (
+const VideoLarge = dynamic(() => import('./VideoLarge'));
+const VideoSmall = dynamic(() => import('./VideoSmall'));
+
+const Hero = () => (
   <Content className="Hero">
     <Canvas />
     <Grid>
       {/* for mobile */}
-      <Gif />
+      <VideoSmall />
       <Blurb />
       {/* for tablet and desktop */}
-      <Video />
+      <VideoLarge />
     </Grid>
   </Content>
 );
+
+export default Hero;

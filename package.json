@@ -22,29 +22,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "eslintConfig": {
-    "plugins": [
-      "prettier",
-      "react"
-    ],
-    "extends": [
-      "react-app",
-      "plugin:import/errors",
-      "plugin:import/warnings"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "react/no-typos": "error",
-      "react/prop-types": [
-        "error",
-        {
-          "ignore": [],
-          "customValidators": [],
-          "skipUndeclared": false
-        }
-      ]
-    }
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.21",
     "@fortawesome/free-solid-svg-icons": "5.10.1",
@@ -79,7 +56,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.0.1",
     "import-sort-parser-babylon": "^5.2.0",
     "import-sort-style-absolute": "^1.0.1",

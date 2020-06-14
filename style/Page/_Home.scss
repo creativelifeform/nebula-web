@@ -31,8 +31,8 @@
     text-align: left;
   }
 
-  .Gif {
-    width: 75%;
+  .VideoSmall {
+    width: 100%;
     margin: $padding-xxl auto;
     background: $app-accent;
 
@@ -52,7 +52,6 @@
 
   video {
     width: 100%;
-    height: 75%;
   }
 
   img {
@@ -103,11 +102,11 @@
       }
     }
 
-    video {
+    .VideoLarge {
       display: none;
     }
 
-    .Gif {
+    .VideoSmall {
       display: block;
     }
   }
@@ -126,11 +125,12 @@
       }
     }
 
-    video {
+    .VideoLarge {
       display: block;
+      height: 75%;
     }
 
-    .Gif {
+    .VideoSmall {
       display: none;
     }
   }
