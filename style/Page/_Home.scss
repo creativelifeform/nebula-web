@@ -34,13 +34,6 @@
   .VideoSmall {
     width: 100%;
     margin: $padding-xxl auto;
-    background: $app-accent;
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
   }
 
   .Blurb {
@@ -127,7 +120,6 @@
 
     .VideoLarge {
       display: block;
-      height: 75%;
     }
 
     .VideoSmall {
