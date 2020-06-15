@@ -1,11 +1,12 @@
 import { Content, Grid } from '../../primitives';
-import dynamic from 'next/dynamic';
+
 import Blurb from './Blurb';
 import Canvas from './Canvas';
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-const VideoLarge = dynamic(() => import('./VideoLarge'));
-const VideoSmall = dynamic(() => import('./VideoSmall'));
+const VideoLarge = dynamic(() => import('./Video/Large'));
+const VideoSmall = dynamic(() => import('./Video/Small'));
 
 const Hero = () => (
   <Content className="Hero">
