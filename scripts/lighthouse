@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+npm run build &&
+npm run start |
+mkdir -p ./audits/$npm_package_version/desktop |
+mkdir -p ./audits/$npm_package_version/mobile |
+lighthouse http://localhost:3000 --output html --output-path ./audits/$npm_package_version/desktop/audit.html --emulated-form-factor desktop --view |
+lighthouse http://localhost:3000 --output html --output-path ./audits/$npm_package_version/mobile/audit.html --emulated-form-factor mobile --view

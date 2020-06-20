@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## `v1.3.0` - 2020-06-20
+
+### Added
+
+- Final hero video and hero video for smaller displays
+
+### Changed
+
+- Hero particle system now using `GPURenderer`
+
+### Fixed
+
+- Some perf regressions that seemed to creep in somewhere along the line
+
 ## `v1.2.9` - 2020-06-06
 
 ### Fixed
