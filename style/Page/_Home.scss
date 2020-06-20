@@ -47,6 +47,10 @@
     width: 100%;
   }
 
+  .VideoLoading {
+    width: 100%;
+  }
+
   img {
     width: 100%;
   }
@@ -95,6 +99,16 @@
       }
     }
 
+    .VideoLoading {
+      &.large {
+        display: none;
+      }
+
+      &.small {
+        display: block;
+      }
+    }
+
     .VideoLarge {
       display: none;
     }
@@ -115,6 +129,16 @@
       }
 
       p {
+      }
+    }
+
+    .VideoLoading {
+      &.large {
+        display: block;
+      }
+
+      &.small {
+        display: none;
       }
     }
 
