@@ -35,8 +35,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "reset-css": "4.0.1",
-    "three": "0.106.2",
-    "three-nebula": "5.0.0-alpha",
+    "three": "^0.112.0",
+    "three-nebula": "github:creativelifeform/three-nebula#develop",
     "typeface-barlow": "0.0.71",
     "typeface-dosis": "0.0.72",
     "universal-analytics": "^0.4.20"

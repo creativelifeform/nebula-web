@@ -138,12 +138,16 @@ export class Visualisation {
     );
 
     return new Promise(resolve => {
-      ParticleSystem.fromJSONAsync(this.data.particleSystemState, this.THREE)
+      ParticleSystem.fromJSONAsync(this.data.particleSystemState, this.THREE, {
+        shouldAutoEmit: true,
+      })
         .then(particleSystem => {
           this.particleSystem = particleSystem;
           particleSystem.addRenderer(
             new SpriteRenderer(this.scene, this.THREE)
           );
+
+          console.log(particleSystem);
 
           return resolve(this.render());
         })
