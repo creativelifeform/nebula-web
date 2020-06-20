@@ -95,6 +95,9 @@ a {
 }
 
 @include phone {
+  .Gdpr {
+    font-size: 0.7em;
+  }
   .Nav {
     ul {
       li {
@@ -115,6 +118,10 @@ a {
 }
 
 @include tablet {
+  .Gdpr {
+    font-size: 0.8em;
+  }
+
   .Nav {
     ul {
       li {

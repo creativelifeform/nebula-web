@@ -1,4 +1,6 @@
-import Index from './home';
+import Home from './home';
 import React from 'react';
 
-export default () => <Index />;
+const IndexPage = () => <Home />;
+
+export default IndexPage;

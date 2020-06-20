@@ -31,16 +31,9 @@
     text-align: left;
   }
 
-  .Gif {
-    width: 75%;
+  .VideoSmall {
+    width: 100%;
     margin: $padding-xxl auto;
-    background: $app-accent;
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
   }
 
   .Blurb {
@@ -52,7 +45,10 @@
 
   video {
     width: 100%;
-    height: 75%;
+  }
+
+  .VideoLoading {
+    width: 100%;
   }
 
   img {
@@ -103,11 +99,21 @@
       }
     }
 
-    video {
+    .VideoLoading {
+      &.large {
+        display: none;
+      }
+
+      &.small {
+        display: block;
+      }
+    }
+
+    .VideoLarge {
       display: none;
     }
 
-    .Gif {
+    .VideoSmall {
       display: block;
     }
   }
@@ -126,11 +132,21 @@
       }
     }
 
-    video {
+    .VideoLoading {
+      &.large {
+        display: block;
+      }
+
+      &.small {
+        display: none;
+      }
+    }
+
+    .VideoLarge {
       display: block;
     }
 
-    .Gif {
+    .VideoSmall {
       display: none;
     }
   }
