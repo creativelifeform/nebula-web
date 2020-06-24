@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
+
 import { string } from 'prop-types';
+
+const videosAreEqual = (prevProps, nextProps) =>
+  prevProps.src === nextProps.src;
 
 /**
  * Autoplaying video component. Must use dangerouslySetInnerHTML because of react bug.
  * @see https://github.com/facebook/react/issues/6544
  */
-export const Video = ({ src, poster, className }) => (
+const VideoComponent = ({ src, poster, className }) => (
   <div
     className={className}
     dangerouslySetInnerHTML={{
@@ -23,8 +27,10 @@ export const Video = ({ src, poster, className }) => (
   />
 );
 
-Video.propTypes = {
+VideoComponent.propTypes = {
   src: string,
   poster: string,
   className: string,
 };
+
+export const Video = memo(VideoComponent, videosAreEqual);
