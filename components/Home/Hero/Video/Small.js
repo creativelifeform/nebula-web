@@ -6,6 +6,6 @@ import src from '../../../../assets/hero-video-360p-60fps.mp4';
 /**
  * A smaller video is displayed for smaller viewports
  */
-const Small = () => <Video src={src} poster={poster} className="VideoSmall" />;
+const Small = () => <Video src={src} poster={poster} className="Video small" />;
 
 export default Small;
