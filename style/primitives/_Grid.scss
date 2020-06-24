@@ -68,6 +68,16 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      .Video,
+      .VideoLoading {
+        order: 1;
+        margin-bottom: $padding-xxl;
+      }
+
+      .Blurb {
+        order: 2;
+      }
     }
   }
 }
@@ -86,6 +96,15 @@
   .Hero {
     .Grid {
       display: grid;
+
+      .Video,
+      .VideoLoading {
+        order: 2;
+      }
+
+      .Blurb {
+        order: 1;
+      }
     }
   }
 }

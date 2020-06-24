@@ -31,7 +31,7 @@
     text-align: left;
   }
 
-  .VideoSmall {
+  .Video .small {
     width: 100%;
     margin: $padding-xxl auto;
   }
@@ -102,24 +102,6 @@
       p {
       }
     }
-
-    .VideoLoading {
-      &.large {
-        display: none;
-      }
-
-      &.small {
-        display: block;
-      }
-    }
-
-    .VideoLarge {
-      display: none;
-    }
-
-    .VideoSmall {
-      display: block;
-    }
   }
 }
 
@@ -134,24 +116,6 @@
 
       p {
       }
-    }
-
-    .VideoLoading {
-      &.large {
-        display: block;
-      }
-
-      &.small {
-        display: none;
-      }
-    }
-
-    .VideoLarge {
-      display: block;
-    }
-
-    .VideoSmall {
-      display: none;
     }
   }
 }
