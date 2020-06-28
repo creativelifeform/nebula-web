@@ -1,4 +1,5 @@
 import { Guides } from '../../../../components';
+import NextLink from 'next/link';
 import React from 'react';
 
 export default () => (
@@ -7,8 +8,12 @@ export default () => (
       <h2>MacOS Installation Guide</h2>
       <h3>Download</h3>
       <p>
-        Head over to the <a href="/download">download page</a> and select MacOS
-        as your operating system to get the correct version of Nebula.
+        Head over to the{' '}
+        <NextLink href="/download">
+          <a>download page</a>
+        </NextLink>{' '}
+        and select MacOS as your operating system to get the correct version of
+        Nebula.
       </p>
       <h3>Unzip</h3>
       <p>
