@@ -3,20 +3,26 @@
   padding-right: 0px;
 
   .Content {
-    display: flex;
     max-width: 100vw;
-    height: calc(100vh - #{$header-h});
+    // height: calc(100vh - #{$header-h});
     padding: 0;
     clear: both;
 
     .main {
+      display: flex;
       padding: 0;
+      margin: 0;
     }
 
     .Sidebar {
       header {
         text-align: left;
       }
+    }
+
+    .Guide {
+      width: calc(100vw - #{$sidebar-w});
+      height: calc(100vh - #{$header-h});
     }
   }
 }
