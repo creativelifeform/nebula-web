@@ -20,10 +20,10 @@ const SidebarItems = ({ items, pathname, basePath }) => {
   }
 
   return (
-    <ul>
+    <ul className="SidebarItems">
       {items.map(item => (
         <li key={item.title}>
-          <NextLink href={`/${basePath}/${item.title}`}>
+          <NextLink href={`/${basePath}/${item.link}`}>
             <a
               className={isActiveLink(item.link, pathname) ? 'active' : ''}
               href={`/${basePath}/${item.link}`}

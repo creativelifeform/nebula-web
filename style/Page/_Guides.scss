@@ -4,7 +4,7 @@
 
   .Content {
     max-width: 100vw;
-    // height: calc(100vh - #{$header-h});
+    min-height: calc(100vh - #{$header-h});
     padding: 0;
     clear: both;
 
@@ -22,7 +22,11 @@
 
     .Guide {
       width: calc(100vw - #{$sidebar-w});
-      height: calc(100vh - #{$header-h});
+      padding: $padding-l;
+
+      h3 {
+        margin-top: $padding-xxl;
+      }
     }
   }
 }

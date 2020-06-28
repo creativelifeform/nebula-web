@@ -7,7 +7,7 @@ import { withContent } from '../../common/utils';
 const Guide = ({ content: { guides }, children }) => (
   <Page className="Guides">
     <Content>
-      <Sidebar content={guides.sidebar} basePath={'guide'} />
+      <Sidebar content={guides.sidebar} basePath={'guides'} />
       {children}
     </Content>
   </Page>
