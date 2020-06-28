@@ -1,0 +1,48 @@
+.Sidebar {
+  font-family: $app-font-body;
+  font-size: 0.9em;
+  width: $sidebar-w;
+  height: calc(100vh - #{$header-h});
+  overflow-y: auto;
+  border-right: $sidebar-border;
+}
+
+.Sidebar {
+  header {
+    padding: $padding-l;
+  }
+
+  header {
+    text-align: left;
+    padding-bottom: $padding-l;
+    font-weight: bold;
+    border-bottom: $sidebar-border;
+  }
+
+  ul {
+    padding-top: $padding-l;
+
+    li {
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: $padding-s $padding-l;
+        width: 100%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.active {
+          background: $sidebar-border-color;
+          background: $app-accent;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

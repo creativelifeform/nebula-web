@@ -2,22 +2,27 @@
 
 module.exports = [
   {
-    title: 'Nebula - A 3D Particle System Designer For Desktop And The Web',
+    title: 'Nebula - a 3D particle system designer for desktop and the web',
     name: 'Home',
     path: '/',
   },
   {
-    title: 'Visually Design Distributable 3D Particle Systems With Nebula',
+    title: 'Visually design distributable 3D particle systems with Nebula',
     name: 'About',
     path: '/about',
   },
   {
-    title: 'The Different Flavours Of Nebula',
+    title: 'How to use Nebula',
+    name: 'Guides',
+    path: '/guides',
+  },
+  {
+    title: 'The different flavours of Nebula',
     name: 'Editions',
     path: '/editions',
   },
   {
-    title: 'Download Nebula for Windows, Mac or Linux Today',
+    title: 'Download Nebula for Windows, Mac or Linux today',
     name: 'Download',
     path: '/download',
     shouldHideFromNav: true,

@@ -21,7 +21,7 @@ class Nav extends Component {
     mobileMenuIsActive: false,
   };
 
-  handleMobileMenuToggle = e => {
+  handleMobileMenuToggle = () => {
     const { mobileMenuIsActive } = this.state;
 
     this.setState({ mobileMenuIsActive: !mobileMenuIsActive });

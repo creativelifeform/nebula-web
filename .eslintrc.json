@@ -4,7 +4,12 @@
     "es6": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
   "parser": "babel-eslint",
   "globals": {
     "Atomics": "readonly",
@@ -33,6 +38,6 @@
         "skipUndeclared": false
       }
     ],
-    "react/display-name": "warn"
+    "react/display-name": "off"
   }
 }

@@ -79,6 +79,33 @@ const content = {
       },
     ],
   },
+  guides: {
+    title: 'Guides',
+    text: 'Instructions on how to use Nebula',
+    sidebar: {
+      title: 'Guides',
+      items: [
+        {
+          title: 'Installation',
+          link: 'installation',
+          items: [
+            {
+              title: 'Windows',
+              link: 'windows',
+            },
+            {
+              title: 'Mac OS',
+              link: 'mac-os',
+            },
+            {
+              title: 'Linux',
+              link: 'linux',
+            },
+          ],
+        },
+      ],
+    },
+  },
 };
 
 const { home, about, download, editions } = content;

@@ -18,6 +18,11 @@ $hero-image-w: 2956px;
 $hero-image-h: 1804px;
 $hero-canvas-h: 500px;
 
+$sidebar-border-width: 1px;
+$sidebar-w: 200 + $sidebar-border-width;
+$sidebar-border-color: #333;
+$sidebar-border: $sidebar-border-width solid #333;
+
 $input-submit-h: 40px;
 $input-submit-w: 75px;
 $spinner-w: 20px;
