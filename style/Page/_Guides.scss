@@ -24,8 +24,15 @@
       width: calc(100vw - #{$sidebar-w});
       padding: $padding-l;
 
-      h3 {
-        margin-top: $padding-xxl;
+      ul {
+        margin-left: $padding-l;
+        list-style-type: disc;
+
+        li {
+          strong {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
