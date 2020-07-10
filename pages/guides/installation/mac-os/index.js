@@ -7,43 +7,39 @@ export default () => (
     <div className="Guide">
       <h2>MacOS Installation Guide</h2>
       <h3>Requirements</h3>
-      <p>
-        <ul>
-          <li>
-            <strong>OS</strong>: MacOS 10.10 El Capitan or later (64 bit only)
-          </li>
-          <li>
-            <strong>Processor</strong>: 2.2GHZ Dual Core Processor Or Higher
-          </li>
-          <li>
-            <strong>Memory</strong>: 2 GB RAM
-          </li>
-          <li>
-            <strong>Graphics</strong>: 512MB VRAM Or Greater
-          </li>
-        </ul>
-      </p>
+      <ul>
+        <li>
+          <strong>OS</strong>: MacOS 10.10 El Capitan or later (64-bit only)
+        </li>
+        <li>
+          <strong>Processor</strong>: 2.2GHZ Dual Core Processor Or Higher
+        </li>
+        <li>
+          <strong>Memory</strong>: 2 GB RAM
+        </li>
+        <li>
+          <strong>Graphics</strong>: 512MB VRAM Or Greater
+        </li>
+      </ul>
       <h3>Instructions</h3>
-      <p>
-        <ul>
-          <li>
-            Head over to the{' '}
-            <NextLink href="/download">
-              <a>download page</a>
-            </NextLink>{' '}
-            and select MacOS as your operating system to get the correct version
-            of Nebula.
-          </li>
-          <li>
-            Unzip the downloaded zip file contents and look inside the folder
-            for the Nebula app icon.
-          </li>
-          <li>
-            Hold control, open the app and give permission to your system to run
-            Nebula.
-          </li>
-        </ul>
-      </p>
+      <ul>
+        <li>
+          Head over to the{' '}
+          <NextLink href="/download">
+            <a>download page</a>
+          </NextLink>{' '}
+          and select MacOS as your operating system to get the correct version
+          of Nebula.
+        </li>
+        <li>
+          Unzip the downloaded zip file contents and look inside the folder for
+          the Nebula app icon.
+        </li>
+        <li>
+          Hold control, open the app and give permission to your system to run
+          Nebula.
+        </li>
+      </ul>
     </div>
   </Guides>
 );
