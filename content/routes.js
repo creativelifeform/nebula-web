@@ -20,21 +20,25 @@ module.exports = [
     title: 'How to install Nebula',
     name: 'Guides - Installation',
     path: '/guides/installation',
+    shouldHideFromNav: true,
   },
   {
     title: 'How to install Nebula on Windows',
     name: 'Guides - Installation - Windows',
     path: '/guides/installation/windows',
+    shouldHideFromNav: true,
   },
   {
     title: 'How to install Nebula on MacOS',
     name: 'Guides - Installation - MacOS',
     path: '/guides/installation/mac-os',
+    shouldHideFromNav: true,
   },
   {
     title: 'How to install Nebula on Linux',
     name: 'Guides - Installation - Linux',
     path: '/guides/installation/linux',
+    shouldHideFromNav: true,
   },
   {
     title: 'The different flavours of Nebula',
