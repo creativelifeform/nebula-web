@@ -35,13 +35,13 @@ export class Form extends Component {
   handleOnSubmit = () => {
     const { platform, email } = this.state;
 
+    if (isSelectedPlatformLinux(platform)) {
+      return this.setState({ isLinuxUser: true });
+    }
+
     this.setState({ loading: true, error: null }, async () => {
       try {
         const response = await Api.sendSignupRequest({ platform, email });
-
-        if (isSelectedPlatformLinux(platform)) {
-          return this.setState({ isLinuxUser: true });
-        }
 
         this.setState({ data: response.json, loading: false });
       } catch (error) {
@@ -71,8 +71,9 @@ export class Form extends Component {
         </form>
         {isLinuxUser && (
           <div className="button" style={{ cursor: 'auto' }}>
-            Linux support is coming soon, we will notify you as soon as it is
-            ready!
+            Linux support is coming soon, please follow us on{' '}
+            <a href="https://twitter.com/getnebula">twitter</a> for the latest
+            updates!
           </div>
         )}
         {data && (
