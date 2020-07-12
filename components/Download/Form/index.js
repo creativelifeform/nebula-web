@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { PlatformSelect } from './PlatformSelect';
 import { mapValueToKey } from '../../../common/utils';
 
+const isSelectedPlatformLinux = platform => platform === 'linux';
+
 export class Form extends Component {
   state = {
     platform: PLATFORM,
@@ -16,10 +18,17 @@ export class Form extends Component {
     data: null,
     error: null,
     loading: false,
+    isLinuxUser: false,
   };
 
   handleOnSelect = platform =>
-    this.setState({ platform, data: null, error: null });
+    this.setState({
+      platform,
+      data: null,
+      error: null,
+      isLinuxUser: false,
+      loading: false,
+    });
 
   handleOnEmail = email => this.setState({ email, error: null });
 
@@ -30,6 +39,10 @@ export class Form extends Component {
       try {
         const response = await Api.sendSignupRequest({ platform, email });
 
+        if (isSelectedPlatformLinux(platform)) {
+          return this.setState({ isLinuxUser: true });
+        }
+
         this.setState({ data: response.json, loading: false });
       } catch (error) {
         this.setState({ loading: false, error });
@@ -38,7 +51,7 @@ export class Form extends Component {
   };
 
   render() {
-    const { data, error, loading, platform } = this.state;
+    const { data, error, loading, platform, isLinuxUser } = this.state;
 
     return (
       <div className="Form">
@@ -47,7 +60,7 @@ export class Form extends Component {
             onSelect={this.handleOnSelect}
             initialValue={PLATFORM}
           />
-          {!data && (
+          {!data && !isLinuxUser && (
             <Email
               platform={this.state.platform}
               loading={loading}
@@ -56,6 +69,12 @@ export class Form extends Component {
             />
           )}
         </form>
+        {isLinuxUser && (
+          <div className="button" style={{ cursor: 'auto' }}>
+            Linux support is coming soon, we will notify you as soon as it is
+            ready!
+          </div>
+        )}
         {data && (
           <div>
             <a className="button" href={data.link} download={data.link}>
