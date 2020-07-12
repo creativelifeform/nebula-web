@@ -122,6 +122,10 @@ a {
       font-size: 0.9em;
     }
   }
+
+  .Table {
+    font-size: 0.8em;
+  }
 }
 
 @include tablet {
@@ -145,6 +149,10 @@ a {
     p {
       font-size: 1.2em;
     }
+  }
+
+  .Table {
+    font-size: 1em;
   }
 }
 
