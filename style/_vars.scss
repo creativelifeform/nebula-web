@@ -21,6 +21,7 @@ $hero-canvas-h: 500px;
 
 $sidebar-border-width: 1px;
 $sidebar-w: 200 + $sidebar-border-width;
+$sidebar-w-phone: $sidebar-w / 1.75;
 $sidebar-border-color: #333;
 $sidebar-border: $sidebar-border-width solid #333;
 

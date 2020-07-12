@@ -21,7 +21,6 @@
     }
 
     .Guide {
-      width: calc(100vw - #{$sidebar-w});
       padding: $padding-l;
 
       ul {
@@ -37,5 +36,17 @@
         }
       }
     }
+  }
+}
+
+@include phone {
+  .Guide {
+    width: calc(100vw - #{$sidebar-w-phone});
+  }
+}
+
+@include tablet {
+  .Guide {
+    width: calc(100vw - #{$sidebar-w});
   }
 }

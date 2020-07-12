@@ -17,6 +17,7 @@
 
   ul {
     font-size: 1em;
+
     li {
       a {
         text-decoration: none;
@@ -42,7 +43,6 @@
           a {
             text-decoration: none;
             display: inline-block;
-            padding: $padding-s $padding-l * 2;
             width: 100%;
 
             &:hover {
@@ -57,6 +57,42 @@
               &:hover {
                 text-decoration: none;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  .Sidebar {
+    width: $sidebar-w-phone;
+
+    ul {
+      li {
+        ul {
+          li {
+            a {
+              padding: $padding-s $padding-l * 1.25;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .Sidebar {
+    width: $sidebar-w;
+
+    ul {
+      li {
+        ul {
+          li {
+            a {
+              padding: $padding-s $padding-l * 1.5;
             }
           }
         }
