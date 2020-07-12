@@ -94,6 +94,17 @@ a {
   border-color: rgba(255, 255, 255, 0.04);
 }
 
+.Guide {
+  h2 {
+    font-weight: bold;
+  }
+
+  h3 {
+    margin-top: $padding-xxl;
+    color: lighten($app-accent, 15);
+  }
+}
+
 @include phone {
   .Gdpr {
     font-size: 0.7em;

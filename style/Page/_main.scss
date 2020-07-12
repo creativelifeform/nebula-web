@@ -1,5 +1,4 @@
 .Page {
-  padding: 0 $padding-l;
   padding-top: $header-h;
 
   .Content {
@@ -12,7 +11,7 @@
     }
 
     .main {
-      padding-top: $padding-xxl * 2;
+      padding: $padding-xxl * 2 $padding-xxl;
     }
 
     padding: $padding-letterbox;
