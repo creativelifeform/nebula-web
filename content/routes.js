@@ -46,6 +46,12 @@ module.exports = [
     path: '/editions',
   },
   {
+    title: 'Three Nebula - Chat',
+    name: 'Chat',
+    url: 'https://spectrum.chat/nebula',
+    path: '/',
+  },
+  {
     title: 'Download Nebula for Windows, Mac or Linux today',
     name: 'Download',
     path: '/download',

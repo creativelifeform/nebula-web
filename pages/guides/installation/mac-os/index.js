@@ -36,7 +36,8 @@ export default () => (
           the Nebula app icon.
         </li>
         <li>
-          Hold control, open the app and give permission to your system to run
+          <strong>The alpha version of the app is not signed.</strong> Hold
+          control, open the app and give permission to your system to run
           Nebula.
         </li>
       </ul>

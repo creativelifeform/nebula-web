@@ -1,9 +1,9 @@
 const content = {
   favicon: {
-    title: 'Three Nebula',
-    description: 'A WebGL based 3D particle system engine for ThreeJs',
-    url: 'https://dev.three-nebula.org',
-    twitterName: 'three-nebula',
+    title: 'Nebula',
+    description: 'Design 3D particle systems for the web',
+    url: 'https://getnebula.app',
+    twitterName: 'nebula',
     twitterImage: '',
   },
   callout: {
