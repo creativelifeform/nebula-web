@@ -6,12 +6,20 @@
   a {
     color: $app-color;
   }
+
+  &.home {
+    background: none;
+  }
 }
 
 @include phone {
   .Footer {
     padding: $padding-m;
     padding-top: 0;
+  }
+
+  .Footer.home {
+    padding: 0;
   }
 }
 

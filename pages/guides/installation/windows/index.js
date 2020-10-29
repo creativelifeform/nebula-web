@@ -36,6 +36,11 @@ export default () => (
           the Nebula app icon.
         </li>
         <li>Double click or right click and select open to run Nebula.</li>
+        <li>
+          <strong>The alpha version of the app is not signed.</strong> When
+          asked whether to trust the application, select{' '}
+          <strong>Run anyway</strong>.
+        </li>
       </ul>
     </div>
   </Guides>

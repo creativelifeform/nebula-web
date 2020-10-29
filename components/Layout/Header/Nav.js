@@ -46,10 +46,10 @@ class Nav extends Component {
         />
         <div className={`ul-container ${activeClass}`}>
           <ul className={`${activeClass}`}>
-            {routes.map(({ path, name, shouldHideFromNav }, i) =>
+            {routes.map(({ path, name, url, shouldHideFromNav }, i) =>
               shouldHideFromNav ? null : (
                 <li key={i}>
-                  <NavLink href={path} name={name} />
+                  <NavLink href={path} name={name} url={url} />
                 </li>
               )
             )}

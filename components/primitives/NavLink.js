@@ -5,6 +5,7 @@ import React from 'react';
 import { withRouter } from 'next/router';
 
 const Link = ({ href, name, router: { pathname }, url = null }) => {
+  console.log(url);
   if (url) {
     return <a href={url}>{name}</a>;
   }
