@@ -1,0 +1,52 @@
+.Page.Guides {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  .Content {
+    max-width: 100vw;
+    min-height: calc(100vh - #{$header-h});
+    padding: 0;
+    clear: both;
+
+    .main {
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    .Sidebar {
+      header {
+        text-align: left;
+      }
+    }
+
+    .Guide {
+      padding: $padding-l;
+
+      ul {
+        margin-left: $padding-l;
+        list-style-type: disc;
+
+        li {
+          margin-bottom: $padding-s;
+
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  .Guide {
+    width: calc(100vw - #{$sidebar-w-phone});
+  }
+}
+
+@include tablet {
+  .Guide {
+    width: calc(100vw - #{$sidebar-w});
+  }
+}

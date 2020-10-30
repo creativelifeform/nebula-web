@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { PlatformSelect } from './PlatformSelect';
 import { mapValueToKey } from '../../../common/utils';
 
+const isSelectedPlatformLinux = platform => platform === 'linux';
+
 export class Form extends Component {
   state = {
     platform: PLATFORM,
@@ -16,15 +18,26 @@ export class Form extends Component {
     data: null,
     error: null,
     loading: false,
+    isLinuxUser: false,
   };
 
   handleOnSelect = platform =>
-    this.setState({ platform, data: null, error: null });
+    this.setState({
+      platform,
+      data: null,
+      error: null,
+      isLinuxUser: false,
+      loading: false,
+    });
 
   handleOnEmail = email => this.setState({ email, error: null });
 
   handleOnSubmit = () => {
     const { platform, email } = this.state;
+
+    if (isSelectedPlatformLinux(platform)) {
+      return this.setState({ isLinuxUser: true });
+    }
 
     this.setState({ loading: true, error: null }, async () => {
       try {
@@ -38,7 +51,7 @@ export class Form extends Component {
   };
 
   render() {
-    const { data, error, loading, platform } = this.state;
+    const { data, error, loading, platform, isLinuxUser } = this.state;
 
     return (
       <div className="Form">
@@ -47,7 +60,7 @@ export class Form extends Component {
             onSelect={this.handleOnSelect}
             initialValue={PLATFORM}
           />
-          {!data && (
+          {!data && !isLinuxUser && (
             <Email
               platform={this.state.platform}
               loading={loading}
@@ -56,6 +69,13 @@ export class Form extends Component {
             />
           )}
         </form>
+        {isLinuxUser && (
+          <div className="button" style={{ cursor: 'auto' }}>
+            Linux support is coming soon, please follow us on{' '}
+            <a href="https://twitter.com/getnebula">twitter</a> for the latest
+            updates!
+          </div>
+        )}
         {data && (
           <div>
             <a className="button" href={data.link} download={data.link}>

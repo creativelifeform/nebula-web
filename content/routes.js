@@ -2,22 +2,57 @@
 
 module.exports = [
   {
-    title: 'Nebula - A 3D Particle System Designer For Desktop And The Web',
+    title: 'Nebula - a 3D particle system designer for desktop and the web',
     name: 'Home',
     path: '/',
   },
   {
-    title: 'Visually Design Distributable 3D Particle Systems With Nebula',
+    title: 'Visually design distributable 3D particle systems with Nebula',
     name: 'About',
     path: '/about',
   },
   {
-    title: 'The Different Flavours Of Nebula',
+    title: 'How to use Nebula',
+    name: 'Guides',
+    path: '/guides',
+  },
+  {
+    title: 'How to install Nebula',
+    name: 'Guides - Installation',
+    path: '/guides/installation',
+    shouldHideFromNav: true,
+  },
+  {
+    title: 'How to install Nebula on Windows',
+    name: 'Guides - Installation - Windows',
+    path: '/guides/installation/windows',
+    shouldHideFromNav: true,
+  },
+  {
+    title: 'How to install Nebula on MacOS',
+    name: 'Guides - Installation - MacOS',
+    path: '/guides/installation/mac-os',
+    shouldHideFromNav: true,
+  },
+  {
+    title: 'How to install Nebula on Linux',
+    name: 'Guides - Installation - Linux',
+    path: '/guides/installation/linux',
+    shouldHideFromNav: true,
+  },
+  {
+    title: 'The different flavours of Nebula',
     name: 'Editions',
     path: '/editions',
   },
   {
-    title: 'Download Nebula for Windows, Mac or Linux Today',
+    title: 'Three Nebula - Chat',
+    name: 'Chat',
+    url: 'https://spectrum.chat/nebula',
+    path: '/',
+  },
+  {
+    title: 'Download Nebula for Windows, Mac or Linux today',
     name: 'Download',
     path: '/download',
     shouldHideFromNav: true,

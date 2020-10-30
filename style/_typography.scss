@@ -94,6 +94,13 @@ a {
   border-color: rgba(255, 255, 255, 0.04);
 }
 
+.Guide {
+  h3 {
+    margin-top: $padding-xxl;
+    color: lighten($app-accent, 15);
+  }
+}
+
 @include phone {
   .Gdpr {
     font-size: 0.7em;
@@ -114,6 +121,10 @@ a {
     p {
       font-size: 0.9em;
     }
+  }
+
+  .Table {
+    font-size: 0.8em;
   }
 }
 
@@ -138,6 +149,10 @@ a {
     p {
       font-size: 1.2em;
     }
+  }
+
+  .Table {
+    font-size: 1em;
   }
 }
 

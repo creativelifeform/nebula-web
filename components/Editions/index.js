@@ -37,8 +37,8 @@ const Editions = ({
             <th>
               <h4>Pro*</h4>
               <p>
-                <b>$5 per account/month</b>The definitive edition with the
-                latest features.
+                <b>$5 per account/month</b>The definitive edition with the most
+                advanced features.
               </p>
               <ComingSoon />
             </th>

@@ -1,9 +1,9 @@
 const content = {
   favicon: {
-    title: 'Three Nebula',
-    description: 'A WebGL based 3D particle system engine for ThreeJs',
-    url: 'https://dev.three-nebula.org',
-    twitterName: 'three-nebula',
+    title: 'Nebula',
+    description: 'Design 3D particle systems for the web',
+    url: 'https://getnebula.app',
+    twitterName: 'nebula',
     twitterImage: '',
   },
   callout: {
@@ -50,22 +50,37 @@ const content = {
       {
         title: 'Voyager Access',
         text:
-          'Access to the Voyager community platform when you can download, and share your particle systems with others',
+          'Access to the Voyager community platform where you can download, and share your particle systems with others',
         inAlpha: false,
         inCommunity: true,
+        inPro: true,
+      },
+      {
+        title: 'Voyager Pro Access',
+        text:
+          'Access to the Voyager Pro community where you can download the greatest particle systems shared by other advanced, pro users',
+        inAlpha: false,
+        inCommunity: false,
         inPro: true,
       },
       {
         title: 'Bug Fixes',
-        text: 'Patch updates for critical bugs',
+        text: 'Patch updates for bugs',
+        inAlpha: true,
+        inCommunity: true,
+        inPro: true,
+      },
+      {
+        title: 'Community Updates',
+        text: 'Access to new versions of the app with some basic new features',
         inAlpha: false,
         inCommunity: true,
         inPro: true,
       },
       {
-        title: 'Updates',
+        title: 'Pro Updates',
         text:
-          'Access to new versions of the application with new and improved features',
+          'Access to new versions of the app which include community features as well as more advanced and powerful stuff!',
         inAlpha: false,
         inCommunity: false,
         inPro: true,
@@ -78,6 +93,33 @@ const content = {
         inPro: true,
       },
     ],
+  },
+  guides: {
+    title: 'Guides',
+    text: 'Instructions on how to use Nebula',
+    sidebar: {
+      title: 'Guides',
+      items: [
+        {
+          title: 'Installation',
+          link: 'installation',
+          items: [
+            {
+              title: 'Windows',
+              link: 'windows',
+            },
+            {
+              title: 'Mac OS',
+              link: 'mac-os',
+            },
+            {
+              title: 'Linux',
+              link: 'linux',
+            },
+          ],
+        },
+      ],
+    },
   },
 };
 

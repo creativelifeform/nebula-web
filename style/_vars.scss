@@ -2,6 +2,7 @@ $app-bg: #111;
 $app-color: #eee;
 $app-accent: #4202ff;
 $app-accent-alt: #a400c1;
+$app-accent-alt-2: #dd1bb9;
 $app-error: red;
 // $app-accent-alt: #0280ff;
 $app-font: 'Dosis', sans-serif;
@@ -17,6 +18,12 @@ $logo-h: 24px;
 $hero-image-w: 2956px;
 $hero-image-h: 1804px;
 $hero-canvas-h: 500px;
+
+$sidebar-border-width: 1px;
+$sidebar-w: 200 + $sidebar-border-width;
+$sidebar-w-phone: $sidebar-w / 1.75;
+$sidebar-border-color: #333;
+$sidebar-border: $sidebar-border-width solid #333;
 
 $input-submit-h: 40px;
 $input-submit-w: 75px;
