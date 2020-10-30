@@ -21,8 +21,8 @@ const Layout = ({ children, router: { pathname }, routes }) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content={getTitle('/', routes)} />
-      {/* <meta name="robots" content="index, follow" /> */}
-      <meta name="author" content="Rohan Deshpande" />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Creativelifeform Pty Ltd" />
       <Favicon />
     </Head>
     <main className="App">

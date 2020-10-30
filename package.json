@@ -12,10 +12,11 @@
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "scripts/lighthouse",
     "build": "next build",
+    "start": "next start",
     "dev": "next",
     "export": "next export",
     "favicon:generate": "real-favicon generate ./public/favicon/description.json ./public/favicon/data.json ./public/favicon",
-    "start": "next start"
+    "sitemap": "node scripts/sitemap-generator.js"
   },
   "browserslist": [
     ">0.2%",
@@ -66,6 +67,7 @@
     "madge": "^3.4.4",
     "next-assets-import": "0.0.2",
     "next-progressbar": "^1.0.0",
+    "nextjs-sitemap-generator": "^1.1.0",
     "node-sass": "^4.14.1",
     "prettier": "^1.15.2",
     "prop-types": "^15.7.2"
