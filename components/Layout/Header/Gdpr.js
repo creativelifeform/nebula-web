@@ -1,5 +1,6 @@
 import { AnalyticsConsumer, GdprConsentConsumer } from '../../../context';
 
+import NextLink from 'next/link';
 import React from 'react';
 
 const Gdpr = () => (
@@ -9,8 +10,11 @@ const Gdpr = () => (
         <div className="Gdpr">
           <div className="message">
             This website collects some information anonymously using Google
-            Analytics. Please see our <a href="/privacy">privacy policy</a> for
-            details
+            Analytics. Please see our{' '}
+            <NextLink href="/privacy">
+              <a href="/privacy">privacy policy</a>
+            </NextLink>{' '}
+            for details
           </div>
           <AnalyticsConsumer>
             {track => (
