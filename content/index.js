@@ -34,20 +34,6 @@ const content = {
       'All the different ways you can start designing 3D particle systems for the web with Nebula',
     features: [
       {
-        title: 'Emitters',
-        text: 'The number of particle emitters supported',
-        inAlpha: '3 Emitters',
-        inCommunity: 'Unlimited',
-        inPro: 'Unlimited',
-      },
-      // {
-      //   title: 'Projects',
-      //   text: 'The number of projects you can have',
-      //   inAlpha: 'Local: unlimitied, Cloud: 0',
-      //   inCommunity: 'Local: unlimited, Cloud: 5',
-      //   inPro: 'Local: unlimited, Cloud: unlimited',
-      // },
-      {
         title: 'Voyager Access',
         text:
           'Access to the Voyager community platform where you can download, and share your particle systems with others',
