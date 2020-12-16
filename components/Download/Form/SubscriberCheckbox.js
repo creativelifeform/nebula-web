@@ -2,10 +2,12 @@ import { bool, func } from 'prop-types';
 
 import React from 'react';
 
-export const SubscriberCheckbox = ({ checked = true, handleChange }) => (
-  <div>
+export const SubscriberCheckbox = ({ checked = false, handleChange }) => (
+  <div className="Subscribe">
     <input type="checkbox" checked={checked} onChange={handleChange} />
-    <span>Please send me product information updates</span>
+    <span>
+      Keep me in the loop for the latest product releases and updates!
+    </span>
   </div>
 );
 

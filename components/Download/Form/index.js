@@ -20,7 +20,7 @@ export class Form extends Component {
     error: null,
     loading: false,
     isLinuxUser: false,
-    isSubscriber: true,
+    isSubscriber: false,
   };
 
   handleOnSelect = platform =>
@@ -35,7 +35,7 @@ export class Form extends Component {
   handleOnEmail = email => this.setState({ email, error: null });
 
   handleOnSubmit = () => {
-    const { platform, email } = this.state;
+    const { platform, email, isSubscriber: subscriber } = this.state;
 
     if (isSelectedPlatformLinux(platform)) {
       return this.setState({ isLinuxUser: true });
@@ -43,7 +43,11 @@ export class Form extends Component {
 
     this.setState({ loading: true, error: null }, async () => {
       try {
-        const response = await Api.sendSignupRequest({ platform, email });
+        const response = await Api.sendSignupRequest({
+          platform,
+          email,
+          subscriber,
+        });
 
         this.setState({ data: response.json, loading: false });
       } catch (error) {
@@ -70,6 +74,10 @@ export class Form extends Component {
           <PlatformSelect
             onSelect={this.handleOnSelect}
             initialValue={PLATFORM}
+          />
+          <SubscriberCheckbox
+            checked={isSubscriber}
+            handleChange={this.setIsSubscriber}
           />
           {!data && !isLinuxUser && (
             <Email
@@ -108,10 +116,6 @@ export class Form extends Component {
             <Error error={error} />
           </>
         )}
-        <SubscriberCheckbox
-          checked={isSubscriber}
-          handleChange={this.setIsSubscriber}
-        />
         <div className="Disclaimer">
           <Link href="/privacy">
             <a href="/privacy">Privacy Policy</a>
