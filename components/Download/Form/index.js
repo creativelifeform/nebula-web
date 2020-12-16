@@ -7,6 +7,7 @@ import { Email } from './Email';
 import { Error } from './Error';
 import Link from 'next/link';
 import { PlatformSelect } from './PlatformSelect';
+import { SubscriberCheckbox } from './SubscriberCheckbox';
 import { mapValueToKey } from '../../../common/utils';
 
 const isSelectedPlatformLinux = platform => platform === 'linux';
@@ -19,6 +20,7 @@ export class Form extends Component {
     error: null,
     loading: false,
     isLinuxUser: false,
+    isSubscriber: false,
   };
 
   handleOnSelect = platform =>
@@ -33,7 +35,7 @@ export class Form extends Component {
   handleOnEmail = email => this.setState({ email, error: null });
 
   handleOnSubmit = () => {
-    const { platform, email } = this.state;
+    const { platform, email, isSubscriber: subscriber } = this.state;
 
     if (isSelectedPlatformLinux(platform)) {
       return this.setState({ isLinuxUser: true });
@@ -41,7 +43,11 @@ export class Form extends Component {
 
     this.setState({ loading: true, error: null }, async () => {
       try {
-        const response = await Api.sendSignupRequest({ platform, email });
+        const response = await Api.sendSignupRequest({
+          platform,
+          email,
+          subscriber,
+        });
 
         this.setState({ data: response.json, loading: false });
       } catch (error) {
@@ -50,8 +56,17 @@ export class Form extends Component {
     });
   };
 
+  setIsSubscriber = e => this.setState({ isSubscriber: e.target.checked });
+
   render() {
-    const { data, error, loading, platform, isLinuxUser } = this.state;
+    const {
+      data,
+      error,
+      loading,
+      platform,
+      isLinuxUser,
+      isSubscriber,
+    } = this.state;
 
     return (
       <div className="Form">
@@ -59,6 +74,10 @@ export class Form extends Component {
           <PlatformSelect
             onSelect={this.handleOnSelect}
             initialValue={PLATFORM}
+          />
+          <SubscriberCheckbox
+            checked={isSubscriber}
+            handleChange={this.setIsSubscriber}
           />
           {!data && !isLinuxUser && (
             <Email
