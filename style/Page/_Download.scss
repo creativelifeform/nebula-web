@@ -41,6 +41,20 @@
           padding-left: $padding-s;
         }
       }
+
+      .Subscribe {
+        font-size: 0.9em;
+        margin-top: $padding-s;
+        vertical-align: middle;
+        padding: $padding-m;
+        background: #222;
+        border-radius: $radius-s;
+
+        input[type='checkbox'] {
+          margin: 0;
+          margin-right: 7px;
+        }
+      }
     }
   }
 }
