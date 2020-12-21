@@ -12,9 +12,20 @@ module.exports = [
     path: '/about',
   },
   {
+    title: 'The different flavours of Nebula',
+    name: 'Editions',
+    path: '/editions',
+  },
+  {
     title: 'How to use Nebula',
     name: 'Guides',
     path: '/guides',
+  },
+  {
+    title: 'Three Nebula - Releases',
+    name: 'Releases',
+    url: 'https://headwayapp.co/nebula-release-notes',
+    path: '/',
   },
   {
     title: 'How to install Nebula',
@@ -39,11 +50,6 @@ module.exports = [
     name: 'Guides - Installation - Linux',
     path: '/guides/installation/linux',
     shouldHideFromNav: true,
-  },
-  {
-    title: 'The different flavours of Nebula',
-    name: 'Editions',
-    path: '/editions',
   },
   {
     title: 'Three Nebula - Chat',
